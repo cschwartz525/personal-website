@@ -24,6 +24,7 @@ var NavBar = React.createClass({
         <img id='navBarLogo' src='assets/images/logo.png' />
         <NavItem content='Home' selectedNavItem={this.props.selectedItem} onNavItemSelected={this.props.onNavChanged} />
         <NavItem content='About' selectedNavItem={this.props.selectedItem} onNavItemSelected={this.props.onNavChanged} />
+        <NavItem content='Resume' selectedNavItem={this.props.selectedItem} onNavItemSelected={this.props.onNavChanged} />
         <NavItem content='Contact' selectedNavItem={this.props.selectedItem} onNavItemSelected={this.props.onNavChanged} />
       </div>
     );
