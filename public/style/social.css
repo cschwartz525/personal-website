@@ -6,6 +6,12 @@
  * You can get the icons to host yourself
  * here: http://simpleicons.org/
  */
+.social-icons {
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .icon a {
   display: inline-block;
   float: right;
