@@ -25,6 +25,14 @@
   cursor: pointer;
 }
 
+.navItem.inactive {
+  background-color: #f0f0f0;
+}
+
+.navItem.active {
+  background-color: #87cefa;
+}
+
 #navBarLogo {
   display: inline-block;
   height: 40px;
@@ -36,7 +44,7 @@
 
 #mainContainer {
   background-color: #cccccc;
-  height: 75%;
+  height: inherit;
 }
 
 #pageTitle {
@@ -47,8 +55,10 @@
 }
 
 #footer {
-  height: 10%;
-  padding: 10px;
+  height: 80px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
   background: #cccccc; /* Old browsers */
   background: -moz-linear-gradient(top,  #cccccc 0%, #555555 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top,  #cccccc 0%, #555555 100%); /* Chrome10-25,Safari5.1-6 */
