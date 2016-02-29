@@ -1,0 +1,56 @@
+.site {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  font-family: sans-serif;
+}
+
+#navBar {
+  background-color: #ffffff;
+}
+
+.navItem {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  vertical-align: middle;
+  border: 2px;
+  border-color: black;
+  border-style: solid;
+  cursor: pointer;
+}
+
+#navBarLogo {
+  display: inline-block;
+  height: 40px;
+  width: 50px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+#mainContainer {
+  background-color: #cccccc;
+  height: 100%;
+}
+
+#pageTitle {
+  text-align: left;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;
+}
