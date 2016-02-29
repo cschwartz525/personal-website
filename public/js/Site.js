@@ -1,6 +1,7 @@
 var NavItem = React.createClass({
-  onNavItemSelected: function() {
-    return this.props.content;
+  onNavItemSelected: function(e) {
+    e.preventDefault();
+    this.props.onNavItemSelected(this.props.content);
   },
   render: function() {
     return (
@@ -12,6 +13,11 @@ var NavItem = React.createClass({
 });
 
 var NavBar = React.createClass({
+  getInitialState: function() {
+    return {
+      selectedPanel: 'Home'
+    };
+  },
   render: function() {
     return (
       <div className="navBar">
@@ -40,7 +46,9 @@ var Site = React.createClass({
     };
   },
   onNavChanged: function(value) {
-    selectedPanel = value;
+    this.setState({
+      selectedPanel: value
+    });
   },
   render: function() {
     return (
