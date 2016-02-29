@@ -15,7 +15,7 @@ var NavItem = React.createClass({
     }
 
     return (
-      <div className='navItem noselect' onClick={this.hanldeClick} style={style}>
+      <div className='navItem noSelect' onClick={this.hanldeClick} style={style}>
         {this.props.content}
       </div>
     );
