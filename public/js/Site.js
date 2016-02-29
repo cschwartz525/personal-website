@@ -5,12 +5,12 @@ var NavItem = React.createClass({
   },
   render: function() {
     var style = {
-      'background-color': '#f0f0f0'
+      backgroundColor: '#f0f0f0'
     }
 
     if(this.props.content === this.props.selectedNavItem){
       style = {
-        'background-color': '#87cefa'
+        backgroundColor: '#87cefa'
       }
     }
 
@@ -45,6 +45,47 @@ var MainContainer = React.createClass({
   }
 });
 
+var Footer = React.createClass({
+  render: function() {
+    return (
+      <div id='footer'>
+        <ul class='social-icons'>
+          <li className='icon icon--soundcloud'>
+            <a href='https://soundcloud.com/soundcastlemusic'>
+              <span className='icon__name'>Soundcloud</span>
+            </a>
+          </li>
+          <li className='icon icon--instagram'>
+            <a href='https://www.instagram.com/cschwartz525/'>
+              <span className='icon__name'>Instagram</span>
+            </a>
+          </li>
+          <li className='icon icon--facebook'>
+            <a href='https://www.facebook.com/cschwartz525'>
+              <span className='icon__name'>Facebook</span>
+            </a>
+          </li>
+          <li className='icon icon--google'>
+            <a href='https://plus.google.com/u/0/101927703181492899764/posts'>
+              <span className='icon__name'>Google+</span>
+            </a>
+          </li>
+          <li className='icon icon--github'>
+            <a href='https://github.com/cschwartz525'>
+              <span className='icon__name'>GitHub</span>
+            </a>
+          </li>
+          <li className='icon icon--linkedin'>
+            <a href='https://www.linkedin.com/in/cschwartz525'>
+              <span className='icon__name'>LinkedIn</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    );
+  }
+});
+
 var Site = React.createClass({
   getInitialState: function() {
     return {
@@ -61,6 +102,7 @@ var Site = React.createClass({
       <div className='site'>
         <NavBar selectedItem={this.state.selectedPanel} onNavChanged={this.onNavChanged} />
         <MainContainer selectedPanel={this.state.selectedPanel} />
+        <Footer />
       </div>
     );
   }
