@@ -4,18 +4,13 @@ var NavItem = React.createClass({
     this.props.onNavItemSelected(this.props.content);
   },
   render: function() {
-    var style = {
-      backgroundColor: '#f0f0f0'
-    }
-
-    if(this.props.content === this.props.selectedNavItem){
-      style = {
-        backgroundColor: '#87cefa'
-      }
+    var status = 'inactive';
+    if (this.props.content === this.props.selectedNavItem) {
+      status = 'active';
     }
 
     return (
-      <div className='navItem noselect' onClick={this.hanldeClick} style={style}>
+      <div className={`navItem noSelect ${status}`} onClick={this.hanldeClick}>
         {this.props.content}
       </div>
     );
@@ -49,38 +44,38 @@ var Footer = React.createClass({
   render: function() {
     return (
       <div id='footer'>
-        <ul class='social-icons'>
-          <li className='icon icon--soundcloud'>
+        <div className='social-icons'>
+          <div className='icon icon--soundcloud'>
             <a href='https://soundcloud.com/soundcastlemusic'>
               <span className='icon__name'>Soundcloud</span>
             </a>
-          </li>
-          <li className='icon icon--instagram'>
+          </div>
+          <div className='icon icon--instagram'>
             <a href='https://www.instagram.com/cschwartz525/'>
               <span className='icon__name'>Instagram</span>
             </a>
-          </li>
-          <li className='icon icon--facebook'>
+          </div>
+          <div className='icon icon--facebook'>
             <a href='https://www.facebook.com/cschwartz525'>
               <span className='icon__name'>Facebook</span>
             </a>
-          </li>
-          <li className='icon icon--google'>
+          </div>
+          <div className='icon icon--google'>
             <a href='https://plus.google.com/u/0/101927703181492899764/posts'>
               <span className='icon__name'>Google+</span>
             </a>
-          </li>
-          <li className='icon icon--github'>
+          </div>
+          <div className='icon icon--github'>
             <a href='https://github.com/cschwartz525'>
               <span className='icon__name'>GitHub</span>
             </a>
-          </li>
-          <li className='icon icon--linkedin'>
+          </div>
+          <div className='icon icon--linkedin'>
             <a href='https://www.linkedin.com/in/cschwartz525'>
               <span className='icon__name'>LinkedIn</span>
             </a>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     );
   }
