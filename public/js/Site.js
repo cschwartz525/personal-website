@@ -10,7 +10,7 @@ var NavItem = React.createClass({
     }
 
     return (
-      <div className={`navItem noSelect ${status}`} onClick={this.hanldeClick}>
+      <div className={`navItem noSelect hvr-bounce-in ${status}`} onClick={this.hanldeClick}>
         {this.props.content}
       </div>
     );
