@@ -62,11 +62,20 @@
   background-color: #cccccc;
 }
 
-#pageTitle {
+.pageTitle {
   text-align: left;
   padding-top: 20px;
   padding-left: 20px;
   font-size: 50px;
+}
+
+#contactList {
+  padding: 20px 0 20px 0;
+}
+
+.contactItem {
+  padding: 5px 0 5px 20px;
+  font-size: 24px;
 }
 
 #footer {
