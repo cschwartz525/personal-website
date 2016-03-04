@@ -24,6 +24,7 @@ var NavBar = React.createClass({
         <img id='navBarLogo' src='assets/images/logo.png' />
         <NavItem content='Home' selectedNavItem={this.props.selectedItem} onNavItemSelected={this.props.onNavChanged} />
         <NavItem content='About' selectedNavItem={this.props.selectedItem} onNavItemSelected={this.props.onNavChanged} />
+        <NavItem content='Resume' selectedNavItem={this.props.selectedItem} onNavItemSelected={this.props.onNavChanged} />
         <NavItem content='Contact' selectedNavItem={this.props.selectedItem} onNavItemSelected={this.props.onNavChanged} />
       </div>
     );
@@ -34,7 +35,55 @@ var MainContainer = React.createClass({
   render: function() {
     return (
       <div id='mainContainer'>
-        <h1 id='pageTitle'>{this.props.selectedPanel}</h1>
+      {(() => {
+      switch (this.props.selectedPanel) {
+        case "Home":   return <HomePage />;
+        case "About": return <AboutPage />;
+        case "Resume":  return <ResumePage />;
+        case "Contact":  return <ContactPage />;
+        default:      return <HomePage />;
+      }
+      })()}
+      </div>
+    );
+  }
+});
+
+var HomePage = React.createClass({
+  render: function() {
+    return (
+      <div id='mainContent'>
+        <h1 id='pageTitle'>Home</h1>
+      </div>
+    );
+  }
+});
+
+var AboutPage = React.createClass({
+  render: function() {
+    return (
+      <div id='mainContent'>
+        <h1 id='pageTitle'>About</h1>
+      </div>
+    );
+  }
+});
+
+var ResumePage = React.createClass({
+  render: function() {
+    return (
+      <div id='mainContent'>
+        <h1 id='pageTitle'>Resume</h1>
+      </div>
+    );
+  }
+});
+
+var ContactPage = React.createClass({
+  render: function() {
+    return (
+      <div id='mainContent'>
+        <h1 id='pageTitle'>Contact</h1>
       </div>
     );
   }
