@@ -1,3 +1,14 @@
+/* Universal elements */
+a {
+  color: #226699;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #ffaa00
+}
+
+/* My classes and elements */
 .site {
   position: absolute;
   height: 100%;
