@@ -104,15 +104,16 @@ a:hover {
 }
 
 .companyLogo {
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
+  border-radius: 5px;
 }
 
 .workHistoryHeader {
-  font-size: 25px;
+  font-size: 28px;
   font-weight: bold;
-  height: 50px;
-  width: 650px;
+  height: 60px;
+  width: 750px;
   margin-bottom: 10px;
 }
 
