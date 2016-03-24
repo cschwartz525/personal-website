@@ -71,7 +71,7 @@ a:hover {
   right: 0;
   width: 100%;
   background-color: #cccccc;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .pageTitle {
@@ -103,16 +103,6 @@ a:hover {
   width: 80%;
 }
 
-.workHistory.left {
-  display: inline-block;
-  float: left;
-}
-
-.workHistory.right {
-  display: inline-block;
-  float: right;
-}
-
 .companyLogo {
   height: 60px;
   width: 60px;
@@ -122,6 +112,16 @@ a:hover {
 .workHistoryHeader {
   font-size: 24px;
   font-weight: bold;
+}
+
+.left {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.right {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .workHistorySummary {
