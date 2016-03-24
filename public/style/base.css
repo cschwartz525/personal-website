@@ -104,14 +104,17 @@ a:hover {
 }
 
 .companyLogo {
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   background-color: white;
 }
 
 .workHistoryHeader {
-  font-size: 24px;
+  font-size: 25px;
   font-weight: bold;
+  height: 50px;
+  width: 650px;
+  margin-bottom: 10px;
 }
 
 .left {
@@ -122,6 +125,7 @@ a:hover {
 .right {
   display: inline-block;
   vertical-align: middle;
+  float: right;
 }
 
 .workHistorySummary {
