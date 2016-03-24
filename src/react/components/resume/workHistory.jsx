@@ -7,9 +7,7 @@ var WorkHistory = React.createClass({
         <div className="workHistoryHeader">
           <div className="left">
             <div>
-              <a href={this.props.webiste}>
                 {this.props.companyName}
-              </a>
             </div>
             <div>
               {this.props.jobTitle}
@@ -32,7 +30,7 @@ var WorkHistory = React.createClass({
               {this.props.startDate} - {this.props.endDate}
             </div>
             <div>
-              <a href={this.props.webiste}>
+              <a href={this.props.website}>
                 {this.props.website}
               </a>
             </div>
