@@ -1,8 +1,8 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
 var NavBar = require('./components/navBar');
 var MainContainer = require('./components/mainContainer');
 var Footer = require('./components/footer');
-var ReactDOM = require('react-dom');
 
 var Site = React.createClass({
   getInitialState: function() {
@@ -17,7 +17,7 @@ var Site = React.createClass({
   },
   render: function() {
     return (
-      <div className='site'>
+      <div className="site">
         <NavBar selectedItem={this.state.selectedPanel} onNavChanged={this.onNavChanged} />
         <MainContainer selectedPanel={this.state.selectedPanel} />
         <Footer />
