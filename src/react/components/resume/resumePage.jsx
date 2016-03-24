@@ -16,6 +16,7 @@ var ResumePage = React.createClass({
             startDate="2016"
             endDate="Present"
             website="https://www.trustpilot.com/"
+            logo="trustpilot.png"
           />
           <WorkHistory
             companyName="Citigroup"
@@ -25,6 +26,7 @@ var ResumePage = React.createClass({
             startDate="2013"
             endDate="2016"
             website="http://www.citigroup.com/citi/"
+            logo="citi.png"
           />
           <WorkHistory
             companyName="The Lloyd Group"
@@ -34,6 +36,7 @@ var ResumePage = React.createClass({
             startDate="2012"
             endDate="2012"
             website="http://www.lloydgroup.com/"
+            logo="lloyd.png"
           />
         </div>
         <div id="education">
