@@ -1,11 +1,11 @@
+var browserify = require('browserify');
 var config = require('./config');
 var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-var source = require('vinyl-source-stream');
-var browserify = require('browserify');
-var streamify = require('gulp-streamify');
-var react = require('gulp-react');
 var gutil = require('gulp-util');
+var react = require('gulp-react');
+var source = require('vinyl-source-stream');
+var streamify = require('gulp-streamify');
+var uglify = require('gulp-uglify');
 
 gulp.task('react', function () {
   return gulp.src(config.react.src)
