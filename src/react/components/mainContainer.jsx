@@ -1,8 +1,8 @@
 var React = require('react');
-var AboutPage = require('./aboutPage');
-var ContactPage = require('./contactPage');
-var HomePage = require('./homePage');
-var ResumePage = require('./resumePage');
+var AboutPage = require('./about/aboutPage');
+var ContactPage = require('./contact/contactPage');
+var HomePage = require('./home/homePage');
+var ResumePage = require('./resume/resumePage');
 
 var MainContainer = React.createClass({
   currentTab: function (tab) {
