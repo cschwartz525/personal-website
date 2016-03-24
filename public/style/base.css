@@ -60,6 +60,7 @@
   right: 0;
   width: 100%;
   background-color: #cccccc;
+  overflow-y: scroll;
 }
 
 .pageTitle {
@@ -69,6 +70,13 @@
   font-size: 50px;
 }
 
+.pageSubtitle {
+  text-align: left;
+  padding-top: 20px;
+  padding-left: 20px;
+  font-size: 32px;
+}
+
 #contactList {
   padding: 20px 0 20px 0;
 }
@@ -76,6 +84,37 @@
 .contactItem {
   padding: 5px 0 5px 20px;
   font-size: 20px;
+}
+
+.workHistory {
+  padding-top: 20px;
+  padding-left: 20px;
+  width: 80%;
+}
+
+.workHistory.left {
+  display: inline-block;
+  float: left;
+}
+
+.workHistory.right {
+  display: inline-block;
+  float: right;
+}
+
+.companyLogo {
+  height: 60px;
+  width: 60px;
+  background-color: white;
+}
+
+.workHistoryHeader {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.workHistorySummary {
+  font-size: 18px;
 }
 
 #footer {
