@@ -97,7 +97,7 @@ a:hover {
   font-size: 20px;
 }
 
-.workHistory {
+.workHistory, .educationHistory {
   margin-top: 10px;
   margin-left: 20px;
   width: 750px;
@@ -115,7 +115,7 @@ a:hover {
   border-radius: 5px;
 }
 
-.workHistoryHeader {
+.workHistoryHeader, .educationHistoryHeader {
   font-size: 28px;
   font-weight: bold;
   height: 60px;
@@ -134,7 +134,7 @@ a:hover {
   float: right;
 }
 
-.workHistorySummary {
+.workHistorySummary, .educationHistorySummary {
   font-size: 18px;
   width: 750px;
 }

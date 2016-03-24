@@ -1,11 +1,13 @@
 var React = require('react');
 var WorkHistory = require('./workHistory');
+var Education = require('./education');
 
 var ResumePage = React.createClass({
   render: function() {
     return (
       <div id="mainContent">
         <h1 className="pageTitle">Resume</h1>
+
         <h2 className="pageSubtitle">Work Experience</h2>
         <div id="previousJobs">
           <WorkHistory
@@ -39,8 +41,17 @@ var ResumePage = React.createClass({
             logo="lloyd.png"
           />
         </div>
-        <div id="education">
 
+        <h2 className="pageSubtitle">Education</h2>
+        <div id="education">
+        <Education
+          name="University of Virginia"
+          degree="Bachelor of Science"
+          major="Computer Science"
+          year="2013"
+          website="http://www.virginia.edu/"
+          logo="uva.png"
+        />
         </div>
       </div>
     );
