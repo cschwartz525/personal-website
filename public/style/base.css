@@ -98,9 +98,15 @@ a:hover {
 }
 
 .workHistory {
-  padding-top: 20px;
-  padding-left: 20px;
-  width: 80%;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 750px;
+
+  padding: 5px;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
 }
 
 .companyLogo {
@@ -130,6 +136,7 @@ a:hover {
 
 .workHistorySummary {
   font-size: 18px;
+  width: 750px;
 }
 
 #footer {
