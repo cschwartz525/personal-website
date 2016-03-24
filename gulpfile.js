@@ -3,9 +3,14 @@ var config = require('./config');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var react = require('gulp-react');
+var sequence = require('run-sequence');
 var source = require('vinyl-source-stream');
 var streamify = require('gulp-streamify');
 var uglify = require('gulp-uglify');
+
+gulp.task('default', function(callback) {
+  sequence('react', 'browserify', callback);
+});
 
 gulp.task('react', function () {
   return gulp.src(config.react.src)
@@ -27,5 +32,3 @@ gulp.task('browserify', function(){
     .pipe(streamify(uglify()))
     .pipe(gulp.dest(config.react.dist_folder));
 });
-
-gulp.task('default', ['react', 'browserify']);
