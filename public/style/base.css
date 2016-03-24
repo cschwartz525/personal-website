@@ -98,22 +98,28 @@ a:hover {
 }
 
 .workHistory {
-  padding-top: 20px;
-  padding-left: 20px;
-  width: 80%;
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 750px;
+
+  padding: 5px;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
 }
 
 .companyLogo {
-  height: 50px;
-  width: 50px;
-  background-color: white;
+  height: 60px;
+  width: 60px;
+  border-radius: 5px;
 }
 
 .workHistoryHeader {
-  font-size: 25px;
+  font-size: 28px;
   font-weight: bold;
-  height: 50px;
-  width: 650px;
+  height: 60px;
+  width: 750px;
   margin-bottom: 10px;
 }
 
@@ -130,6 +136,7 @@ a:hover {
 
 .workHistorySummary {
   font-size: 18px;
+  width: 750px;
 }
 
 #footer {

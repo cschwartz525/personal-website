@@ -14,7 +14,7 @@ var WorkHistory = React.createClass({
             </div>
           </div>
           <div className="right">
-            <div className="companyLogo"></div>
+            <img className="companyLogo" src={"../assets/images/" + this.props.logo}></img>
           </div>
         </div>
 
