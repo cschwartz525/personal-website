@@ -33,3 +33,5 @@ gulp.task('browserify', function(){
     //.pipe(streamify(uglify()))
     .pipe(gulp.dest('public/assets/js'));
 });
+
+gulp.task('default', ['react', 'browserify']);
