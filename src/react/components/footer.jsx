@@ -4,6 +4,9 @@ var Footer = React.createClass({
   render: function() {
     return (
       <div id="footer">
+        <div id="copyright">
+          © 2016 Craig Schwartz
+        </div>
         <div className="social-icons">
           <div className="icon icon--soundcloud">
             <a href="https://soundcloud.com/soundcastlemusic">
