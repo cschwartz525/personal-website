@@ -4,3 +4,8 @@ node_modules/*
 
 # Logs #
 npm-debug.log
+
+# Build files #
+lib
+lib/**/*
+public/assets/js/build.min.js

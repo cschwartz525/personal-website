@@ -1,3 +1,14 @@
+/* Universal elements */
+a {
+  color: #226699;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #ffaa00
+}
+
+/* My classes and elements */
 .site {
   position: absolute;
   height: 100%;
@@ -60,6 +71,7 @@
   right: 0;
   width: 100%;
   background-color: #cccccc;
+  overflow-y: auto;
 }
 
 .pageTitle {
@@ -67,6 +79,13 @@
   padding-top: 20px;
   padding-left: 20px;
   font-size: 50px;
+}
+
+.pageSubtitle {
+  text-align: left;
+  padding-top: 20px;
+  padding-left: 20px;
+  font-size: 32px;
 }
 
 #contactList {
@@ -78,6 +97,48 @@
   font-size: 20px;
 }
 
+.workHistory, .educationHistory {
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 750px;
+
+  padding: 5px;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+}
+
+.companyLogo {
+  height: 60px;
+  width: 60px;
+  border-radius: 5px;
+}
+
+.workHistoryHeader, .educationHistoryHeader {
+  font-size: 28px;
+  font-weight: bold;
+  height: 60px;
+  width: 750px;
+  margin-bottom: 10px;
+}
+
+.workHistorySummary, .educationHistorySummary {
+  font-size: 18px;
+  width: 750px;
+}
+
+.left {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.right {
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+}
+
 #footer {
   height: 80px;
   width: 100%;
@@ -87,6 +148,14 @@
   background: -moz-linear-gradient(top,  #cccccc 0%, #555555 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top,  #cccccc 0%, #555555 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom,  #cccccc 0%, #555555 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+#copyright {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #ffffff;
+  font-size: 12px;
 }
 
 .noSelect {
