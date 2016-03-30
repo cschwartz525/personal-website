@@ -1,0 +1,44 @@
+{
+  "jobs": {
+    "trustpilot": {
+      "companyName": "Trustpilot",
+      "jobTitle": "Software Developer",
+      "department": "Commercial Growth Team",
+      "location": "New York, NY",
+      "startDate": "2016",
+      "endDate": "Present",
+      "website": "https://www.trustpilot.com/",
+      "logo": "trustpilot.png"
+    },
+    "citi": {
+      "companyName": "Citigroup",
+      "jobTitle": "Assitant Vice President - Software Devleopment",
+      "department": "ICG Technology",
+      "location": "New York, NY",
+      "startDate": "2013",
+      "endDate": "2016",
+      "website": "http://www.citigroup.com/citi/",
+      "logo": "citi.png"
+    },
+    "lloyd": {
+      "companyName": "The Lloyd Group",
+      "jobTitle": "Operations Intern",
+      "department": "Summer Internship",
+      "location": "New York, NY",
+      "startDate": "2012",
+      "endDate": "2012",
+      "website": "http://www.lloydgroup.com/",
+      "logo": "lloyd.png"
+    }
+  },
+  "education": {
+    "uva": {
+      "name": "University of Virginia",
+      "degree": "Bachelor of Science",
+      "major": "Computer Science",
+      "year": "2013",
+      "website": "http://www.virginia.edu/",
+      "logo": "uva.png"
+    }
+  }
+}
