@@ -3,6 +3,24 @@ var WorkHistory = require('./workHistory');
 var Education = require('./education');
 
 var ResumePage = React.createClass({
+  getInitialState: function() {
+    return {
+      skills: [],
+      jobs: [],
+      education: []
+    };
+  },
+
+  componentDidMount: function() {
+    $.getJSON('/api/resume')
+      .done(function(response) {
+        this.setState(response);
+      }.bind(this))
+      .fail(function(err) {
+        console.log('Error loading resume data');
+      });
+  },
+
   render: function() {
     return (
       <div id="mainContent">
