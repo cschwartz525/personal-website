@@ -1,6 +1,7 @@
 {
-  "jobs": {
-    "trustpilot": {
+  "skills": [],
+  "jobs": [
+    {
       "companyName": "Trustpilot",
       "jobTitle": "Software Developer",
       "department": "Commercial Growth Team",
@@ -10,7 +11,7 @@
       "website": "https://www.trustpilot.com/",
       "logo": "trustpilot.png"
     },
-    "citi": {
+    {
       "companyName": "Citigroup",
       "jobTitle": "Assitant Vice President - Software Devleopment",
       "department": "ICG Technology",
@@ -20,7 +21,7 @@
       "website": "http://www.citigroup.com/citi/",
       "logo": "citi.png"
     },
-    "lloyd": {
+    {
       "companyName": "The Lloyd Group",
       "jobTitle": "Operations Intern",
       "department": "Summer Internship",
@@ -30,9 +31,9 @@
       "website": "http://www.lloydgroup.com/",
       "logo": "lloyd.png"
     }
-  },
-  "education": {
-    "uva": {
+  ],
+  "education": [
+    {
       "name": "University of Virginia",
       "degree": "Bachelor of Science",
       "major": "Computer Science",
@@ -40,5 +41,5 @@
       "website": "http://www.virginia.edu/",
       "logo": "uva.png"
     }
-  }
+  ]
 }
