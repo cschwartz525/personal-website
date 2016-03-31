@@ -27,13 +27,13 @@ var ResumePage = React.createClass({
         <WorkHistory
           key={index}
           companyName={job.companyName}
-          jobTitle={job.jobTitle}
           department={job.department}
-          location={job.location}
-          startDate={job.startDate}
           endDate={job.endDate}
-          website={job.website}
+          jobTitle={job.jobTitle}
+          location={job.location}
           logo={job.logo}
+          startDate={job.startDate}
+          website={job.website}
         />
       );
     });
@@ -42,12 +42,12 @@ var ResumePage = React.createClass({
       return (
         <Education
           key={index}
-          name={school.name}
           degree={school.degree}
-          major={school.major}
-          year={school.year}
-          website={school.website}
           logo={school.logo}
+          major={school.major}
+          name={school.name}
+          website={school.website}
+          year={school.year}
         />
       );
     });
