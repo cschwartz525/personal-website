@@ -3,3 +3,5 @@
 Personal website for Craig Schwartz
 
 Written using *NodeJS* and *ReactJS*
+
+Built using *Gulp* and *Browserify*
