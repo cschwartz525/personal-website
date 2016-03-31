@@ -1,6 +1,7 @@
 var React = require('react');
 var WorkHistory = require('./workHistory');
 var Education = require('./education');
+var Skills = require('./skill');
 
 var ResumePage = React.createClass({
   getInitialState: function() {
@@ -22,6 +23,14 @@ var ResumePage = React.createClass({
   },
 
   render: function() {
+    var skills = this.state.skills.map(function(skill, index) {
+      return (
+        <Skill
+          key={index}
+        />
+      );
+    });
+
     var jobs = this.state.jobs.map(function(job, index) {
       return (
         <WorkHistory
@@ -55,6 +64,11 @@ var ResumePage = React.createClass({
     return (
       <div id="mainContent">
         <h1 className="pageTitle">Resume</h1>
+
+        <h2 className="pageSubtitle">Skills</h2>
+        <div id="skills">
+          {skills}
+        </div>
 
         <h2 className="pageSubtitle">Work Experience</h2>
         <div id="previousJobs">
