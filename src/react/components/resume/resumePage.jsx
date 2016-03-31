@@ -22,9 +22,10 @@ var ResumePage = React.createClass({
   },
 
   render: function() {
-    var jobs = this.state.jobs.map(function(job) {
+    var jobs = this.state.jobs.map(function(job, index) {
       return (
         <WorkHistory
+          key={index}
           companyName={job.companyName}
           jobTitle={job.jobTitle}
           department={job.department}
@@ -37,9 +38,10 @@ var ResumePage = React.createClass({
       );
     });
 
-    var education = this.state.education.map(function(school) {
+    var education = this.state.education.map(function(school, index) {
       return (
         <Education
+          key={index}
           name={school.name}
           degree={school.degree}
           major={school.major}
