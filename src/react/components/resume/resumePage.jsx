@@ -37,6 +37,19 @@ var ResumePage = React.createClass({
       );
     });
 
+    var education = this.state.education.map(function(school) {
+      return (
+        <Education
+          name={school.name}
+          degree={school.degree}
+          major={school.major}
+          year={school.year}
+          website={school.website}
+          logo={school.logo}
+        />
+      );
+    });
+
     return (
       <div id="mainContent">
         <h1 className="pageTitle">Resume</h1>
@@ -48,14 +61,7 @@ var ResumePage = React.createClass({
 
         <h2 className="pageSubtitle">Education</h2>
         <div id="education">
-        <Education
-          name="University of Virginia"
-          degree="Bachelor of Science"
-          major="Computer Science"
-          year="2013"
-          website="http://www.virginia.edu/"
-          logo="uva.png"
-        />
+          {education}
         </div>
       </div>
     );
