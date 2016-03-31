@@ -1,7 +1,7 @@
 var React = require('react');
-var WorkHistory = require('./workHistory');
 var Education = require('./education');
 var Skills = require('./skill');
+var WorkHistory = require('./workHistory');
 
 var ResumePage = React.createClass({
   getInitialState: function() {
