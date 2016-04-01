@@ -1,6 +1,6 @@
 var React = require('react');
 var Education = require('./education');
-var Skills = require('./skill');
+var Skill = require('./skill');
 var WorkHistory = require('./workHistory');
 
 var ResumePage = React.createClass({
@@ -27,6 +27,7 @@ var ResumePage = React.createClass({
       return (
         <Skill
           key={index}
+          name={skill}
         />
       );
     });
