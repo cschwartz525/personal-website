@@ -97,7 +97,7 @@ a:hover {
   font-size: 20px;
 }
 
-#skills, #previousJobs, #education, #emailForm {
+.pageContent {
   margin-top: 10px;
   margin-left: 20px;
 }
