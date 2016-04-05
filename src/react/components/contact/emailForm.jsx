@@ -3,8 +3,7 @@ var React = require('react');
 var EmailForm = React.createClass({
   render: function() {
     return (
-      <div className="pageContent" id="emailForm">
-        <h2>Contact Me</h2>
+      <div id="emailForm">
         <form
             action="/api/sendEmail"
             enctype="text/plain"
