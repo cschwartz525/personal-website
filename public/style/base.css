@@ -97,11 +97,36 @@ a:hover {
   font-size: 20px;
 }
 
-.workHistory, .educationHistory {
+#skills, #previousJobs, #education {
   margin-top: 10px;
   margin-left: 20px;
-  width: 750px;
+}
 
+#skills {
+  width: 1000px;
+  height: 240px;
+}
+
+.skill {
+  width: 200px;
+  float: left;
+  font-size: 20px;
+  margin: 10px 20px 10px 0;
+  padding: 10px;
+
+  text-align: center;
+  background-color: #ffaa00;
+  border-radius: 5px;
+}
+
+.skill:hover {
+  box-shadow: 2px 2px 0 #996600;
+  cursor: default;
+}
+
+.workHistory, .educationHistory {
+  width: 1000px;
+  margin-top: 10px;
   padding: 5px;
   border-color: black;
   border-style: solid;
@@ -113,13 +138,13 @@ a:hover {
   font-size: 28px;
   font-weight: bold;
   height: 60px;
-  width: 750px;
+  width: 1000px;
   margin-bottom: 10px;
 }
 
 .workHistorySummary, .educationHistorySummary {
   font-size: 18px;
-  width: 750px;
+  width: 1000px;
 }
 
 .companyLogo {

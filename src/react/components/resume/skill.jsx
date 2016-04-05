@@ -3,7 +3,7 @@ var React = require('react');
 var Skill = React.createClass({
   render: function() {
     return (
-      <div className="skill">
+      <div className="skill noSelect">
         {this.props.name}
       </div>
     );
