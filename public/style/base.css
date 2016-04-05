@@ -131,6 +131,20 @@ a:hover {
   font-size: 20px;
 }
 
+.formButton {
+  font-size: 50px;
+}
+
+.formText {
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 2px 0;
+}
+
+.formText:focus {
+  background-color: #ccddee;
+}
+
 /* Resume page */
 #skills {
   width: 1000px;

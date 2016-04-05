@@ -7,29 +7,34 @@ var EmailForm = React.createClass({
         <h2>Contact Me</h2>
         <form
             action="/api/sendEmail"
-            method="post"
             enctype="text/plain"
+            method="post"
         >
           <input
-              type="text"
+              className="formText"
               name="sender"
               placeholder="Your email"
+              size="50"
+              type="text"
           />
           <br />
           <input
-              type="text"
+              className="formText"
               name="subject"
               placeholder="Subject"
+              size="50"
+              type="text"
           />
           <br />
           <textarea
+              className="formText"
               cols="100"
               name="message"
-              placeholder="..."
               rows="20"
           />
-          <input type="submit" value="Send" />
-          <input type="reset" value="Reset" />
+          <br />
+          <input className="formButton" type="submit" value="Send" />
+          <input className="formButton" type="reset" value="Reset" />
         </form>
       </div>
     );
