@@ -1,6 +1,7 @@
 var config = {
   port: 8000,
   public_dir: './public',
+  email_address: 'craigschwartz525@gmail.com',
   react: {
     src: './src/react/**/*',
     dest: './lib/react',
