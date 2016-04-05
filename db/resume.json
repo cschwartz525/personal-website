@@ -1,5 +1,22 @@
 {
-  "skills": [],
+  "skills": [
+    "Javascript",
+    "C#",
+    "Java",
+    "Node.JS",
+    "REST",
+    "MVC",
+    "HTML",
+    "CSS",
+    "SASS",
+    "React",
+    "WPF",
+    "Unix",
+    "Git",
+    "SVN",
+    "SQL",
+    "Unit Testing"
+  ],
   "jobs": [
     {
       "companyName": "Trustpilot",
