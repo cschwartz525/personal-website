@@ -1,0 +1,239 @@
+@import 'social';
+@import 'colors';
+
+/* Universal elements */
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover {
+    background-color: $link-bg-hover;
+    -o-transition:.4s;
+    -ms-transition:.4s;
+    -moz-transition:.4s;
+    -webkit-transition:.4s;
+    transition:.4s;
+  }
+}
+
+.noSelect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;
+}
+
+/* My classes and elements */
+.site {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  font-family: sans-serif;
+  display: block;
+  background-image: url("../assets/images/background.jpg");
+  background-size: 100% auto;
+
+  #navBar {
+    height: 80px;
+    background-color: $white;
+
+    #navBarLogo {
+      display: inline-block;
+      height: 40px;
+      width: 50px;
+      margin: 10px;
+      padding: 10px;
+      vertical-align: middle;
+    }
+
+    .navItem {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px;
+      vertical-align: middle;
+      border: 2px;
+      border-color: $black;
+      border-style: solid;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &.inactive {
+        background: $navitem-inactive-1; /* Old browsers */
+        background: -moz-linear-gradient(top, $navitem-inactive-1 0%, $navitem-inactive-2 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, $navitem-inactive-1 0%, $navitem-inactive-2 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, $navitem-inactive-1 0%, $navitem-inactive-2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$navitem-inactive-1', endColorstr='$navitem-inactive-2',GradientType=0 ); /* IE6-9 */
+      }
+      &.active {
+        background: $navitem-active-1; /* Old browsers */
+        background: -moz-linear-gradient(top, $navitem-active-1 0%, $navitem-active-2 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, $navitem-active-1 0%, $navitem-active-2 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, $navitem-active-1 0%, $navitem-active-2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$navitem-active-1', endColorstr='$navitem-active-2',GradientType=0 ); /* IE6-9 */
+      }
+    }
+  }
+
+  #mainContainer {
+    position: absolute;
+    top: 80px;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: transparent;
+    overflow-y: auto;
+
+    .pageTitle {
+      text-align: left;
+      padding-top: 20px;
+      padding-left: 20px;
+      font-size: 50px;
+    }
+
+    .pageSubtitle {
+      text-align: left;
+      padding-top: 20px;
+      padding-left: 20px;
+      font-size: 32px;
+    }
+
+    .pageContent {
+      margin-top: 10px;
+      margin-left: 20px;
+
+      /* Contact page */
+      .contactItem {
+        padding: 5px 0;
+        font-size: 20px;
+      }
+
+      .formButton {
+        font-size: 50px;
+      }
+
+      .formText {
+        border-radius: 5px;
+        font-size: 16px;
+        margin: 2px 0;
+
+        &:focus {
+          background-color: $text-input-bg-active;
+        }
+      }
+
+      /* Resume page */
+      .workHistory, .educationHistory {
+        width: 1000px;
+        margin-top: 10px;
+        padding: 5px;
+        border-color: $black;
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 5px;
+
+        &Header {
+          font-size: 28px;
+          font-weight: bold;
+          height: 60px;
+          width: 1000px;
+          margin-bottom: 10px;
+
+          .companyLogo {
+            height: 60px;
+            width: 60px;
+            border-radius: 5px;
+          }
+        }
+
+        &Summary {
+          font-size: 18px;
+          width: 1000px;
+        }
+
+        .left {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        .right {
+          display: inline-block;
+          vertical-align: middle;
+          float: right;
+        }
+      }
+    }
+
+    #skills {
+      width: 1000px;
+      height: 240px;
+
+      .skill {
+        width: 200px;
+        float: left;
+        font-size: 20px;
+        margin: 10px 20px 10px 0;
+        padding: 10px;
+        text-align: center;
+        background-color: $skill-inactive-bg;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: $skill-active-bg-1;
+          box-shadow: 2px 2px 0 $skill-active-bg-2;
+          cursor: default;
+          -o-transition:.4s;
+          -ms-transition:.4s;
+          -moz-transition:.4s;
+          -webkit-transition:.4s;
+          transition:.4s;
+        }
+      }
+    }
+  }
+
+  #footer {
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: $footer-bg-oldbrowsers; /* Old browsers */
+    background: -moz-linear-gradient(top, transparent 0%, $footer-bg-newbrowsers 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, transparent 0%, $footer-bg-newbrowsers 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, transparent 0%, $footer-bg-newbrowsers 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    #copyright {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: $copyright-text-color;
+      font-size: 12px;
+    }
+  }
+}
+
+/* Bounce In */
+.hvr-bounce-in {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+
+  &:hover, &:focus, &:active {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  }
+}
