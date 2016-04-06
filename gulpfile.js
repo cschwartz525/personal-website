@@ -1,15 +1,17 @@
 var browserify = require('browserify');
+var concat = require('gulp-concat');
 var config = require('./config');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var react = require('gulp-react');
+var sass = require('gulp-sass');
 var sequence = require('run-sequence');
 var source = require('vinyl-source-stream');
 var streamify = require('gulp-streamify');
 var uglify = require('gulp-uglify');
 
 gulp.task('default', function(callback) {
-  sequence('react', 'browserify', callback);
+  sequence('react', 'browserify', 'sass', callback);
 });
 
 gulp.task('react', function () {
@@ -31,4 +33,11 @@ gulp.task('browserify', function(){
     .pipe(source(config.react.minified_file))
     .pipe(streamify(uglify()))
     .pipe(gulp.dest(config.react.dist_folder));
+});
+
+gulp.task('sass', function() {
+  gulp.src(config.sass.src)
+      .pipe(sass())
+      .pipe(concat(config.sass.output_file))
+      .pipe(gulp.dest(config.sass.dest));
 });
