@@ -6,7 +6,12 @@ a {
   color: $link-color;
   text-decoration: none;
   &:hover {
-    background-color: $link-bg-hover
+    background-color: $link-bg-hover;
+    -o-transition:.4s;
+    -ms-transition:.4s;
+    -moz-transition:.4s;
+    -webkit-transition:.4s;
+    transition:.4s;
   }
 }
 
