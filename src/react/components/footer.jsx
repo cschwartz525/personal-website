@@ -1,6 +1,28 @@
 var React = require('react');
 
 var Footer = React.createClass({
+  getInitialState: function() {
+    return {
+      facebook: '',
+      github: '',
+      google: '',
+      instagram: '',
+      linkedin: '',
+      soundcloud: '',
+      twitter: ''
+    };
+  },
+
+  componentDidMount: function() {
+    $.getJSON('/api/social')
+      .done(function(response) {
+        this.setState(response);
+      }.bind(this))
+      .fail(function(err) {
+        console.log('Error loading social icons');
+      });
+  },
+
   render: function() {
     return (
       <div id="footer">
