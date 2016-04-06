@@ -23,6 +23,15 @@ a:hover {
   background-size: 100% auto;
 }
 
+.noSelect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;
+}
+
 #navBar {
   height: 80px;
   background-color: #ffffff;
@@ -90,20 +99,51 @@ a:hover {
   font-size: 32px;
 }
 
-#contactList {
-  padding: 20px 0 20px 0;
-}
-
-.contactItem {
-  padding: 5px 0 5px 20px;
-  font-size: 20px;
-}
-
-#skills, #previousJobs, #education {
+.pageContent {
   margin-top: 10px;
   margin-left: 20px;
 }
 
+#footer {
+  height: 80px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: #cccccc; /* Old browsers */
+  background: -moz-linear-gradient(top, transparent 0%, #555555 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, transparent 0%, #555555 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, transparent 0%, #555555 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+#copyright {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+/* Contact page */
+.contactItem {
+  padding: 5px 0;
+  font-size: 20px;
+}
+
+.formButton {
+  font-size: 50px;
+}
+
+.formText {
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 2px 0;
+}
+
+.formText:focus {
+  background-color: #ccddee;
+}
+
+/* Resume page */
 #skills {
   width: 1000px;
   height: 240px;
@@ -164,34 +204,6 @@ a:hover {
   display: inline-block;
   vertical-align: middle;
   float: right;
-}
-
-#footer {
-  height: 80px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  background: #cccccc; /* Old browsers */
-  background: -moz-linear-gradient(top, transparent 0%, #555555 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, transparent 0%, #555555 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, transparent 0%, #555555 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
-
-#copyright {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  color: #ffffff;
-  font-size: 12px;
-}
-
-.noSelect {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none;   /* Chrome/Safari/Opera */
-  -khtml-user-select: none;    /* Konqueror */
-  -moz-user-select: none;      /* Firefox */
-  -ms-user-select: none;       /* IE/Edge */
-  user-select: none;
 }
 
 /* Bounce In */
