@@ -38,6 +38,5 @@ gulp.task('browserify', function(){
 gulp.task('sass', function() {
   gulp.src(config.sass.src)
       .pipe(sass())
-      .pipe(concat(config.sass.output_file))
       .pipe(gulp.dest(config.sass.dest));
 });
