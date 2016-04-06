@@ -2,6 +2,6 @@
 
 Personal website for Craig Schwartz
 
-Written using *NodeJS* and *ReactJS*
+Written using *NodeJS*, *ReactJS*, and *SASS*
 
 Built using *Gulp* and *Browserify*
