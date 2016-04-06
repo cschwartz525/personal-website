@@ -126,6 +126,74 @@ a {
           background-color: $text-input-bg-active;
         }
       }
+
+      /* Resume page */
+      .workHistory, .educationHistory {
+        width: 1000px;
+        margin-top: 10px;
+        padding: 5px;
+        border-color: $black;
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 5px;
+
+        &Header {
+          font-size: 28px;
+          font-weight: bold;
+          height: 60px;
+          width: 1000px;
+          margin-bottom: 10px;
+
+          .companyLogo {
+            height: 60px;
+            width: 60px;
+            border-radius: 5px;
+          }
+        }
+
+        &Summary {
+          font-size: 18px;
+          width: 1000px;
+        }
+
+        .left {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        .right {
+          display: inline-block;
+          vertical-align: middle;
+          float: right;
+        }
+      }
+    }
+
+    #skills {
+      width: 1000px;
+      height: 240px;
+
+      .skill {
+        width: 200px;
+        float: left;
+        font-size: 20px;
+        margin: 10px 20px 10px 0;
+        padding: 10px;
+        text-align: center;
+        background-color: $skill-inactive-bg;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: $skill-active-bg-1;
+          box-shadow: 2px 2px 0 $skill-active-bg-2;
+          cursor: default;
+          -o-transition:.4s;
+          -ms-transition:.4s;
+          -moz-transition:.4s;
+          -webkit-transition:.4s;
+          transition:.4s;
+        }
+      }
     }
   }
 
@@ -146,74 +214,6 @@ a {
       color: $copyright-text-color;
       font-size: 12px;
     }
-  }
-}
-
-/* Resume page */
-#skills {
-  width: 1000px;
-  height: 240px;
-}
-
-.skill {
-  width: 200px;
-  float: left;
-  font-size: 20px;
-  margin: 10px 20px 10px 0;
-  padding: 10px;
-  text-align: center;
-  background-color: $skill-inactive-bg;
-  border-radius: 5px;
-
-  &:hover {
-    background-color: $skill-active-bg-1;
-    box-shadow: 2px 2px 0 $skill-active-bg-2;
-    cursor: default;
-    -o-transition:.4s;
-    -ms-transition:.4s;
-    -moz-transition:.4s;
-    -webkit-transition:.4s;
-    transition:.4s;
-  }
-}
-
-.workHistory, .educationHistory {
-  width: 1000px;
-  margin-top: 10px;
-  padding: 5px;
-  border-color: $black;
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 5px;
-
-  &Header {
-    font-size: 28px;
-    font-weight: bold;
-    height: 60px;
-    width: 1000px;
-    margin-bottom: 10px;
-
-    .companyLogo {
-      height: 60px;
-      width: 60px;
-      border-radius: 5px;
-    }
-  }
-
-  &Summary {
-    font-size: 18px;
-    width: 1000px;
-  }
-
-  .left {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  .right {
-    display: inline-block;
-    vertical-align: middle;
-    float: right;
   }
 }
 
