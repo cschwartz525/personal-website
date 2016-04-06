@@ -19,6 +19,8 @@ a:hover {
   bottom: 0;
   font-family: sans-serif;
   display: block;
+  background-image: url("../assets/images/background.jpg");
+  background-size: 100% auto;
 }
 
 .noSelect {
@@ -79,7 +81,7 @@ a:hover {
   left: 0;
   right: 0;
   width: 100%;
-  background-color: #cccccc;
+  background-color: transparent;
   overflow-y: auto;
 }
 
@@ -108,9 +110,9 @@ a:hover {
   position: absolute;
   bottom: 0;
   background: #cccccc; /* Old browsers */
-  background: -moz-linear-gradient(top,  #cccccc 0%, #555555 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  #cccccc 0%, #555555 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  #cccccc 0%, #555555 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: -moz-linear-gradient(top, transparent 0%, #555555 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, transparent 0%, #555555 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, transparent 0%, #555555 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 #copyright {
