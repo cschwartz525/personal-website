@@ -1,9 +1,10 @@
 var browserify = require('browserify');
-var concat = require('gulp-concat');
 var config = require('./config');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
+var minify = require('gulp-minify-css');
 var react = require('gulp-react');
+var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var sequence = require('run-sequence');
 var source = require('vinyl-source-stream');
@@ -38,5 +39,7 @@ gulp.task('browserify', function(){
 gulp.task('sass', function() {
   gulp.src(config.sass.src)
       .pipe(sass())
+      .pipe(minify({keepBreaks: true}))
+      .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest(config.sass.dest));
 });
