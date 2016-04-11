@@ -3,6 +3,12 @@ function resume(req, res) {
   res.json(resume);
 }
 
+function social(req, res) {
+  var social = require('../db/social');
+  res.json(social);
+}
+
 module.exports = {
-  resume: resume
+  resume: resume,
+  social: social
 }
