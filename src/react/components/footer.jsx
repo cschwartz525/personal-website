@@ -32,32 +32,44 @@ var Footer = React.createClass({
         <div className="social-icons">
           <div className="icon icon--soundcloud">
             <a href="https://soundcloud.com/soundcastlemusic">
-              <span className="icon__name">Soundcloud</span>
+              <svg viewBox="0 0 512 512">
+                <path d={this.state.soundcloud}/>
+              </svg>
             </a>
           </div>
           <div className="icon icon--instagram">
             <a href="https://www.instagram.com/cschwartz525/">
-              <span className="icon__name">Instagram</span>
+              <svg viewBox="0 0 512 512">
+                <path d={this.state.instagram}/>
+              </svg>
             </a>
           </div>
           <div className="icon icon--facebook">
             <a href="https://www.facebook.com/cschwartz525">
-              <span className="icon__name">Facebook</span>
+              <svg viewBox="0 0 512 512">
+                <path d={this.state.facebook}/>
+              </svg>
             </a>
           </div>
           <div className="icon icon--google">
             <a href="https://plus.google.com/u/0/101927703181492899764/posts">
-              <span className="icon__name">Google+</span>
+              <svg viewBox="0 0 512 512">
+                <path d={this.state.google}/>
+              </svg>
             </a>
           </div>
           <div className="icon icon--github">
             <a href="https://github.com/cschwartz525">
-              <span className="icon__name">GitHub</span>
+              <svg viewBox="0 0 512 512">
+                <path d={this.state.github}/>
+              </svg>
             </a>
           </div>
           <div className="icon icon--linkedin">
             <a href="https://www.linkedin.com/in/cschwartz525">
-              <span className="icon__name">LinkedIn</span>
+              <svg viewBox="0 0 512 512">
+                <path d={this.state.linkedin}/>
+              </svg>
             </a>
           </div>
         </div>

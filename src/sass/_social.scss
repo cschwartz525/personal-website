@@ -14,93 +14,139 @@
     height: 60px;
     border: 0;
     border-radius: 10px;
-    background-color: #fff;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    -webkit-transition: all .2s ease-out;
-    transition: all .2s ease-out;
-
-    &:hover {
-      background-color: #222;
-      background-size: 0%;
-      -webkit-transition: all .2s ease-out;
-      transition: all .2s ease-out;
-    }
-  }
-
-  &__name {
-    float: right;
-    vertical-align: middle;
-    margin-top: 25px;
-    width: 100%;
-    color: #ffffff;
-    font-size: 11px;
-    text-align: center;
     -webkit-transition: all .3s ease-out;
     transition: all .3s ease-out;
-    opacity: 0;
-    -webkit-filter: blur(25px);
-            filter: blur(25px);
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-    will-change: transform;
 
     &:hover {
+      background-size: 0%;
       -webkit-transition: all .3s ease-out;
       transition: all .3s ease-out;
-      opacity: 1;
-      -webkit-filter: blur(0);
-              filter: blur(0);
     }
   }
 
   &--facebook {
     a {
       background-color: #3b5998;
-      background-image: url('/assets/images//facebook-128.png');
+      &:hover {
+        background-color: #ffffff;
+      }
+
+      svg {
+        height: 60px;
+        width: 60px;
+        fill: #ffffff;
+        &:hover {
+          fill: #3b5998;
+        }
+      }
     }
   }
 
   &--twitter {
     a {
       background-color: #00aced;
-      background-image: url('/assets/images//twitter-128.png');
+      &:hover {
+        background-color: #ffffff;
+      }
+
+      svg {
+        height: 60px;
+        width: 60px;
+        fill: #ffffff;
+        &:hover {
+          fill: #00aced;
+        }
+      }
     }
   }
 
   &--linkedin {
     a {
       background-color: #007fb1;
-      background-image: url('/assets/images//linkedin-128.png');
+      &:hover {
+        background-color: #ffffff;
+      }
+
+      svg {
+        height: 60px;
+        width: 60px;
+        fill: #ffffff;
+        &:hover {
+          fill: #007fb1;
+        }
+      }
     }
   }
 
   &--instagram {
     a {
       background-color: #5c3d2e;
-      background-image: url('/assets/images//instagram-128.png');
+      &:hover {
+        background-color: #ffffff;
+      }
+
+      svg {
+        height: 60px;
+        width: 60px;
+        fill: #ffffff;
+        &:hover {
+          fill: #5c3d2e;
+        }
+      }
     }
   }
 
   &--soundcloud {
     a {
-      background-color: #f60;
-      background-image: url('/assets/images//soundcloud-128.png');
+      background-color: #ff6600;
+      &:hover {
+        background-color: #ffffff;
+      }
+
+      svg {
+        height: 60px;
+        width: 60px;
+        fill: #ffffff;
+        &:hover {
+          fill: #ff6600;
+        }
+      }
     }
   }
 
   &--github {
     a {
       background-color: #4183c4;
-      background-image: url('/assets/images/github-128.png');
+      &:hover {
+        background-color: #ffffff;
+      }
+
+      svg {
+        height: 60px;
+        width: 60px;
+        fill: #ffffff;
+        &:hover {
+          fill: #4183c4;
+        }
+      }
     }
   }
 
   &--google {
     a {
       background-color: #dd4b39;
-      background-image: url('/assets/images/google-plus-128.png');
+      &:hover {
+        background-color: #ffffff;
+      }
+
+      svg {
+        height: 60px;
+        width: 60px;
+        fill: #ffffff;
+        &:hover {
+          fill: #dd4b39;
+        }
+      }
     }
   }
 }
