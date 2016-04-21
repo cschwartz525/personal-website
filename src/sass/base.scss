@@ -110,7 +110,19 @@ a {
 
       /* Home page */
       .carousel {
-        width: 600px;
+        width: 400px;
+
+        &-item {
+          height: 200px;
+          width: 200px;
+
+          img {
+            display: block;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
       }
 
       /* Contact page */
