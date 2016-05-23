@@ -10,7 +10,7 @@
     "CSS",
     "SASS",
     "React",
-    "WPF",
+    "AWS",
     "Unix",
     "Git",
     "SVN",
@@ -26,7 +26,15 @@
       "startDate": "2016",
       "endDate": "Present",
       "website": "https://www.trustpilot.com/",
-      "logo": "trustpilot.png"
+      "logo": "trustpilot.png",
+      "description": "Worked as a full-stack developer on the Commercial Growth team. Developed back-end functionality in Node.js, Express, and .NET. Created front-end features in React.js, Angular.js, Handlebars.js, and more.",
+      "projects": [
+        "Supported the business-facing website and created new features to help drive engagement and increase signups and conversions.",
+        "Created APIs using REST and SOAP in order to sync data between components in a microservice architecture.",
+        "Developed several Lambda functions in AWS to carry out lightweight, repeatable business functions.",
+        "Worked on the Trustpilot careers website, converting existing UI elements to reusable components in React.js.",
+        "Contributed to a fast-moving agile development team, deploying new functionality on a daily basis."
+      ]
     },
     {
       "companyName": "Citigroup",
@@ -36,7 +44,16 @@
       "startDate": "2013",
       "endDate": "2016",
       "website": "http://www.citigroup.com/citi/",
-      "logo": "citi.png"
+      "logo": "citi.png",
+      "description": "Worked as a full-stack developer in the Institutional Clients Group. Spent one year with the Finance Desk Technology team, performing development and support for a trade capture application called Finance Workstation. Spent a year with the Global Securitized Markets Technology team, supporting a position and risk management application called SPIRIT.",
+      "projects": [
+        "Served as a crucial member in the build-out of MIS, a bid and order tracking module for traders. Developed both front-end and server-side functionality for this module.",
+        "Supported the .NET-based Management Reporting module, which provides critical risk and reporting data to traders daily.",
+        "Developed robust stateful response messaging for the Margin Operations team using a REST web service and Tibco EMS",
+        "Refactored internal code structure for Java modules to allow for single-click deployment. Implemented a new build procedure using Maven.",
+        "Managed the reporting and recon build-out for Volcker regulations.",
+        "Supported a user base of over 100 traders and salespeople worldwide, spanning multiple desks and asset classes."
+      ]
     },
     {
       "companyName": "The Lloyd Group",
@@ -46,7 +63,8 @@
       "startDate": "2012",
       "endDate": "2012",
       "website": "http://www.lloydgroup.com/",
-      "logo": "lloyd.png"
+      "logo": "lloyd.png",
+      "description": "Assisted in a wide variety of information technology operations including remote server management, scripting, SharePoint development, MAC development, managed backup services, audits, and hardware builds."
     }
   ],
   "education": [
