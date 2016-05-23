@@ -37,6 +37,7 @@ var WorkHistory = React.createClass({
           </div>
           <div className="right">
             <p>
+              {this.props.description}
             </p>
           </div>
         </div>

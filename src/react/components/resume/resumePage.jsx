@@ -38,6 +38,7 @@ var ResumePage = React.createClass({
           key={index}
           companyName={job.companyName}
           department={job.department}
+          description={job.description}
           endDate={job.endDate}
           jobTitle={job.jobTitle}
           location={job.location}
