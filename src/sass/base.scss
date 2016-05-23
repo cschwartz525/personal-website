@@ -138,6 +138,7 @@ a {
         border-radius: 5px;
 
         &Header {
+          display: table;
           font-size: 28px;
           font-weight: bold;
           height: 60px;
@@ -152,17 +153,23 @@ a {
         }
 
         &Summary {
+          display: table;
           font-size: 18px;
+          padding-top: 5px;
           width: 1000px;
+
+          .right {
+            width: 700px;
+          }
         }
 
         .left {
-          display: inline-block;
+          display: table-cell;
           vertical-align: middle;
         }
 
         .right {
-          display: inline-block;
+          display: table-cell;
           vertical-align: middle;
           float: right;
         }
