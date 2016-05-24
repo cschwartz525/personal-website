@@ -2,6 +2,15 @@ var React = require('react');
 
 var WorkHistory = React.createClass({
   render: function() {
+    var projects = [];
+    if (this.props.projects) {
+      projects = this.props.projects.map(function(project, index) {
+        return (
+          <li key={index}>{project}</li>
+        );
+      });
+    }
+
     return (
       <div className="workHistory">
         <div className="workHistoryHeader">
@@ -39,6 +48,7 @@ var WorkHistory = React.createClass({
             <p>
               {this.props.description}
             </p>
+            <ul>{projects}</ul>
           </div>
         </div>
       </div>

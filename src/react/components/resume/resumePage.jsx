@@ -43,6 +43,7 @@ var ResumePage = React.createClass({
           jobTitle={job.jobTitle}
           location={job.location}
           logo={job.logo}
+          projects={job.projects}
           startDate={job.startDate}
           website={job.website}
         />
