@@ -18,22 +18,22 @@ var HomePage = React.createClass({
           <div className="carousel">
             <Slider {...settings}>
               <div className="carousel-item">
-                <img src="../assets/images/trustpilot.png" />
+                <img src="../assets/images/carousel/1.jpg" />
               </div>
               <div className="carousel-item">
-                <img src="../assets/images/trustpilot.png" />
+                <img src="../assets/images/carousel/2.jpg" />
               </div>
               <div className="carousel-item">
-                <img src="../assets/images/trustpilot.png" />
+                <img src="../assets/images/carousel/3.jpg" />
               </div>
               <div className="carousel-item">
-                <img src="../assets/images/trustpilot.png" />
+                <img src="../assets/images/carousel/1.jpg" />
               </div>
               <div className="carousel-item">
-                <img src="../assets/images/trustpilot.png" />
+                <img src="../assets/images/carousel/2.jpg" />
               </div>
               <div className="carousel-item">
-                <img src="../assets/images/trustpilot.png" />
+                <img src="../assets/images/carousel/3.jpg" />
               </div>
             </Slider>
           </div>
