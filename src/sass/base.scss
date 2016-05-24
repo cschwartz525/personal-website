@@ -155,23 +155,29 @@ a {
         &Summary {
           display: table;
           font-size: 18px;
-          padding-top: 5px;
           width: 1000px;
 
           .right {
             width: 700px;
           }
+
+          li {
+            font-size: 16px;
+            list-style: circle inside;
+            padding-top: 5px;
+          }
         }
 
         .left {
           display: table-cell;
-          vertical-align: middle;
+          vertical-align: top;
         }
 
         .right {
           display: table-cell;
-          vertical-align: middle;
           float: right;
+          padding: 0 10px 10px 0;
+          vertical-align: top;
         }
       }
     }
