@@ -4,6 +4,8 @@ var Slider = require('react-slick');
 var HomePage = React.createClass({
   render: function() {
     var settings = {
+      autoplay: true,
+      autoplaySpeed: 4000,
       dots: true,
       infinite: true,
       speed: 500,
