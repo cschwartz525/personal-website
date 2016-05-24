@@ -156,6 +156,7 @@ a {
         border-radius: 5px;
 
         &Header {
+          display: table;
           font-size: 28px;
           font-weight: bold;
           height: 60px;
@@ -170,19 +171,31 @@ a {
         }
 
         &Summary {
+          display: table;
           font-size: 18px;
           width: 1000px;
+
+          .right {
+            width: 700px;
+          }
+
+          li {
+            font-size: 16px;
+            list-style: circle inside;
+            padding-top: 5px;
+          }
         }
 
         .left {
-          display: inline-block;
-          vertical-align: middle;
+          display: table-cell;
+          vertical-align: top;
         }
 
         .right {
-          display: inline-block;
-          vertical-align: middle;
+          display: table-cell;
           float: right;
+          padding: 0 10px 10px 0;
+          vertical-align: top;
         }
       }
     }
