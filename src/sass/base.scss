@@ -1,5 +1,6 @@
-@import 'social';
 @import 'colors';
+@import 'slick';
+@import 'social';
 
 /* Universal elements */
 a {
@@ -106,6 +107,23 @@ a {
     .pageContent {
       margin-top: 10px;
       margin-left: 20px;
+
+      /* Home page */
+      .carousel {
+        width: 400px;
+
+        &-item {
+          height: 200px;
+          width: 200px;
+
+          img {
+            display: block;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
 
       /* Contact page */
       .contactItem {
