@@ -38,10 +38,12 @@ var ResumePage = React.createClass({
           key={index}
           companyName={job.companyName}
           department={job.department}
+          description={job.description}
           endDate={job.endDate}
           jobTitle={job.jobTitle}
           location={job.location}
           logo={job.logo}
+          projects={job.projects}
           startDate={job.startDate}
           website={job.website}
         />
@@ -67,17 +69,17 @@ var ResumePage = React.createClass({
         <h1 className="pageTitle">Resume</h1>
 
         <h2 className="pageSubtitle">Skills</h2>
-        <div id="skills">
+        <div className="pageContent" id="skills">
           {skills}
         </div>
 
         <h2 className="pageSubtitle">Work Experience</h2>
-        <div id="previousJobs">
+        <div className="pageContent">
           {jobs}
         </div>
 
         <h2 className="pageSubtitle">Education</h2>
-        <div id="education">
+        <div className="pageContent">
           {education}
         </div>
       </div>
