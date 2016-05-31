@@ -10,10 +10,26 @@ var NavBar = React.createClass({
     return (
       <div id="navBar">
         <img id="navBarLogo" src="assets/images/logo.png" />
-        <NavItem content="Home" selectedNavItem={this.props.selectedItem} onNavItemSelected={this.props.onNavChanged} />
-        <NavItem content="About" selectedNavItem={this.props.selectedItem} onNavItemSelected={this.props.onNavChanged} />
-        <NavItem content="Resume" selectedNavItem={this.props.selectedItem} onNavItemSelected={this.props.onNavChanged} />
-        <NavItem content="Contact" selectedNavItem={this.props.selectedItem} onNavItemSelected={this.props.onNavChanged} />
+        <NavItem
+          content="Home"
+          onNavItemSelected={this.props.onNavChanged}
+          selectedNavItem={this.props.selectedItem}
+        />
+        <NavItem
+          content="About"
+          onNavItemSelected={this.props.onNavChanged}
+          selectedNavItem={this.props.selectedItem}
+        />
+        <NavItem
+          content="Resume"
+          onNavItemSelected={this.props.onNavChanged}
+          selectedNavItem={this.props.selectedItem}
+        />
+        <NavItem
+          content="Contact"
+          onNavItemSelected={this.props.onNavChanged}
+          selectedNavItem={this.props.selectedItem}
+        />
       </div>
     );
   }
