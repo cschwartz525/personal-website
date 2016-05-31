@@ -105,8 +105,10 @@ a {
     }
 
     .pageContent {
+      display: block;
       margin-top: 10px;
-      margin-left: 20px;
+      margin-left: auto;
+      margin-right: auto;
 
       /* Home page */
       .carousel {
@@ -149,6 +151,8 @@ a {
       .workHistory, .educationHistory {
         width: 1000px;
         margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
         padding: 5px;
         border-color: $black;
         border-style: solid;
