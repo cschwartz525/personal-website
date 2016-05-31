@@ -7,7 +7,7 @@ var Footer = require('./components/footer');
 var Site = React.createClass({
   getInitialState: function() {
     return {
-      selectedPanel: 'Home'
+      selectedPanel: 'About'
     };
   },
   onNavChanged: function(value) {
