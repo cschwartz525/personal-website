@@ -1,6 +1,20 @@
 var React = require('react');
 
 var WorkHistory = React.createClass({
+  propTypes: {
+    data: React.PropTypes.shape({
+      companyName: React.PropTypes.string,
+      department: React.PropTypes.string,
+      description: React.PropTypes.string,
+      endDate: React.PropTypes.string,
+      jobTitle: React.PropTypes.string,
+      location: React.PropTypes.string,
+      logo: React.PropTypes.string,
+      projects: React.PropTypes.arrayOf(React.PropTypes.string),
+      startDate: React.PropTypes.string,
+      website: React.PropTypes.string
+    })
+  },
   render: function() {
     var projects = [];
     if (this.props.data.projects) {

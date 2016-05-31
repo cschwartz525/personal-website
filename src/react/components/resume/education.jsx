@@ -1,6 +1,16 @@
 var React = require('react');
 
 var Education = React.createClass({
+  propTypes: {
+    data: React.PropTypes.shape({
+      degree: React.PropTypes.string,
+      logo: React.PropTypes.string,
+      major: React.PropTypes.string,
+      name: React.PropTypes.string,
+      website: React.PropTypes.string,
+      year: React.PropTypes.string
+    })
+  },
   render: function() {
     return (
       <div className="educationHistory">
