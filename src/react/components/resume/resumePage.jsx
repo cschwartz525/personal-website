@@ -11,7 +11,6 @@ var ResumePage = React.createClass({
       education: []
     };
   },
-
   componentDidMount: function() {
     $.getJSON('/api/resume')
       .done(function(response) {
@@ -21,7 +20,6 @@ var ResumePage = React.createClass({
         console.log('Error loading resume data');
       });
   },
-
   render: function() {
     var skills = this.state.skills.map(function(skill, index) {
       return (

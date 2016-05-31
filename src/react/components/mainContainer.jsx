@@ -17,7 +17,6 @@ var MainContainer = React.createClass({
       default:      return <HomePage />;
     }
   },
-
   render: function() {
     return (
       <div id="mainContainer">

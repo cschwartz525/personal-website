@@ -10,7 +10,6 @@ var NavItem = React.createClass({
     e.preventDefault();
     this.props.onNavItemSelected(this.props.content);
   },
-
   render: function() {
     var status = 'inactive';
     if (this.props.content === this.props.selectedNavItem) {

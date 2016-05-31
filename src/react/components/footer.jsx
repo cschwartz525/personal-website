@@ -12,7 +12,6 @@ var Footer = React.createClass({
       twitter: ''
     };
   },
-
   componentDidMount: function() {
     $.getJSON('/api/social')
       .done(function(response) {
@@ -22,7 +21,6 @@ var Footer = React.createClass({
         console.log('Error loading social icons');
       });
   },
-
   render: function() {
     return (
       <div id="footer">
