@@ -2,6 +2,10 @@ var React = require('react');
 var NavItem = require('./navItem');
 
 var NavBar = React.createClass({
+  propTypes: {
+    onNavChanged: React.PropTypes.func.isRequired,
+    selectedItem: React.PropTypes.string.isRequired
+  },
   render: function() {
     return (
       <div id="navBar">

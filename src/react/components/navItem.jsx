@@ -1,6 +1,11 @@
 var React = require('react');
 
 var NavItem = React.createClass({
+  propTypes: {
+    content: React.PropTypes.string.isRequired,
+    onNavItemSelected: React.PropTypes.func.isRequired,
+    selectedNavItem: React.PropTypes.string.isRequired
+  },
   hanldeClick: function(e) {
     e.preventDefault();
     this.props.onNavItemSelected(this.props.content);

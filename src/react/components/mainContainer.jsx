@@ -5,6 +5,9 @@ var HomePage = require('./home/homePage');
 var ResumePage = require('./resume/resumePage');
 
 var MainContainer = React.createClass({
+  propTypes: {
+    selectedPanel: React.PropTypes.string.isRequired
+  },
   currentTab: function (tab) {
     switch (tab) {
       case "Home":   return <HomePage />;
