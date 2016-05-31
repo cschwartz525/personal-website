@@ -91,26 +91,30 @@ a {
     overflow-y: auto;
 
     .pageTitle {
-      text-align: left;
+      text-align: center;
       padding-top: 20px;
       padding-left: 20px;
       font-size: 50px;
     }
 
     .pageSubtitle {
-      text-align: left;
+      text-align: center;
       padding-top: 20px;
       padding-left: 20px;
       font-size: 32px;
     }
 
     .pageContent {
+      display: block;
       margin-top: 10px;
-      margin-left: 20px;
+      margin-left: auto;
+      margin-right: auto;
 
       /* Home page */
       .carousel {
         width: 400px;
+        margin-left: auto;
+        margin-right: auto;
 
         &-item {
           height: 200px;
@@ -126,6 +130,10 @@ a {
       }
 
       /* Contact page */
+      #contactList, #emailForm {
+        text-align: center;
+      }
+
       .contactItem {
         padding: 5px 0;
         font-size: 20px;
@@ -149,6 +157,8 @@ a {
       .workHistory, .educationHistory {
         width: 1000px;
         margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
         padding: 5px;
         border-color: $black;
         border-style: solid;
@@ -201,14 +211,16 @@ a {
     }
 
     #skills {
-      width: 1000px;
+      width: 960px;
       height: 240px;
+      margin-left: auto;
+      margin-right: auto;
 
       .skill {
         width: 200px;
         float: left;
         font-size: 20px;
-        margin: 10px 20px 10px 0;
+        margin: 10px;
         padding: 10px;
         text-align: center;
         background-color: $skill-inactive-bg;
