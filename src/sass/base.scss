@@ -113,6 +113,8 @@ a {
       /* Home page */
       .carousel {
         width: 400px;
+        margin-left: auto;
+        margin-right: auto;
 
         &-item {
           height: 200px;
