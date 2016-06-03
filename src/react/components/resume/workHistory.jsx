@@ -1,10 +1,24 @@
 var React = require('react');
 
 var WorkHistory = React.createClass({
+  propTypes: {
+    data: React.PropTypes.shape({
+      companyName: React.PropTypes.string,
+      department: React.PropTypes.string,
+      description: React.PropTypes.string,
+      endDate: React.PropTypes.string,
+      jobTitle: React.PropTypes.string,
+      location: React.PropTypes.string,
+      logo: React.PropTypes.string,
+      projects: React.PropTypes.arrayOf(React.PropTypes.string),
+      startDate: React.PropTypes.string,
+      website: React.PropTypes.string
+    })
+  },
   render: function() {
     var projects = [];
-    if (this.props.projects) {
-      projects = this.props.projects.map(function(project, index) {
+    if (this.props.data.projects) {
+      projects = this.props.data.projects.map(function(project, index) {
         return (
           <li key={index}>{project}</li>
         );
@@ -16,37 +30,37 @@ var WorkHistory = React.createClass({
         <div className="workHistoryHeader">
           <div className="left">
             <div>
-                {this.props.companyName}
+                {this.props.data.companyName}
             </div>
             <div>
-              {this.props.jobTitle}
+              {this.props.data.jobTitle}
             </div>
           </div>
           <div className="right">
-            <img className="companyLogo" src={"../assets/images/" + this.props.logo}></img>
+            <img className="companyLogo" src={"../assets/images/" + this.props.data.logo}></img>
           </div>
         </div>
 
         <div className="workHistorySummary">
           <div className="left">
             <div>
-              {this.props.department}
+              {this.props.data.department}
             </div>
             <div>
-              {this.props.location}
+              {this.props.data.location}
             </div>
             <div>
-              {this.props.startDate} - {this.props.endDate}
+              {this.props.data.startDate} - {this.props.data.endDate}
             </div>
             <div>
-              <a href={this.props.website}>
-                {this.props.website}
+              <a href={this.props.data.website}>
+                {this.props.data.website}
               </a>
             </div>
           </div>
           <div className="right">
             <p>
-              {this.props.description}
+              {this.props.data.description}
             </p>
             <ul>{projects}</ul>
           </div>

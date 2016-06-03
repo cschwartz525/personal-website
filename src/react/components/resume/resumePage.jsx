@@ -11,7 +11,6 @@ var ResumePage = React.createClass({
       education: []
     };
   },
-
   componentDidMount: function() {
     $.getJSON('/api/resume')
       .done(function(response) {
@@ -21,7 +20,6 @@ var ResumePage = React.createClass({
         console.log('Error loading resume data');
       });
   },
-
   render: function() {
     var skills = this.state.skills.map(function(skill, index) {
       return (
@@ -36,16 +34,7 @@ var ResumePage = React.createClass({
       return (
         <WorkHistory
           key={index}
-          companyName={job.companyName}
-          department={job.department}
-          description={job.description}
-          endDate={job.endDate}
-          jobTitle={job.jobTitle}
-          location={job.location}
-          logo={job.logo}
-          projects={job.projects}
-          startDate={job.startDate}
-          website={job.website}
+          data={job}
         />
       );
     });
@@ -54,12 +43,7 @@ var ResumePage = React.createClass({
       return (
         <Education
           key={index}
-          degree={school.degree}
-          logo={school.logo}
-          major={school.major}
-          name={school.name}
-          website={school.website}
-          year={school.year}
+          data={school}
         />
       );
     });
@@ -69,8 +53,10 @@ var ResumePage = React.createClass({
         <h1 className="pageTitle">Resume</h1>
 
         <h2 className="pageSubtitle">Skills</h2>
-        <div className="pageContent" id="skills">
-          {skills}
+        <div className="pageContent">
+          <div id="skills">
+            {skills}
+          </div>
         </div>
 
         <h2 className="pageSubtitle">Work Experience</h2>
