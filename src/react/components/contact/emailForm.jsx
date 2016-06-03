@@ -6,7 +6,7 @@ var EmailForm = React.createClass({
       <div id="emailForm">
         <form
             action="/api/sendEmail"
-            enctype="text/plain"
+            encType="application/json"
             method="post"
         >
           <input
