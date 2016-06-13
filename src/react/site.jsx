@@ -5,6 +5,7 @@ var MainContainer = require('./components/mainContainer');
 var Footer = require('./components/footer');
 
 var Site = React.createClass({
+  displayName: 'Site',
   getInitialState: function() {
     return {
       selectedPanel: 'About'

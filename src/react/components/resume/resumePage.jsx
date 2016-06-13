@@ -4,6 +4,7 @@ var Skill = require('./skill');
 var WorkHistory = require('./workHistory');
 
 var ResumePage = React.createClass({
+  displayName: 'ResumePage',
   getInitialState: function() {
     return {
       skills: [],

@@ -1,6 +1,7 @@
 var React = require('react');
 
 var EmailForm = React.createClass({
+  displayName: 'EmailForm',
   render: function() {
     return (
       <div id="emailForm">

@@ -1,6 +1,7 @@
 var React = require('react');
 
 var NavItem = React.createClass({
+  displayName: 'NavItem',
   propTypes: {
     content: React.PropTypes.string.isRequired,
     onNavItemSelected: React.PropTypes.func.isRequired,

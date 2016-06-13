@@ -1,6 +1,7 @@
 var React = require('react');
 
 var Footer = React.createClass({
+  displayName: 'Footer',
   getInitialState: function() {
     return {
       facebook: '',

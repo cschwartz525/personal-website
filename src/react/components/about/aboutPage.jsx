@@ -2,6 +2,7 @@ var React = require('react');
 var Slider = require('react-slick');
 
 var AboutPage = React.createClass({
+  displayName: 'AboutPage',
   render: function() {
     var settings = {
       autoplay: true,

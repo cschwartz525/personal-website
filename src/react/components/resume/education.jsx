@@ -1,6 +1,7 @@
 var React = require('react');
 
 var Education = React.createClass({
+  displayName: 'Education',
   propTypes: {
     data: React.PropTypes.shape({
       degree: React.PropTypes.string,
