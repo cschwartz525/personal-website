@@ -6,7 +6,7 @@ var AboutPage = React.createClass({
   getInitialState: function() {
     return {
       heading: '',
-      summary: ''
+      summary: []
     };
   },
   componentDidMount: function() {
@@ -28,12 +28,19 @@ var AboutPage = React.createClass({
       slidesToShow: 1,
       slidesToScroll: 1
     };
+    var summary = this.state.summary.map(function(line, index) {
+      return (
+        <p key={index} className="selfSummary">
+          {line}
+        </p>
+      );
+    });
     return (
       <div id="mainContent">
         <h1 className="pageTitle">{this.state.heading}</h1>
 
         <div className="pageContent">
-          <p className="selfSummary">{this.state.summary}</p>
+          {summary}
           <div className="carousel">
             <Slider {...settings}>
               <div className="carousel-item">
