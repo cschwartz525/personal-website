@@ -1,6 +1,6 @@
 var config = {
   port: process.env.PORT || 8000,
-  public_dir: './public',
+  public_dir: 'public',
   email_address: 'craigschwartz525@gmail.com',
   smtpConfig: {
     host: 'smtp.gmail.com',
