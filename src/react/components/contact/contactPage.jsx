@@ -2,6 +2,7 @@ var React = require('react');
 var EmailForm = require('./emailForm');
 
 var ContactPage = React.createClass({
+  displayName: 'ContactPage',
   render: function() {
     return (
       <div id="mainContent">

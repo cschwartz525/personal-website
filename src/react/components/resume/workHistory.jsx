@@ -1,6 +1,7 @@
 var React = require('react');
 
 var WorkHistory = React.createClass({
+  displayName: 'WorkHistory',
   propTypes: {
     data: React.PropTypes.shape({
       companyName: React.PropTypes.string,
