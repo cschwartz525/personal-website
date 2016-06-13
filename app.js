@@ -1,11 +1,14 @@
 var config = require('./config');
 var bodyParser = require('body-parser');
 var express = require('express');
+var path = require('path');
 var app = express();
 
 var apiController = require('./controllers/api');
 
-app.use(express.static(config.public_dir));
+process.env.PWD = process.cwd();
+
+app.use(express.static(path.join(process.env.PWD, config.public_dir)));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
