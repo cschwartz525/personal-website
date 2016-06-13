@@ -110,7 +110,7 @@ a {
       margin-left: auto;
       margin-right: auto;
 
-      /* Home page */
+      /* About page */
       .carousel {
         width: 400px;
         margin-left: auto;
@@ -127,6 +127,12 @@ a {
             margin-right: auto;
           }
         }
+      }
+
+      .selfSummary {
+        margin: 20px;
+        font-size: 20px;
+        text-align: center;
       }
 
       /* Contact page */
