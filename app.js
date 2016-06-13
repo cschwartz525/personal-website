@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
+app.get('/api/about', apiController.about);
 app.get('/api/resume', apiController.resume);
 app.get('/api/social', apiController.social);
 app.post('/api/sendEmail', apiController.sendEmail);
