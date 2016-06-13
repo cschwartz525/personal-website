@@ -1,6 +1,11 @@
 var nodemailer = require('nodemailer');
 var config = require('../config');
 
+function about(req, res) {
+  var about = require('../db/about');
+  res.json(about);
+}
+
 function resume(req, res) {
   var resume = require('../db/resume');
   res.json(resume);
@@ -32,6 +37,7 @@ function social(req, res) {
 }
 
 module.exports = {
+  about: about,
   resume: resume,
   sendEmail: sendEmail,
   social: social

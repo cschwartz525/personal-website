@@ -3,6 +3,21 @@ var Slider = require('react-slick');
 
 var AboutPage = React.createClass({
   displayName: 'AboutPage',
+  getInitialState: function() {
+    return {
+      heading: '',
+      summary: []
+    };
+  },
+  componentDidMount: function() {
+    $.getJSON('/api/about')
+      .done(function(response) {
+        this.setState(response);
+      }.bind(this))
+      .fail(function(err) {
+        console.log('Error loading summary');
+      });
+  },
   render: function() {
     var settings = {
       autoplay: true,
@@ -13,11 +28,19 @@ var AboutPage = React.createClass({
       slidesToShow: 1,
       slidesToScroll: 1
     };
+    var summary = this.state.summary.map(function(line, index) {
+      return (
+        <p key={index} className="selfSummary">
+          {line}
+        </p>
+      );
+    });
     return (
       <div id="mainContent">
-        <h1 className="pageTitle">Hi, I'm Craig</h1>
+        <h1 className="pageTitle">{this.state.heading}</h1>
 
         <div className="pageContent">
+          {summary}
           <div className="carousel">
             <Slider {...settings}>
               <div className="carousel-item">

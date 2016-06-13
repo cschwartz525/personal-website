@@ -110,7 +110,7 @@ a {
       margin-left: auto;
       margin-right: auto;
 
-      /* Home page */
+      /* About page */
       .carousel {
         width: 400px;
         margin-left: auto;
@@ -126,6 +126,16 @@ a {
             margin-left: auto;
             margin-right: auto;
           }
+        }
+      }
+
+      .selfSummary {
+        margin: 20px;
+        font-size: 20px;
+        text-align: center;
+
+        &:hover {
+          text-shadow: 1px 1px 1px $summary-hover
         }
       }
 
