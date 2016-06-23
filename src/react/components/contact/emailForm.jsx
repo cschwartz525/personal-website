@@ -3,6 +3,7 @@ var React = require('react');
 var EmailForm = React.createClass({
   displayName: 'EmailForm',
   render: function() {
+    var emailRegex = "^[a-zA-Z0-9-_.]+@[a-zA-Z0-9-_.]+\.(com|org|net|edu|info|int|gov|mil|[a-z]{2}|co.[a-z]{2})$";
     return (
       <div id="emailForm">
         <form
@@ -13,6 +14,7 @@ var EmailForm = React.createClass({
           <input
               className="formText"
               name="sender"
+              pattern={emailRegex}
               placeholder="Your email"
               size="50"
               type="text"
