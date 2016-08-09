@@ -8,18 +8,10 @@ var MainContainer = React.createClass({
   propTypes: {
     selectedPanel: React.PropTypes.string.isRequired
   },
-  currentTab: function (tab) {
-    switch (tab) {
-      case "About": return <AboutPage />;
-      case "Resume":  return <ResumePage />;
-      case "Contact":  return <ContactPage />;
-      default:      return <AboutPage />;
-    }
-  },
   render: function() {
     return (
       <div id="mainContainer">
-      {this.currentTab(this.props.selectedPanel)}
+      {this.props.selectedPanel}
       </div>
     );
   }

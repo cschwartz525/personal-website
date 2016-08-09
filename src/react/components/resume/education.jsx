@@ -34,7 +34,7 @@ var Education = React.createClass({
               {this.props.data.major}
             </div>
             <div>
-              <a href={this.props.data.website}>
+              <a className="textLink" href={this.props.data.website}>
                 {this.props.data.website}
               </a>
             </div>

@@ -54,7 +54,7 @@ var WorkHistory = React.createClass({
               {this.props.data.startDate} - {this.props.data.endDate}
             </div>
             <div>
-              <a href={this.props.data.website}>
+              <a className="textLink" href={this.props.data.website}>
                 {this.props.data.website}
               </a>
             </div>
