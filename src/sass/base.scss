@@ -3,7 +3,7 @@
 @import 'social';
 
 /* Universal elements */
-a {
+.textLink {
   color: $link-color;
   text-decoration: none;
   &:hover {
@@ -62,6 +62,7 @@ a {
       border-style: solid;
       border-radius: 5px;
       cursor: pointer;
+      color: $black;
 
       &.inactive {
         background: $navitem-inactive-1; /* Old browsers */
