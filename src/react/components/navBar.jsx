@@ -4,27 +4,27 @@ var NavItem = require('./navItem');
 var NavBar = React.createClass({
   displayName: 'NavBar',
   propTypes: {
-    onNavChanged: React.PropTypes.func.isRequired,
     selectedItem: React.PropTypes.string.isRequired
   },
   render: function() {
+    var selectedNavItem = this.props.selectedItem.substring(1);
     return (
       <div id="navBar">
         <img id="navBarLogo" src="assets/images/logo.png" />
         <NavItem
           content="About"
-          onNavItemSelected={this.props.onNavChanged}
-          selectedNavItem={this.props.selectedItem}
+          link="about"
+          selectedNavItem={selectedNavItem}
         />
         <NavItem
           content="Resume"
-          onNavItemSelected={this.props.onNavChanged}
-          selectedNavItem={this.props.selectedItem}
+          link="resume"
+          selectedNavItem={selectedNavItem}
         />
         <NavItem
           content="Contact"
-          onNavItemSelected={this.props.onNavChanged}
-          selectedNavItem={this.props.selectedItem}
+          link="contact"
+          selectedNavItem={selectedNavItem}
         />
       </div>
     );
