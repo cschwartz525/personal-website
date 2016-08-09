@@ -12,8 +12,6 @@ var ResumePage = require('./components/resume/resumePage');
 var Site = React.createClass({
   displayName: 'Site',
   render: function() {
-    console.log(this.props.location);
-    console.log(this.props.route);
     return (
       <div className="site">
         <NavBar selectedItem={this.props.location.pathname} />
@@ -25,12 +23,12 @@ var Site = React.createClass({
 });
 
 ReactDOM.render(
-  <ReactRouter.Router>
+  <ReactRouter.Router history={ReactRouter.browserHistory}>
     <ReactRouter.Route path='/' component={Site}>
-      <ReactRouter.IndexRoute name='about' component={AboutPage} />
-      <ReactRouter.Route name='about' path='about' component={AboutPage} />
-      <ReactRouter.Route name='contact' path='contact' component={ContactPage} />
-      <ReactRouter.Route name='resume' path='resume' component={ResumePage} />
+      <ReactRouter.IndexRoute component={AboutPage} />
+      <ReactRouter.Route path='/about' component={AboutPage} />
+      <ReactRouter.Route path='/contact' component={ContactPage} />
+      <ReactRouter.Route path='/resume' component={ResumePage} />
     </ReactRouter.Route>
   </ReactRouter.Router>,
 document.getElementById('main'));

@@ -7,24 +7,23 @@ var NavBar = React.createClass({
     selectedItem: React.PropTypes.string.isRequired
   },
   render: function() {
-    var selectedNavItem = this.props.selectedItem.substring(1);
     return (
       <div id="navBar">
         <img id="navBarLogo" src="assets/images/logo.png" />
         <NavItem
           content="About"
           link="about"
-          selectedNavItem={selectedNavItem}
+          selectedNavItem={this.props.selectedItem}
         />
         <NavItem
           content="Resume"
           link="resume"
-          selectedNavItem={selectedNavItem}
+          selectedNavItem={this.props.selectedItem}
         />
         <NavItem
           content="Contact"
           link="contact"
-          selectedNavItem={selectedNavItem}
+          selectedNavItem={this.props.selectedItem}
         />
       </div>
     );
