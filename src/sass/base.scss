@@ -34,7 +34,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  font-family: "Gill Sans";
+  font-family: "Gill Sans", Helvetica, Arial;
   display: block;
   background-image: url("../assets/images/background.jpg");
   background-size: 100% auto;
@@ -157,6 +157,7 @@
       .formText {
         background-color: $white;
         border: $black solid 1px;
+        font-family: "Gill Sans", Helvetica, Arial;
         font-size: 16px;
         margin: 5px 0;
         outline: $black solid 1px;
