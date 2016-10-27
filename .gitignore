@@ -10,3 +10,6 @@ lib
 lib/**/*
 public/assets/js/build.min.js
 public/style/base.min.css
+
+# Mac #
+.DS_STORE
