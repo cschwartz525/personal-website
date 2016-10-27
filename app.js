@@ -9,9 +9,6 @@ var apiController = require('./controllers/api');
 process.env.PWD = process.cwd();
 
 app.use(express.static(path.join(process.env.PWD, config.public_dir)));
-app.use('/about', express.static(path.join(process.env.PWD, config.public_dir)));
-app.use('/contact', express.static(path.join(process.env.PWD, config.public_dir)));
-app.use('/resume', express.static(path.join(process.env.PWD, config.public_dir)));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({

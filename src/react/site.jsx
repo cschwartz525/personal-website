@@ -22,8 +22,12 @@ var Site = React.createClass({
   }
 });
 
+var useRouterHistory = ReactRouter.useRouterHistory;
+var createHistory = require('history').createHashHistory;
+var appHistory = useRouterHistory(createHistory)({ queryKey: false });
+
 ReactDOM.render(
-  <ReactRouter.Router history={ReactRouter.browserHistory}>
+  <ReactRouter.Router history={appHistory}>
     <ReactRouter.Route path='/' component={Site}>
       <ReactRouter.IndexRoute component={AboutPage} />
       <ReactRouter.Route path='/about' component={AboutPage} />
