@@ -10,7 +10,7 @@ var NavItem = React.createClass({
   },
   render: function() {
     var status = 'inactive';
-    if (this.props.link === this.props.selectedNavItem) {
+    if ('/' + this.props.link === this.props.selectedNavItem) {
       status = 'active';
     }
 
