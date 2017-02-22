@@ -50,23 +50,23 @@ var ResumePage = React.createClass({
     });
 
     return (
-      <div id="mainContent">
-        <h1 className="pageTitle">Resume</h1>
+      <div id="main-content">
+        <h1 className="page-title">Resume</h1>
 
-        <h2 className="pageSubtitle">Skills</h2>
-        <div className="pageContent">
+        <h2 className="page-subtitle">Skills</h2>
+        <div className="page-content">
           <div id="skills">
             {skills}
           </div>
         </div>
 
-        <h2 className="pageSubtitle">Work Experience</h2>
-        <div className="pageContent">
+        <h2 className="page-subtitle">Work Experience</h2>
+        <div className="page-content">
           {jobs}
         </div>
 
-        <h2 className="pageSubtitle">Education</h2>
-        <div className="pageContent">
+        <h2 className="page-subtitle">Education</h2>
+        <div className="page-content">
           {education}
         </div>
       </div>

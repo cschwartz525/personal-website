@@ -14,7 +14,7 @@ var NavItem = React.createClass({
       status = 'active';
     }
 
-    var cssClass = 'navItem noSelect hvr-bounce-in ' + status;
+    var cssClass = 'nav-item no-select hvr-bounce-in ' + status;
 
     return (
       <Link to={this.props.link}>

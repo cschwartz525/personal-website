@@ -3,7 +3,7 @@
 @import 'social';
 
 /* Universal elements */
-.textLink {
+.text-link {
   color: $link-color;
   text-decoration: none;
   &:hover {
@@ -16,7 +16,7 @@
   }
 }
 
-.noSelect {
+.no-select {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none;   /* Chrome/Safari/Opera */
   -khtml-user-select: none;    /* Konqueror */
@@ -39,11 +39,11 @@
   background-image: url("../assets/images/background.jpg");
   background-size: 100% auto;
 
-  #navBar {
+  #navbar {
     height: 80px;
     background-color: $white;
 
-    #navBarLogo {
+    #navbar-logo {
       display: inline-block;
       height: 40px;
       width: 50px;
@@ -52,7 +52,7 @@
       vertical-align: middle;
     }
 
-    .navItem {
+    .nav-item {
       display: inline-block;
       margin: 10px;
       padding: 10px;
@@ -81,7 +81,7 @@
     }
   }
 
-  #mainContainer {
+  #main-container {
     position: absolute;
     top: 80px;
     bottom: 80px;
@@ -91,21 +91,21 @@
     background-color: transparent;
     overflow-y: auto;
 
-    .pageTitle {
+    .page-title {
       text-align: center;
       padding-top: 20px;
       padding-left: 20px;
       font-size: 50px;
     }
 
-    .pageSubtitle {
+    .page-subtitle {
       text-align: center;
       padding-top: 20px;
       padding-left: 20px;
       font-size: 32px;
     }
 
-    .pageContent {
+    .page-content {
       display: block;
       margin-top: 10px;
       margin-left: auto;
@@ -130,7 +130,7 @@
         }
       }
 
-      .selfSummary {
+      .self-summary {
         margin: 20px;
         font-size: 20px;
         text-align: center;
@@ -141,16 +141,16 @@
       }
 
       /* Contact page */
-      #contactList, #emailForm {
+      #contact-list, #email-form {
         text-align: center;
       }
 
-      .contactItem {
+      .contact-item {
         padding: 5px 0;
         font-size: 20px;
       }
 
-      .formButton {
+      .form-button {
         background: $navitem-inactive-1; /* Old browsers */
         background: -moz-linear-gradient(top, $navitem-inactive-1 0%, $navitem-inactive-2 100%); /* FF3.6-15 */
         background: -webkit-linear-gradient(top, $navitem-inactive-1 0%, $navitem-inactive-2 100%); /* Chrome10-25,Safari5.1-6 */
@@ -174,7 +174,7 @@
         }
       }
 
-      .formText {
+      .form-text-field {
         background-color: $white;
         border: $black solid 1px;
         font-family: inherit;
@@ -197,7 +197,7 @@
       }
 
       /* Resume page */
-      .workHistory, .educationHistory {
+      .work-history, .education-history {
         width: 1000px;
         margin-top: 10px;
         margin-left: auto;
@@ -208,21 +208,21 @@
         border-width: 2px;
         border-radius: 5px;
 
-        &Header {
+        &__header {
           display: table;
           font-size: 28px;
           height: 60px;
           width: 1000px;
           margin-bottom: 10px;
 
-          .companyLogo {
+          .company-logo {
             height: 60px;
             width: 60px;
             border-radius: 5px;
           }
         }
 
-        &Summary {
+        &__summary {
           display: table;
           font-size: 18px;
           width: 1000px;

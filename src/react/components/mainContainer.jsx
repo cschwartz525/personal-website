@@ -10,7 +10,7 @@ var MainContainer = React.createClass({
   },
   render: function() {
     return (
-      <div id="mainContainer">
+      <div id="main-container">
       {this.props.selectedPanel}
       </div>
     );

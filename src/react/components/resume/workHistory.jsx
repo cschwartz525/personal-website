@@ -27,8 +27,8 @@ var WorkHistory = React.createClass({
     }
 
     return (
-      <div className="workHistory">
-        <div className="workHistoryHeader">
+      <div className="work-history">
+        <div className="work-history__header">
           <div className="left">
             <div>
                 {this.props.data.companyName}
@@ -38,11 +38,11 @@ var WorkHistory = React.createClass({
             </div>
           </div>
           <div className="right">
-            <img className="companyLogo" src={"../assets/images/" + this.props.data.logo}></img>
+            <img className="company-logo" src={"../assets/images/" + this.props.data.logo}></img>
           </div>
         </div>
 
-        <div className="workHistorySummary">
+        <div className="work-history__summary">
           <div className="left">
             <div>
               {this.props.data.department}
@@ -54,7 +54,7 @@ var WorkHistory = React.createClass({
               {this.props.data.startDate} - {this.props.data.endDate}
             </div>
             <div>
-              <a className="textLink" href={this.props.data.website}>
+              <a className="text-link" href={this.props.data.website}>
                 {this.props.data.website}
               </a>
             </div>

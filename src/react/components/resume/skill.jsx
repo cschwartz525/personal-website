@@ -7,7 +7,7 @@ var Skill = React.createClass({
   },
   render: function() {
     return (
-      <div className="skill noSelect">
+      <div className="skill no-select">
         {this.props.name}
       </div>
     );
