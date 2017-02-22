@@ -4,14 +4,14 @@ var EmailForm = React.createClass({
   displayName: 'EmailForm',
   render: function() {
     return (
-      <div id="emailForm">
+      <div id="email-form">
         <form
             action="/api/sendEmail"
             encType="application/json"
             method="post"
         >
           <input
-              className="formText"
+              className="form-text-field"
               id="contact-form-email"
               name="sender"
               placeholder="Your email"
@@ -20,7 +20,7 @@ var EmailForm = React.createClass({
           />
           <br />
           <input
-              className="formText"
+              className="form-text-field"
               name="subject"
               placeholder="Subject"
               size="50"
@@ -28,14 +28,14 @@ var EmailForm = React.createClass({
           />
           <br />
           <textarea
-              className="formText"
+              className="form-text-field"
               cols="100"
               name="message"
               rows="20"
           />
           <br />
-          <input className="formButton" disabled id="contact-form-submit" type="submit" value="Send" />
-          <input className="formButton" type="reset" value="Reset" />
+          <input className="form-button" disabled id="contact-form-submit" type="submit" value="Send" />
+          <input className="form-button" type="reset" value="Reset" />
         </form>
       </div>
     );

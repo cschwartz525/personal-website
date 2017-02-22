@@ -8,8 +8,8 @@ var NavBar = React.createClass({
   },
   render: function() {
     return (
-      <div id="navBar">
-        <img id="navBarLogo" src="assets/images/logo.png" />
+      <div id="navbar">
+        <img id="navbar-logo" src="assets/images/logo.png" />
         <NavItem
           content="About"
           link="about"

@@ -14,18 +14,18 @@ var Education = React.createClass({
   },
   render: function() {
     return (
-      <div className="educationHistory">
-        <div className="educationHistoryHeader">
+      <div className="education-history">
+        <div className="education-history__header">
           <div className="left">
             <div>{this.props.data.name}</div>
             <div>Class of {this.props.data.year}</div>
           </div>
           <div className="right">
-            <img className="companyLogo" src={"../assets/images/" + this.props.data.logo}></img>
+            <img className="company-logo" src={"../assets/images/" + this.props.data.logo}></img>
           </div>
         </div>
 
-        <div className="educationHistorySummary">
+        <div className="education-history__summary">
           <div className="left">
             <div>
               {this.props.data.degree}
@@ -34,7 +34,7 @@ var Education = React.createClass({
               {this.props.data.major}
             </div>
             <div>
-              <a className="textLink" href={this.props.data.website}>
+              <a className="text-link" href={this.props.data.website}>
                 {this.props.data.website}
               </a>
             </div>

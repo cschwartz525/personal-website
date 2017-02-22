@@ -30,16 +30,16 @@ var AboutPage = React.createClass({
     };
     var summary = this.state.summary.map(function(line, index) {
       return (
-        <p key={index} className="selfSummary">
+        <p key={index} className="self-summary">
           {line}
         </p>
       );
     });
     return (
-      <div id="mainContent">
-        <h1 className="pageTitle">{this.state.heading}</h1>
+      <div id="main-content">
+        <h1 className="page-title">{this.state.heading}</h1>
 
-        <div className="pageContent">
+        <div className="page-content">
           {summary}
           <div className="carousel">
             <Slider {...settings}>
