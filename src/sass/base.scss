@@ -189,6 +189,11 @@
           border-color: $text-input-border-active;
           outline: $text-input-border-active solid 1px;
         }
+
+        &.error {
+          border-color: $error-color;
+          outline: $error-color solid 1px;
+        }
       }
 
       /* Resume page */
