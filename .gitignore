@@ -6,10 +6,7 @@ node_modules/*
 npm-debug.log
 
 # Build files #
-lib
-lib/**/*
-public/assets/js/build.min.js
-public/style/base.min.css
+dist
 
 # Mac #
 .DS_STORE
