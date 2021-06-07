@@ -14,7 +14,7 @@ const NavItem = ({
     const status = `/${link}` === location.pathname ? 'active' : 'inactive';
 
     return (
-        <Link to={link}>
+        <Link to={`/${link}`}>
             <div className={`nav-item no-select hvr-bounce-in ${status}`}>
                 {content}
             </div>
