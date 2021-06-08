@@ -9,6 +9,7 @@ import NavBar from './components/navBar';
 import Footer from './components/footer';
 import AboutPage from './components/about/aboutPage';
 import ContactPage from './components/contact/contactPage';
+import FrontPage from './components/frontpage';
 import ResumePage from './components/resume/resumePage';
 
 const Site = () => (
@@ -16,6 +17,9 @@ const Site = () => (
         <Router>
             <NavBar />
             <Switch>
+                <Route path='/' exact>
+                    <FrontPage />
+                </Route>
                 <Route path='/about'>
                     <AboutPage />
                 </Route>
