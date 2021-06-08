@@ -9,7 +9,7 @@ import NavBar from './components/navBar';
 import Footer from './components/footer';
 import AboutPage from './pages/about';
 import ContactPage from './pages/contact';
-import FrontPage from './pages/frontpage';
+import LandingPage from './pages/landing';
 import ResumePage from './pages/resume';
 
 const Site = () => (
@@ -18,7 +18,7 @@ const Site = () => (
             <NavBar />
             <Switch>
                 <Route path='/' exact>
-                    <FrontPage />
+                    <LandingPage />
                 </Route>
                 <Route path='/about'>
                     <AboutPage />

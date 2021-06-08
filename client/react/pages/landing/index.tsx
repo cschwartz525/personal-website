@@ -48,7 +48,7 @@ const LinkButton = styled(Link)`
     }
 `;
 
-const FrontPage = () => (
+const LandingPage = () => (
     <Wrapper>
         <Heading>Craig Schwartz</Heading>
         <Subheading>Hi, I'm Craig. I build user-friendly websites and web applications.</Subheading>
@@ -59,4 +59,4 @@ const FrontPage = () => (
     </Wrapper>
 );
 
-export default memo(FrontPage);
+export default memo(LandingPage);
