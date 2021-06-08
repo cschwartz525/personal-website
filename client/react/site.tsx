@@ -7,10 +7,10 @@ import {
 } from 'react-router-dom';
 import NavBar from './components/navBar';
 import Footer from './components/footer';
-import AboutPage from './components/about/aboutPage';
-import ContactPage from './components/contact/contactPage';
-import FrontPage from './components/frontpage';
-import ResumePage from './components/resume/resumePage';
+import AboutPage from './pages/about';
+import ContactPage from './pages/contact';
+import FrontPage from './pages/frontpage';
+import ResumePage from './pages/resume';
 
 const Site = () => (
     <div className='site'>
