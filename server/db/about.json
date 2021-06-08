@@ -1,11 +1,9 @@
 {
-  "heading": "Hi, I'm Craig",
-  "summary": [
-    "I'm a software developer living in New York City.",
-    "I'm interested in web applications and distributed systems, and I love solving problems.",
-    "I build scalable, performant software solutions, and I have experience with a wide variety of tecnologies.",
-    "I love music. I have played guitar in bands for years and I produce my own electronic music.",
-    "I'm an avid sports fan, world traveler, and movie buff.",
-    "Welcome to my site!"
-  ]
+    "heading": "Hey! I'm Craig",
+    "summary": [
+        "I'm a software developer from New York City. I have a wide range of full-stack skills, but I tend to focus most of my energy on front-end web applications. I specialize in building user-centric websites and web applications in Node.js.",
+        "After graduating the University of Virginia with a degree in Computer Science, I moved to the Big Apple where I have worked in a variety of industries, including financial services, e-commerce, and most recently, streaming video.",
+        "When I'm not building web apps, I love to travel, run, and explore my city. I also play guitar and write my own music.",
+        "Whether you need a basic information site, an e-commerce site, or something special, I can help you build the website of your dreams! Contact me to get started."
+    ]
 }

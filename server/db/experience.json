@@ -1,0 +1,99 @@
+{
+    "jobs": [
+        {
+            "companyName": "Disney Streaming Services",
+            "jobTitle": "Senior Software Engineer",
+            "location": "New York, NY",
+            "startDate": "2019",
+            "endDate": "Present",
+            "website": "https://dmedmedia.disney.com/",
+            "description": "Leading the Disney+ Web Team.",
+            "notes": [
+                ""
+            ]
+        },
+        {
+            "companyName": "Disney Streaming Services",
+            "jobTitle": "Software Engineer",
+            "location": "New York, NY",
+            "startDate": "2016",
+            "endDate": "2019",
+            "website": "https://dmedmedia.disney.com/",
+            "description": "Worked as a front-end web developer and team lead for the Accounts, Activation, and Access team.",
+            "notes": [
+                "Developed login, password reset, and account management flows for several streaming video websites",
+                "Assisted with the rollout of large-scale live streaming and VOD sports websites such as MLS Live and Eurosport",
+                "Supported, upgraded, and refactored several existing sites, including NHL.com, MLB.com, WWE Network, and HBO NOW",
+                "Streamlined internal cable provider / MVPD authorization flow",
+                "Managed relationships with partners, business stakeholders, and other technology teams"
+            ]
+        },
+        {
+            "companyName": "MLB Advanced Media",
+            "jobTitle": "Full Stack Software Developer",
+            "location": "New York, NY",
+            "startDate": "2016",
+            "endDate": "Present",
+            "website": "https://www.mlbam.com/",
+            "description": "Working as a full-stack developer with a front-end focus on the User Services team.",
+            "notes": [
+                "Developed account sections for MLS Live and Eurosport Player, including login, account / profile management, registration, password reset pages.",
+                "Developed features and enhancements to login and password reset flows for NHL.com and the Arena App.",
+                "Served as the primary subject-matter expert on my team for Node.js, Express.js, jQuery, React, Handlebars, and several internal Javascript frameworks and SDKs.",
+                "Worked iteratively with product teams to build enhancements and new features, constantly improving the efficiency and usability of partner websites."
+            ]
+        },
+        {
+            "companyName": "Trustpilot",
+            "jobTitle": "Software Developer",
+            "location": "New York, NY",
+            "startDate": "2016",
+            "endDate": "2016",
+            "website": "https://www.trustpilot.com/",
+            "description": "Worked as a full-stack developer on the Commercial Growth team. Developed back-end functionality in Node.js, Express, and .NET. Created front-end features in React.js, Angular.js, Handlebars.js, and more.",
+            "notes": [
+                "Supported the business-facing website and created new features to help drive engagement and increase signups and conversions.",
+                "Created APIs using REST and SOAP in order to sync data between components in a microservice architecture.",
+                "Developed several Lambda functions in AWS to carry out lightweight, repeatable business functions.",
+                "Worked on the Trustpilot careers website, converting existing UI elements to reusable components in React.js.",
+                "Contributed to a fast-moving agile development team, deploying new functionality on a daily basis."
+            ]
+        },
+        {
+            "companyName": "Citigroup",
+            "jobTitle": "Assitant Vice President - Software Devleopment",
+            "location": "New York, NY",
+            "startDate": "2013",
+            "endDate": "2016",
+            "website": "http://www.citigroup.com/citi/",
+            "description": "Worked as a full-stack developer in the Institutional Clients Group. Spent my first year with the Finance Desk Technology team and spent my second year with the Global Securitized Markets Technology team",
+            "notes": [
+                "Served as a crucial member in the build-out of MIS, a bid and order tracking module for traders. Developed both front-end and server-side functionality for this module.",
+                "Supported the .NET-based Management Reporting module, which provides critical risk and reporting data to traders daily.",
+                "Developed robust stateful response messaging for the Margin Operations team using a REST web service and Tibco EMS",
+                "Refactored internal code structure for Java modules to allow for single-click deployment. Implemented a new build procedure using Maven.",
+                "Managed the reporting and recon build-out for Volcker regulations.",
+                "Supported a user base of over 100 traders and salespeople worldwide, spanning multiple desks and asset classes."
+            ]
+        },
+        {
+            "companyName": "The Lloyd Group",
+            "jobTitle": "Operations Intern",
+            "location": "New York, NY",
+            "startDate": "2012",
+            "endDate": "2012",
+            "website": "http://www.lloydgroup.com/",
+            "description": "Assisted in a wide variety of information technology operations including remote server management, scripting, SharePoint development, managed backup services, audits, and hardware builds."
+        }
+    ],
+    "education": [
+        {
+            "name": "University of Virginia",
+            "degree": "Bachelor of Science",
+            "major": "Computer Science",
+            "year": "2013",
+            "website": "http://www.virginia.edu/",
+            "logo": "uva.png"
+        }
+    ]
+}

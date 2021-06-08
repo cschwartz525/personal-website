@@ -1,0 +1,43 @@
+{
+    "header": [
+        {
+            "title": "Web Applications",
+            "description": "I specialize in building performant front-end web applications with React, Typescript, Node, and many more."
+        },
+        {
+            "title": "API Development",
+            "description": "I also have extensive experience building RESTful APIs and web services with a variety of languages and frameworks."
+        },
+        {
+            "title": "User Experience",
+            "description": "I design attractive, responsive, easy-to-use websites and user interfaces with the end user in mind."
+        }
+    ],
+    "frontend": [
+        "JavaScript",
+        "Typescript",
+        "React",
+        "HTML",
+        "CSS",
+        "LESS / SASS / SCSS",
+        "Jest",
+        "Webpack",
+        "Handlebars"
+    ],
+    "backend": [
+        "Node.JS",
+        "Express",
+        "Java",
+        "C#",
+        "REST",
+        "GraphQL",
+        "SQL"
+    ],
+    "other": [
+        "AWS",
+        "Unix",
+        "Git",
+        "SQL",
+        "VSCode"
+    ]
+}
