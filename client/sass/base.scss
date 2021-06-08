@@ -39,48 +39,6 @@
   background-color: $white;
   background-size: 100% auto;
 
-  #navbar {
-    height: 80px;
-    background-color: $white;
-
-    #navbar-logo {
-      display: inline-block;
-      height: 40px;
-      width: 50px;
-      margin: 10px;
-      padding: 10px;
-      vertical-align: middle;
-    }
-
-    .nav-item {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px;
-      vertical-align: middle;
-      border: 2px;
-      border-color: $black;
-      border-style: solid;
-      border-radius: 5px;
-      cursor: pointer;
-      color: $black;
-
-      &.inactive {
-        background: $navitem-inactive-1; /* Old browsers */
-        background: -moz-linear-gradient(top, $navitem-inactive-1 0%, $navitem-inactive-2 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, $navitem-inactive-1 0%, $navitem-inactive-2 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, $navitem-inactive-1 0%, $navitem-inactive-2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$navitem-inactive-1', endColorstr='$navitem-inactive-2',GradientType=0 ); /* IE6-9 */
-      }
-      &.active {
-        background: $navitem-active-1; /* Old browsers */
-        background: -moz-linear-gradient(top, $navitem-active-1 0%, $navitem-active-2 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, $navitem-active-1 0%, $navitem-active-2 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, $navitem-active-1 0%, $navitem-active-2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$navitem-active-1', endColorstr='$navitem-active-2',GradientType=0 ); /* IE6-9 */
-      }
-    }
-  }
-
   #main-container {
     position: absolute;
     top: 80px;
@@ -112,24 +70,6 @@
       margin-right: auto;
 
       /* About page */
-      .carousel {
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-
-        &-item {
-          height: 300px;
-          width: 300px;
-
-          img {
-            display: block;
-            height: 100%;
-            margin-left: auto;
-            margin-right: auto;
-          }
-        }
-      }
-
       .self-summary {
         margin: 20px;
         font-size: 20px;

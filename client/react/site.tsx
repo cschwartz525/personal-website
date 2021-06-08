@@ -5,15 +5,22 @@ import {
     Switch,
     Route
 } from 'react-router-dom';
+import styled from 'styled-components';
 import NavBar from './components/navBar';
 import Footer from './components/footer';
 import AboutPage from './pages/about';
 import ContactPage from './pages/contact';
 import LandingPage from './pages/landing';
 import ResumePage from './pages/resume';
+import colors from './styles/colors';
+
+const Wrapper = styled.div`
+    background: ${colors.lightgrey};
+    font-family: Lato, Helvetica, Arial;
+`;
 
 const Site = () => (
-    <div className='site'>
+    <Wrapper>
         <Router>
             <NavBar />
             <Switch>
@@ -32,7 +39,7 @@ const Site = () => (
             </Switch>
         </Router>
         <Footer />
-    </div>
+    </Wrapper>
 );
 
 ReactDOM.render(<Site />, document.getElementById('main'));

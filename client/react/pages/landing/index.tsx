@@ -1,12 +1,14 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import colors from '../../styles/colors';
 
 const Wrapper = styled.div`
     margin: 120px auto;
 `;
 
 const Heading = styled.h1`
+    color: ${colors.darkblue};
     font-size: 72px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -14,6 +16,7 @@ const Heading = styled.h1`
 `;
 
 const Subheading = styled.h2`
+    color: ${colors.darkblue};
     font-size: 19px;
     margin-bottom: 20px;
     text-align: center;
@@ -25,10 +28,10 @@ const LinksContainer = styled.div`
 `;
 
 const LinkButton = styled(Link)`
-    background-color: rgba(0,0,0,0);
-    border: 2px solid #000000;
+    background-color: ${colors.white};
+    border: 2px solid ${colors.darkblue};
     border-radius: 20px;
-    color: #000000;
+    color: ${colors.darkblue};
     display: block;
     font-weight: bold;
     letter-spacing: .5px;
@@ -38,9 +41,9 @@ const LinkButton = styled(Link)`
     transition: .2s;
 
     &:hover {
-        background-color: #000000;
-        border: 2px solid #000000;
-        color: #ffffff;
+        background-color: ${colors.darkblue};
+        border: 2px solid ${colors.darkblue};
+        color: ${colors.white};
         cursor: pointer;
         margin: 0;
         padding: 10px 50px;
