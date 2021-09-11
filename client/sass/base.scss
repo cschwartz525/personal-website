@@ -5,261 +5,32 @@
 
 /* Universal elements */
 .text-link {
-  color: $link-color;
-  text-decoration: none;
-  &:hover {
-    background-color: $link-bg-hover;
-    -o-transition:.4s;
-    -ms-transition:.4s;
-    -moz-transition:.4s;
-    -webkit-transition:.4s;
-    transition:.4s;
-  }
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $link-bg-hover;
+        -o-transition:.4s;
+        -ms-transition:.4s;
+        -moz-transition:.4s;
+        -webkit-transition:.4s;
+        transition:.4s;
+    }
 }
 
 .no-select {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none;   /* Chrome/Safari/Opera */
-  -khtml-user-select: none;    /* Konqueror */
-  -moz-user-select: none;      /* Firefox */
-  -ms-user-select: none;       /* IE/Edge */
-  user-select: none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+    user-select: none;
 }
 
-/* My classes and elements */
-.site {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  font-family: "Lato", Helvetica, Arial;
-  display: block;
-  background-color: $white;
-  background-size: 100% auto;
-
-  #main-container {
-    position: absolute;
-    top: 80px;
-    bottom: 80px;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background-color: transparent;
-    overflow-y: auto;
-
-    .page-title {
-      text-align: center;
-      padding-top: 20px;
-      padding-left: 20px;
-      font-size: 50px;
-    }
-
-    .page-subtitle {
-      text-align: center;
-      padding-top: 20px;
-      padding-left: 20px;
-      font-size: 32px;
-    }
-
-    .page-content {
-      display: block;
-      margin-top: 10px;
-      margin-left: auto;
-      margin-right: auto;
-
-      /* About page */
-      .self-summary {
-        margin: 20px;
-        font-size: 20px;
-        text-align: center;
-
-        &:hover {
-          text-shadow: 1px 1px 1px $summary-hover
-        }
-      }
-
-      /* Contact page */
-      #contact-list, #email-form {
-        text-align: center;
-      }
-
-      .contact-item {
-        padding: 5px 0;
-        font-size: 20px;
-      }
-
-      .form-button {
-        background: $navitem-inactive-1; /* Old browsers */
-        background: -moz-linear-gradient(top, $navitem-inactive-1 0%, $navitem-inactive-2 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, $navitem-inactive-1 0%, $navitem-inactive-2 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, $navitem-inactive-1 0%, $navitem-inactive-2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$navitem-inactive-1', endColorstr='$navitem-inactive-2',GradientType=0 ); /* IE6-9 */
-
-        border: #000000 solid 2px;
-        border-radius: 5px;
-        font-family: inherit;
-        font-size: 20px;
-        margin: 5px;
-        outline: transparent;
-        padding: 10px 20px;
-
-        &:hover {
-          background: $navitem-active-1; /* Old browsers */
-          background: -moz-linear-gradient(top, $navitem-active-1 0%, $navitem-active-2 100%); /* FF3.6-15 */
-          background: -webkit-linear-gradient(top, $navitem-active-1 0%, $navitem-active-2 100%); /* Chrome10-25,Safari5.1-6 */
-          background: linear-gradient(to bottom, $navitem-active-1 0%, $navitem-active-2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$navitem-active-1', endColorstr='$navitem-active-2',GradientType=0 ); /* IE6-9 */
-        }
-      }
-
-      .form-text-field {
-        background-color: $white;
-        border: $black solid 1px;
-        font-family: inherit;
-        font-size: 16px;
-        margin: 5px 0;
-        outline: $black solid 1px;
-        padding: 10px;
-        resize: none;
-
-        &:focus {
-          background-color: $text-input-bg-active;
-          border-color: $text-input-border-active;
-          outline: $text-input-border-active solid 1px;
-        }
-
-        &.error {
-          border-color: $error-color;
-          outline: $error-color solid 1px;
-        }
-      }
-
-      /* Resume page */
-      .work-history, .education-history {
-        width: 1000px;
-        margin-top: 10px;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 5px;
-        border-color: $black;
-        border-style: solid;
-        border-width: 2px;
-        border-radius: 5px;
-
-        &__header {
-          display: table;
-          font-size: 28px;
-          height: 60px;
-          width: 1000px;
-          margin-bottom: 10px;
-
-          .company-logo {
-            height: 60px;
-            width: 60px;
-            border-radius: 5px;
-          }
-        }
-
-        &__summary {
-          display: table;
-          font-size: 18px;
-          width: 1000px;
-
-          .right {
-            width: 700px;
-          }
-
-          li {
-            font-size: 16px;
-            list-style: circle inside;
-            padding-top: 5px;
-          }
-        }
-
-        .left {
-          display: table-cell;
-          vertical-align: top;
-        }
-
-        .right {
-          display: table-cell;
-          float: right;
-          padding: 0 10px 10px 0;
-          vertical-align: top;
-        }
-      }
-    }
-
-    #skills {
-      width: 960px;
-      height: 240px;
-      margin-left: auto;
-      margin-right: auto;
-
-      .skill {
-        width: 200px;
-        float: left;
-        font-size: 20px;
-        margin: 10px;
-        padding: 10px;
-        text-align: center;
-        background-color: $skill-inactive-bg;
-        border-radius: 5px;
-
-        &:hover {
-          background-color: $skill-active-bg-1;
-          box-shadow: 2px 2px 0 $skill-active-bg-2;
-          cursor: default;
-          -o-transition:.4s;
-          -ms-transition:.4s;
-          -moz-transition:.4s;
-          -webkit-transition:.4s;
-          transition:.4s;
-        }
-      }
-    }
-  }
-
-  #footer {
-    height: 80px;
-    width: 100%;
-    position: absolute;
+#main {
     bottom: 0;
-    background: $footer-bg-oldbrowsers; /* Old browsers */
-    background: -moz-linear-gradient(top, transparent 0%, $footer-bg-newbrowsers 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, transparent 0%, $footer-bg-newbrowsers 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, transparent 0%, $footer-bg-newbrowsers 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
-    #copyright {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      color: $copyright-text-color;
-      font-size: 12px;
-    }
-  }
-}
-
-/* Bounce In */
-.hvr-bounce-in {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-
-  &:hover, &:focus, &:active {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
-    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
-  }
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
