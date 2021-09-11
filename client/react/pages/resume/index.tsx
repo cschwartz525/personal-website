@@ -1,12 +1,15 @@
 import React, { memo, useEffect, useState } from 'react';
-import Education from './education';
-import Skill from './skill';
-import WorkHistory from './workHistory';
+import styled from 'styled-components';
+import Card from './Card';
+
+const Container = styled.div`
+    margin: 0 auto;
+    max-width: 600px;
+`;
 
 const ResumePage = () => {
     const [education, setEducation] = useState([]);
     const [jobs, setJobs] = useState([]);
-    const [skills, setSkills] = useState([]);
 
     useEffect(() => {
         fetch('/api/resume')
@@ -14,7 +17,6 @@ const ResumePage = () => {
             .then((data) => {
                 setEducation(data.education);
                 setJobs(data.jobs);
-                setSkills(data.skills);
             })
             .catch((error: Error) => {
                 console.error('Error fetching resume data', error);
@@ -22,47 +24,65 @@ const ResumePage = () => {
     }, []);
 
     return (
-        <div id='main-content'>
-            <h1 className='page-title'>Resume</h1>
+        <Container>
+            <h1 className='centered'>My Experience</h1>
 
-            <h2 className='page-subtitle'>Skills</h2>
-            <div className='page-content'>
-            <div id='skills'>
+            <h2>JOBS</h2>
+            <div>
                 {
-                    skills.map((skill, index) => (
-                        <Skill
-                            key={`skill-${index}`}
-                            name={skill}
-                        />
-                    ))
+                    jobs.map((job, index) => {
+                        const {
+                            companyName,
+                            description,
+                            endDate,
+                            jobTitle,
+                            projects,
+                            startDate
+                        } = job;
+
+                        return (
+                            <Card
+                                endDate={endDate}
+                                heading={companyName}
+                                key={`job-${index}`}
+                                notes={projects}
+                                startDate={startDate}
+                                subheading={jobTitle}
+                                summary={description}
+                            />
+                        );
+                    })
                 }
             </div>
-            </div>
 
-            <h2 className='page-subtitle'>Work Experience</h2>
-            <div className='page-content'>
+            <h2>EDUCATION</h2>
+            <div>
                 {
-                    jobs.map((job, index) => (
-                        <WorkHistory
-                            key={`job-${index}`}
-                            data={job}
-                        />
-                    ))
+                    education.map((school, index) => {
+                        const {
+                            courses,
+                            degree,
+                            endDate,
+                            major,
+                            name,
+                            startDate
+                        } = school;
+
+                        return (
+                            <Card
+                                endDate={endDate}
+                                heading={name}
+                                key={`school-${index}`}
+                                notes={courses}
+                                startDate={startDate}
+                                subheading={`${degree} - ${major}`}
+                                summary='Relevant coursework'
+                            />
+                        );
+                    })
                 }
             </div>
-
-            <h2 className='page-subtitle'>Education</h2>
-            <div className='page-content'>
-                {
-                    education.map((school, index) => (
-                        <Education
-                            key={`school-${index}`}
-                            data={school}
-                        />
-                    ))
-                }
-            </div>
-        </div>
+        </Container>
     );
 };
 
