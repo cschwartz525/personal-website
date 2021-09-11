@@ -9,19 +9,21 @@ const Wrapper = styled.div`
     background-color: ${colors.white};
 `;
 
-const Logo = styled.img`
+const Logo = styled.div`
+    background-image: url('/assets/images/logo_black.png');
+    background-size: contain;
+    background-repeat: no-repeat;
     display: inline-block;
     height: 40px;
-    width: 50px;
-    margin: 10px;
-    padding: 10px;
+    width: 56px;
+    margin: 20px 10px 20px 20px;
     vertical-align: middle;
 `;
 
 const NavBar = (): JSX.Element => (
     <Wrapper>
         <Link to='/'>
-            <Logo src='assets/images/logo.png' />
+            <Logo />
         </Link>
         <NavItem
             content='About'
