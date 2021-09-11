@@ -12,11 +12,11 @@ import AboutPage from './pages/about';
 import ContactPage from './pages/contact';
 import LandingPage from './pages/landing';
 import ResumePage from './pages/resume';
-import colors from './styles/colors';
 import themes from './themes';
 
 const Wrapper = styled.div`
-    background: ${colors.lightgrey};
+    background: ${({ theme }) => theme.backgroundColor};
+    color: ${({ theme }) => theme.color};
     font-family: Lato, Helvetica, Arial;
 `;
 
@@ -24,9 +24,9 @@ const Site = () => {
     const [theme, setTheme] = useState('light');
 
     return (
-        <Wrapper>
-            <Router>
-                <ThemeProvider theme={themes[theme]}>
+        <ThemeProvider theme={themes[theme]}>
+            <Wrapper>
+                <Router>
                     <NavBar
                         setTheme={setTheme}
                         theme={theme}
@@ -45,10 +45,10 @@ const Site = () => {
                             <ResumePage />
                         </Route>
                     </Switch>
-                </ThemeProvider>
-            </Router>
-            <Footer />
-        </Wrapper>
+                </Router>
+                <Footer />
+            </Wrapper>
+        </ThemeProvider>
     );
 };
 

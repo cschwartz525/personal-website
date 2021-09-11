@@ -1,7 +1,9 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
+import colors from '../../styles/colors';
 
 const CardContainer = styled.div`
+    color: ${colors.black};
     margin: 10px auto;
 `;
 
