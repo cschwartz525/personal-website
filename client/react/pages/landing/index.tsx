@@ -28,7 +28,7 @@ const LinksContainer = styled.div`
 `;
 
 const LinkButton = styled(Link)`
-    background-color: ${colors.white};
+    background-color: ${({ theme }) => theme.backgroundColor};
     border: ${({ theme }) => `2px solid ${theme.color}`};
     border-radius: 20px;
     color: ${({ theme }) => theme.color};

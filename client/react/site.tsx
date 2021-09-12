@@ -23,7 +23,7 @@ const Wrapper = styled.div`
 `;
 
 const Site = () => {
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState('dark');
 
     return (
         <ThemeProvider theme={themes[theme]}>
