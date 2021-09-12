@@ -4,11 +4,11 @@ import styled from 'styled-components';
 import colors from '../../styles/colors';
 
 const Wrapper = styled.div`
-    margin: 120px auto;
+    margin: 25vh auto;
 `;
 
 const Heading = styled.h1`
-    color: ${colors.darkblue};
+    color: ${({ theme }) => theme.color};
     font-size: 72px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -16,7 +16,7 @@ const Heading = styled.h1`
 `;
 
 const Subheading = styled.h2`
-    color: ${colors.darkblue};
+    color: ${({ theme }) => theme.color};
     font-size: 19px;
     margin-bottom: 20px;
     text-align: center;
@@ -29,9 +29,9 @@ const LinksContainer = styled.div`
 
 const LinkButton = styled(Link)`
     background-color: ${colors.white};
-    border: 2px solid ${colors.darkblue};
+    border: ${({ theme }) => `2px solid ${theme.color}`};
     border-radius: 20px;
-    color: ${colors.darkblue};
+    color: ${({ theme }) => theme.color};
     display: block;
     font-weight: bold;
     letter-spacing: .5px;
@@ -41,9 +41,9 @@ const LinkButton = styled(Link)`
     transition: .2s;
 
     &:hover {
-        background-color: ${colors.darkblue};
-        border: 2px solid ${colors.darkblue};
-        color: ${colors.white};
+        background-color: ${({ theme }) => theme.color};
+        border: ${({ theme }) => `2px solid ${theme.color}`};
+        color: ${({ theme }) => theme.backgroundColor};
         cursor: pointer;
         margin: 0;
         padding: 10px 50px;
