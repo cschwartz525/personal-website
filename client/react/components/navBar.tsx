@@ -1,8 +1,12 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import NavItem from './navItem';
-import colors from '../styles/colors';
+
+library.add(faMoon, faSun);
 
 const Wrapper = styled.div`
     height: 80px;
@@ -22,13 +26,15 @@ const Logo = styled.div`
 
 const ThemeButton = styled.button`
     background-color: ${({ theme }) => theme.backgroundColor};
-    border: ${({ theme }) => `1px solid ${theme.color}`};
-    border-radius: 5px;
+    border: ${({ theme }) => `2px solid ${theme.color}`};
+    border-radius: 50%;
     color: ${({ theme }) => theme.color};
     cursor: pointer;
     float: right;
+    font-size: 20px;
     height: 40px;
     margin: 20px;
+    width: 40px;
 
     &:hover {
         background-color: ${({ theme }) => theme.color};
@@ -68,7 +74,7 @@ const NavBar = ({ setTheme, theme }: NavBarProps): JSX.Element => {
                 link='contact'
             />
             <ThemeButton onClick={toggleTheme}>
-                {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
+                <FontAwesomeIcon icon={theme === 'light' ? 'moon' : 'sun'} />
             </ThemeButton>
         </Wrapper>
     );
