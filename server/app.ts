@@ -4,7 +4,6 @@ import path from 'path';
 import {
     about,
     resume,
-    social,
     sendEmail
 } from './api';
 import config from './config'
@@ -25,7 +24,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/api/about', about);
 app.get('/api/resume', resume);
-app.get('/api/social', social);
 app.post('/api/sendEmail', sendEmail);
 
 app.listen(config.port, function() {

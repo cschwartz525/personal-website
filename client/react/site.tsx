@@ -18,6 +18,8 @@ const Wrapper = styled.div`
     background: ${({ theme }) => theme.backgroundColor};
     color: ${({ theme }) => theme.color};
     font-family: Lato, Helvetica, Arial;
+    min-height: 100vh;
+    position: relative;
 `;
 
 const Site = () => {

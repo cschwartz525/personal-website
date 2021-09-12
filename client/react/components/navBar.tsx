@@ -2,8 +2,8 @@ import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import NavItem from './navItem';
 
 library.add(faMoon, faSun);

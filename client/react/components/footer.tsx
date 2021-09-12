@@ -1,80 +1,63 @@
-import React, { memo, useEffect, useState } from 'react';
+import React, { memo } from 'react';
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { fab, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
-const Footer = (): JSX.Element => {
-    const [facebookIcon, setFacebookIcon] = useState('');
-    const [instagramIcon, setInstagramIcon] = useState('');
-    const [googleIcon, setGoogleIcon] = useState('');
-    const [githubIcon, setGithubIcon] = useState('');
-    const [linkedinIcon, setLinkedinIcon] = useState('');
-    const [soundcloudIcon, setSoundcloudIcon] = useState('');
+library.add(fab, faGithub, faLinkedinIn, faEnvelope);
 
-    useEffect(() => {
-        fetch('/api/social')
-        .then(res => res.json())
-        .then(data => {
-            setFacebookIcon(data.facebook);
-            setInstagramIcon(data.instagram);
-            setGoogleIcon(data.google);
-            setGithubIcon(data.github);
-            setLinkedinIcon(data.linkedin);
-            setSoundcloudIcon(data.soundcloud);
-        })
-        .catch(error => {
-            console.error('Error fetching social icon data', error);
-        })
-    }, []);
+const Container = styled.div`
+    bottom: 0;
+    height: 80px;
+    left: 0;
+    margin-top: 20px;
+    position: absolute;
+    right: 0;
+`;
 
-    return (
-        <div id='footer'>
-            <div id='copyright'>
-                © 2021 Craig Schwartz
-            </div>
-            <div className='social-icons'>
-                <div className='icon icon--soundcloud'>
-                    <a href='https://soundcloud.com/soundcastlemusic'>
-                        <svg viewBox='0 0 512 512'>
-                            <path d={soundcloudIcon}/>
-                        </svg>
-                    </a>
-                </div>
-                <div className='icon icon--instagram'>
-                    <a href='https://www.instagram.com/cschwartz525/'>
-                        <svg viewBox='0 0 512 512'>
-                            <path d={instagramIcon}/>
-                        </svg>
-                    </a>
-                </div>
-                <div className='icon icon--facebook'>
-                    <a href='https://www.facebook.com/cschwartz525'>
-                        <svg viewBox='0 0 512 512'>
-                            <path d={facebookIcon}/>
-                        </svg>
-                    </a>
-                </div>
-                <div className='icon icon--google'>
-                    <a href='https://plus.google.com/u/0/101927703181492899764/posts'>
-                        <svg viewBox='0 0 512 512'>
-                            <path d={googleIcon}/>
-                        </svg>
-                    </a>
-                </div>
-                <div className='icon icon--github'>
-                    <a href='https://github.com/cschwartz525'>
-                        <svg viewBox='0 0 512 512'>
-                            <path d={githubIcon}/>
-                        </svg>
-                    </a>
-                </div>
-                <div className='icon icon--linkedin'>
-                    <a href='https://www.linkedin.com/in/cschwartz525'>
-                        <svg viewBox='0 0 512 512'>
-                            <path d={linkedinIcon}/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
+const SocialRow = styled.div`
+    display: flex;
+    justify-content: center;
+`;
+
+const SocialButton = styled.a`
+    align-items: center;
+    background-color: ${({ theme }) => theme.backgroundColor};
+    border: ${({ theme }) => `1px solid ${theme.color}`};
+    border-radius: 50%;
+    color: ${({ theme }) => theme.color};
+    cursor: pointer;
+    display: flex;
+    font-size: 20px;
+    height: 36px;
+    justify-content: center;
+    margin: 5px;
+    width: 36px;
+
+    &:hover {
+        background-color: ${({ theme }) => theme.color};
+        color: ${({ theme }) => theme.backgroundColor};
+    }
+`;
+
+const Footer = (): JSX.Element => (
+    <Container>
+        <div className='centered'>
+            © 2021 Craig Schwartz
         </div>
-    );
-};
+        <SocialRow>
+            <SocialButton href='https://github.com/cschwartz525' target="_blank">
+                <FontAwesomeIcon icon={['fab', 'github']} />
+            </SocialButton>
+            <SocialButton href='https://www.linkedin.com/in/cschwartz525/' target="_blank">
+                <FontAwesomeIcon icon={['fab', 'linkedin-in']} />
+            </SocialButton>
+            <SocialButton href='mailto:craigschwartz525@gmail.com'>
+                <FontAwesomeIcon icon='envelope' />
+            </SocialButton>
+        </SocialRow>
+    </Container>
+);
 
 export default memo(Footer);
