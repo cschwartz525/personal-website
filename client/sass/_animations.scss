@@ -1,0 +1,22 @@
+// Landing Page
+.landing-enter {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.landing-enter.landing-enter-active {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 1000ms ease-in-out;
+}
+
+.landing-exit {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.landing-exit-active {
+    opacity: 0;
+    transition: all 1000ms ease-in-out;
+    transform: translateY(20px);
+}

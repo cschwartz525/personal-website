@@ -1,7 +1,7 @@
-import React, { memo } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
-import colors from '../../styles/colors';
 
 const Wrapper = styled.div`
     margin: 25vh auto;
@@ -51,15 +51,29 @@ const LinkButton = styled(Link)`
     }
 `;
 
-const LandingPage = () => (
-    <Wrapper>
-        <Heading>Craig Schwartz</Heading>
-        <Subheading>Hi, I'm Craig. I build user-friendly websites and web applications.</Subheading>
-        <LinksContainer>
-            <LinkButton to='/about'>Learn More</LinkButton>
-            <LinkButton to='/contact'>Contact Me</LinkButton>
-        </LinksContainer>
-    </Wrapper>
-);
+const LandingPage = () => {
+    const [isMounted, setIsMounted] = useState(false);
+    useEffect(() => setIsMounted(true), []);
+
+    return (
+        <Wrapper>
+            <CSSTransition
+                in={isMounted}
+                timeout={1000}
+                classNames='landing'
+                unmountOnExit
+            >
+                <div>
+                    <Heading>Craig Schwartz</Heading>
+                    <Subheading>Hi, I'm Craig. I build user-friendly websites and web applications.</Subheading>
+                    <LinksContainer>
+                        <LinkButton to='/about'>Learn More</LinkButton>
+                        <LinkButton to='/contact'>Contact Me</LinkButton>
+                    </LinksContainer>
+                </div>
+            </CSSTransition>
+        </Wrapper>
+    );
+};
 
 export default memo(LandingPage);
