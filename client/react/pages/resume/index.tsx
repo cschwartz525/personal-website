@@ -5,7 +5,7 @@ import Card from './Card';
 const Container = styled.div`
     margin: 0 auto;
     max-width: 600px;
-    padding-bottom: 100px;
+    padding: 0 20px 100px;
 `;
 
 const ResumePage = () => {

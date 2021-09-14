@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
     margin: 120px auto;
+    padding: 0 20px;
 `;
 
 const Heading = styled.h1`
