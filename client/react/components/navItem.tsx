@@ -9,7 +9,6 @@ type NavItemProps = {
 };
 
 const Tab = styled.div`
-    display: inline-block;
     margin: 10px;
     padding: 10px;
     vertical-align: middle;
@@ -19,6 +18,17 @@ const Tab = styled.div`
     border-radius: 5px;
     cursor: pointer;
     color: ${colors.black};
+
+    @media screen and (min-width: 480px) {
+        display: inline-block;
+    }
+
+    @media screen and (max-width: 479px) {
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+        width: 120px;
+    }
 
     &.inactive {
         background: ${colors.lightgrey};
