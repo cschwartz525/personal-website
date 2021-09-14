@@ -4,7 +4,7 @@ import { CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-    margin: 25vh auto;
+    margin: 120px auto;
 `;
 
 const Heading = styled.h1`
@@ -23,8 +23,16 @@ const Subheading = styled.h2`
 `;
 
 const LinksContainer = styled.div`
-    display: flex;
-    justify-content: center;
+    @media screen and (min-width: 412px) {
+        display: flex;
+        justify-content: center;
+    }
+
+    @media screen and (max-width: 411px) {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+    }
 `;
 
 const LinkButton = styled(Link)`
@@ -35,19 +43,36 @@ const LinkButton = styled(Link)`
     display: block;
     font-weight: bold;
     letter-spacing: .5px;
-    margin: 0 10px;
-    padding: 10px 40px;
+    text-align: center;
     text-decoration: none;
     transition: .2s;
+
+    @media screen and (min-width: 412px) {
+        margin: 0 10px;
+        padding: 10px 40px;
+    }
+
+    @media screen and (max-width: 411px) {
+        margin: 10px;
+        padding: 10px 20px;
+    }
 
     &:hover {
         background-color: ${({ theme }) => theme.color};
         border: ${({ theme }) => `2px solid ${theme.color}`};
         color: ${({ theme }) => theme.backgroundColor};
         cursor: pointer;
-        margin: 0;
-        padding: 10px 50px;
         transition: .2s;
+
+        @media screen and (min-width: 412px) {
+            margin: 0;
+            padding: 10px 50px;
+        }
+
+        @media screen and (max-width: 411px) {
+            margin: 0;
+            padding: 10px 30px;
+        }
     }
 `;
 
