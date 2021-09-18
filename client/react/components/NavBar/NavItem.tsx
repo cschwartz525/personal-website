@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import colors from '../styles/colors';
+import colors from '../../styles/colors';
 
 type NavItemProps = {
     content: string;

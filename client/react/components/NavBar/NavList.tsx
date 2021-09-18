@@ -3,22 +3,27 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
-import NavItem from './navItem';
+import { faBars, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import NavItem from './NavItem';
 
-library.add(faMoon, faSun);
+library.add(faBars, faMoon, faSun);
 
-const Wrapper = styled.div`
-    background-color: ${({ theme }) => theme.backgroundColor};
+type WrapperProps = {
+    show: boolean;
+};
 
+const Wrapper = styled.div<WrapperProps>`
     @media screen and (min-width: 480px) {
-        height: 80px;
+        display: block;
     }
 
     @media screen and (max-width: 479px) {
+        background-color: black;
         bottom: 0;
+        display: ${({ show }) => show ? 'block' : 'none'};
+        height: ${({ show }) => show ? '100vh' : '0'};
         left: 0;
-        position: fixed;
+        position: relative;
         right: 0;
         top: 0;
     }
@@ -70,10 +75,11 @@ const ThemeButton = styled.button`
 
 type NavBarProps = {
     setTheme: (theme: string) => void;
+    show: boolean;
     theme: string;
 };
 
-const NavBar = ({ setTheme, theme }: NavBarProps): JSX.Element => {
+const NavList = ({ setTheme, show, theme }: NavBarProps): JSX.Element => {
     const toggleTheme = () => {
         if (theme === 'light') {
             setTheme('dark');
@@ -83,7 +89,7 @@ const NavBar = ({ setTheme, theme }: NavBarProps): JSX.Element => {
     };
 
     return (
-        <Wrapper>
+        <Wrapper show={show}>
             <Link to='/'>
                 <Logo />
             </Link>
@@ -106,4 +112,4 @@ const NavBar = ({ setTheme, theme }: NavBarProps): JSX.Element => {
     );
 };
 
-export default memo(NavBar);
+export default memo(NavList);
