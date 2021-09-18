@@ -6,8 +6,8 @@ import {
     Route
 } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
-import NavBar from './components/navBar';
-import Footer from './components/footer';
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 import AboutPage from './pages/about';
 import ContactPage from './pages/contact';
 import LandingPage from './pages/landing';
