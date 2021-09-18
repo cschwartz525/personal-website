@@ -2,10 +2,10 @@ import React, { memo, useState } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faBars, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import NavList from './NavList';
 
-library.add(faBars, faMoon, faSun);
+library.add(faBars);
 
 const Wrapper = styled.div`
     background-color: ${({ theme }) => theme.backgroundColor};

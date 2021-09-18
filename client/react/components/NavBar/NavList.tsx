@@ -1,12 +1,8 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faBars, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import NavItem from './NavItem';
-
-library.add(faBars, faMoon, faSun);
+import ThemeToggle from './ThemeToggle';
 
 type WrapperProps = {
     show: boolean;
@@ -75,24 +71,19 @@ const ThemeButton = styled.button`
     }
 `;
 
-type NavBarProps = {
+type NavListProps = {
     setTheme: (theme: string) => void;
     show: boolean;
     theme: string;
     toggleShow: () => void;
 };
 
-const NavList = ({ setTheme, show, theme, toggleShow }: NavBarProps): JSX.Element => {
-    const toggleTheme = () => {
-        if (theme === 'light') {
-            setTheme('dark');
-        } else {
-            setTheme('light');
-        }
-    };
-
+const NavList = ({ setTheme, show, theme, toggleShow }: NavListProps): JSX.Element => {
     return (
-        <Wrapper onClick={toggleShow} show={show}>
+        <Wrapper
+            onClick={toggleShow}
+            show={show}
+        >
             <Link to='/'>
                 <Logo />
             </Link>
@@ -108,9 +99,10 @@ const NavList = ({ setTheme, show, theme, toggleShow }: NavBarProps): JSX.Elemen
                 content='Contact'
                 link='contact'
             />
-            <ThemeButton onClick={toggleTheme}>
-                <FontAwesomeIcon icon={theme === 'light' ? 'moon' : 'sun'} />
-            </ThemeButton>
+            <ThemeToggle
+                setTheme={setTheme}
+                theme={theme}
+            />
         </Wrapper>
     );
 };
