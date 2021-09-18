@@ -18,7 +18,7 @@ const Wrapper = styled.div<WrapperProps>`
     }
 
     @media screen and (max-width: 479px) {
-        background-color: black;
+        background-color: ${({ theme }) => theme.backgroundColor};
         bottom: 0;
         display: ${({ show }) => show ? 'block' : 'none'};
         height: ${({ show }) => show ? '100vh' : '0'};
@@ -34,16 +34,17 @@ const Logo = styled.div`
     background-size: contain;
     background-repeat: no-repeat;
     height: 40px;
-    width: 56px;
-    margin: 20px 10px 20px 20px;
     vertical-align: middle;
+    width: 56px;
 
     @media screen and (min-width: 480px) {
         display: inline-block;
+        margin: 20px 10px 20px 20px;
     }
 
     @media screen and (max-width: 479px) {
         display: block;
+        margin: 20px auto;
     }
 `;
 
@@ -55,16 +56,17 @@ const ThemeButton = styled.button`
     cursor: pointer;
     font-size: 20px;
     height: 40px;
-    margin: 20px;
     width: 40px;
 
     @media screen and (min-width: 480px) {
         display: inline-block;
         float: right;
+        margin: 20px;
     }
 
     @media screen and (max-width: 479px) {
         display: block;
+        margin: 20px auto;
     }
 
     &:hover {
@@ -77,9 +79,10 @@ type NavBarProps = {
     setTheme: (theme: string) => void;
     show: boolean;
     theme: string;
+    toggleShow: () => void;
 };
 
-const NavList = ({ setTheme, show, theme }: NavBarProps): JSX.Element => {
+const NavList = ({ setTheme, show, theme, toggleShow }: NavBarProps): JSX.Element => {
     const toggleTheme = () => {
         if (theme === 'light') {
             setTheme('dark');
@@ -89,7 +92,7 @@ const NavList = ({ setTheme, show, theme }: NavBarProps): JSX.Element => {
     };
 
     return (
-        <Wrapper show={show}>
+        <Wrapper onClick={toggleShow} show={show}>
             <Link to='/'>
                 <Logo />
             </Link>

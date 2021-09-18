@@ -49,6 +49,7 @@ const NavBar = ({ setTheme, theme }: NavBarProps): JSX.Element => {
                 setTheme={setTheme}
                 show={show}
                 theme={theme}
+                toggleShow={toggleShow}
             />
         </Wrapper>
     );
