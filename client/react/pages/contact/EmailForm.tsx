@@ -119,7 +119,7 @@ const EmailForm = (): JSX.Element => (
             name='message'
             rows={20}
         />
-        <div className="g-recaptcha" data-sitekey="TODO"></div>
+        <div className='g-recaptcha' data-sitekey='TODO'></div>
         <ButtonWrapper>
             <FormButton
                 disabled
