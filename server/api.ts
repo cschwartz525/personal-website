@@ -1,5 +1,7 @@
+import axios from 'axios';
 import { Request, Response } from 'express';
 import nodemailer from 'nodemailer';
+import MandrillTransport from 'mandrill-nodemailer-transport';
 import config from './config';
 import aboutData from './db/about.json';
 import resumeData from './db/resume.json';
@@ -12,24 +14,42 @@ export const resume = (req: Request, res: Response): void => {
     res.json(resumeData);
 }
 
-export const sendEmail = (req: Request, res: Response): void => {
-    var transporter = nodemailer.createTransport(config.smtpConfig);
+export const sendEmail = async (req: Request, res: Response): Promise<void> => {
+    var recaptchaResponse = req.body.recaptcha;
+    var recaptchaSecret = process.env.RECAPTCHA_SECRET;
+    var recaptchaVerifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${encodeURIComponent(recaptchaSecret)}&response=${encodeURIComponent(recaptchaResponse)}`;
 
-    var mailOptions = {
-        from: req.body.sender,
-        to: config.email_address,
-        subject: 'New email sent from personal website form',
-        text: `Subject: ${req.body.subject}\nFrom: ${req.body.sender}\nMessage: ${req.body.message}`
+	const response = await axios(recaptchaVerifyUrl);
+
+    if (response.data && response.data.success) {
+        const transport = nodemailer.createTransport(new MandrillTransport({
+            apiKey: process.env.MANDRILL_API_KEY
+        }));
+
+        var mailOptions = {
+            from: config.email_address,
+            to: config.email_address,
+            subject: 'New email sent from craigschwartzweb.com',
+            text: `Subject: ${req.body.subject}\nFrom: ${req.body.sender}\nMessage: ${req.body.message}`
+        };
+
+        transport.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                console.log('Error', error);
+                res.status(400);
+                res.send('error');
+            }
+            console.log('Message sent: ' + info);
+            res.status(200);
+            res.send('success');
+        });
+
+    } else {
+
+        console.log('Recaptcha not verified');
+        res.status(500);
+
     }
-
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            return console.log(error);
-            res.write('<h1>Error sending email</h1><a href="/">Back</a>');
-        }
-        console.log('Message sent: ' + info);
-        res.write('<h1>Email sent successfully</h1><a href="/">Back</a>');
-    });
 }
 
 export default {
