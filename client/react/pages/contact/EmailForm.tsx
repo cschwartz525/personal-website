@@ -1,5 +1,7 @@
-import React, { memo } from 'react';
+import React, { FormEvent, memo, useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 import styled from 'styled-components';
+import axios from 'axios';
 
 const ButtonWrapper = styled.div`
     margin: 10px auto;
@@ -96,41 +98,80 @@ const TextArea = styled.textarea`
     }
 `;
 
-const EmailForm = (): JSX.Element => (
-    <form
-        action='/api/sendEmail'
-        encType='application/json'
-        method='post'
-    >
-        <InputField
-            id='contact-form-email'
-            name='sender'
-            placeholder='Your email'
-            size={50}
-            type='text'
-        />
-        <InputField
-            name='subject'
-            placeholder='Subject'
-            size={50}
-            type='text'
-        />
-        <TextArea
-            name='message'
-            rows={20}
-        />
-        <div className='g-recaptcha' data-sitekey='6Ldi4oYUAAAAALqD9pjgAFq8553Vzz3kTOJW1h0e'></div>
-        <ButtonWrapper>
-            <FormButton
-                type='submit'
-                value='Send'
+const EmailForm = (): JSX.Element => {
+    let captcha: ReCAPTCHA;
+    const [message, setMessage] = useState('');
+    const [recaptchaValue, setRecaptchaValue] = useState('');
+    const [sender, setSender] = useState('');
+    const [subject, setSubject] = useState('');
+
+    const resetForm = () => {
+        captcha.reset();
+        setMessage('');
+        setSender('');
+        setSubject('');
+    };
+
+    const onSubmit = async (e: FormEvent) => {
+        e.preventDefault();
+
+        try {
+            await axios.post('/api/sendEmail', {
+                message,
+                recaptcha: recaptchaValue,
+                sender,
+                subject
+            });
+
+            resetForm();
+        } catch (error) {
+            console.error('Error sending email', error);
+        }
+    };
+
+    return (
+        <form onSubmit={onSubmit}>
+            <InputField
+                id='contact-form-email'
+                name='sender'
+                onChange={(e) => setSender(e.target.value)}
+                placeholder='Your email'
+                size={50}
+                type='text'
+                value={sender}
             />
-            <FormButton
-                type='reset'
-                value='Reset'
+            <InputField
+                name='subject'
+                onChange={(e) => setSubject(e.target.value)}
+                placeholder='Subject'
+                size={50}
+                type='text'
+                value={subject}
             />
-        </ButtonWrapper>
-    </form>
-);
+            <TextArea
+                name='message'
+                onChange={(e) => setMessage(e.target.value)}
+                rows={20}
+                value={message}
+            />
+            <ReCAPTCHA
+                ref={el => { captcha = el; }}
+                onChange={setRecaptchaValue}
+                sitekey='6Ldi4oYUAAAAALqD9pjgAFq8553Vzz3kTOJW1h0e'
+            />
+            <ButtonWrapper>
+                <FormButton
+                    type='submit'
+                    value='Send'
+                />
+                <FormButton
+                    onClick={resetForm}
+                    type='reset'
+                    value='Reset'
+                />
+            </ButtonWrapper>
+        </form>
+    );
+}
 
 export default memo(EmailForm);

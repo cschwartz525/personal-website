@@ -15,7 +15,7 @@ export const resume = (req: Request, res: Response): void => {
 }
 
 export const sendEmail = async (req: Request, res: Response): Promise<void> => {
-    var recaptchaResponse = req.body['g-recaptcha-response'];
+    var recaptchaResponse = req.body.recaptcha;
     var recaptchaSecret = process.env.RECAPTCHA_SECRET;
     var recaptchaVerifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${encodeURIComponent(recaptchaSecret)}&response=${encodeURIComponent(recaptchaResponse)}`;
 
@@ -36,10 +36,12 @@ export const sendEmail = async (req: Request, res: Response): Promise<void> => {
         transport.sendMail(mailOptions, (error, info) => {
             if (error) {
                 console.log('Error', error);
-                res.write('<h1>Error sending email</h1><a href="/">Back</a>');
+                res.status(400);
+                res.send('error');
             }
             console.log('Message sent: ' + info);
-            res.write('<h1>Email sent successfully</h1><a href="/">Back</a>');
+            res.status(200);
+            res.send('success');
         });
 
     } else {
