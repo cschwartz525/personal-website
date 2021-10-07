@@ -10,3 +10,6 @@ dist
 
 # Mac #
 .DS_STORE
+
+# Env File #
+.env

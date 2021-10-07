@@ -1,3 +1,4 @@
+import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import express from 'express';
 import path from 'path';
@@ -7,6 +8,8 @@ import {
     sendEmail
 } from './api';
 import config from './config'
+
+dotenv.config();
 
 const app = express();
 
