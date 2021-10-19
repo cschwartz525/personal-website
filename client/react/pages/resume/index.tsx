@@ -1,6 +1,8 @@
 import React, { memo, useEffect, useState } from 'react';
+import { CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
 import Card from './Card';
+import data from './data.json';
 
 const Container = styled.div`
     margin: 0 auto;
@@ -9,26 +11,23 @@ const Container = styled.div`
 `;
 
 const ResumePage = () => {
-    const [education, setEducation] = useState([]);
-    const [jobs, setJobs] = useState([]);
+    const [isMounted, setIsMounted] = useState(false);
+    useEffect(() => setIsMounted(true), []);
 
-    useEffect(() => {
-        fetch('/api/resume')
-            .then(res => res.json())
-            .then((data) => {
-                setEducation(data.education);
-                setJobs(data.jobs);
-            })
-            .catch((error: Error) => {
-                console.error('Error fetching resume data', error);
-            });
-    }, []);
+    const { education, jobs } = data;
 
     return (
         <Container>
             <h1 className='centered'>My Experience</h1>
 
-            <h2>JOBS</h2>
+            <CSSTransition
+                classNames='resume'
+                in={isMounted}
+                timeout={5000}
+                unmountOnExit
+            >
+                <h2>JOBS</h2>
+            </CSSTransition>
             <div>
                 {
                     jobs.map((job, index) => {
@@ -42,21 +41,36 @@ const ResumePage = () => {
                         } = job;
 
                         return (
-                            <Card
-                                endDate={endDate}
-                                heading={companyName}
+                            <CSSTransition
+                                classNames='resume'
+                                in={isMounted}
                                 key={`job-${index}`}
-                                notes={projects}
-                                startDate={startDate}
-                                subheading={jobTitle}
-                                summary={description}
-                            />
+                                timeout={5000}
+                                unmountOnExit
+                            >
+                                <Card
+                                    endDate={endDate}
+                                    heading={companyName}
+                                    index={index}
+                                    notes={projects}
+                                    startDate={startDate}
+                                    subheading={jobTitle}
+                                    summary={description}
+                                />
+                            </CSSTransition>
                         );
                     })
                 }
             </div>
 
-            <h2>EDUCATION</h2>
+            <CSSTransition
+                classNames='resume'
+                in={isMounted}
+                timeout={5000}
+                unmountOnExit
+            >
+                <h2>EDUCATION</h2>
+            </CSSTransition>
             <div>
                 {
                     education.map((school, index) => {
@@ -70,15 +84,23 @@ const ResumePage = () => {
                         } = school;
 
                         return (
-                            <Card
-                                endDate={endDate}
-                                heading={name}
+                            <CSSTransition
+                                classNames='resume'
+                                in={isMounted}
                                 key={`school-${index}`}
-                                notes={courses}
-                                startDate={startDate}
-                                subheading={`${degree} - ${major}`}
-                                summary='Relevant coursework'
-                            />
+                                timeout={5000}
+                                unmountOnExit
+                            >
+                                <Card
+                                    endDate={endDate}
+                                    heading={name}
+                                    index={jobs.length + index}
+                                    notes={courses}
+                                    startDate={startDate}
+                                    subheading={`${degree} - ${major}`}
+                                    summary='Relevant coursework'
+                                />
+                            </CSSTransition>
                         );
                     })
                 }

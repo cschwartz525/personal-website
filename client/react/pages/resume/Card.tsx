@@ -2,6 +2,16 @@ import React, { memo } from 'react';
 import styled from 'styled-components';
 import colors from '../../styles/colors';
 
+type CardProps = {
+    endDate: string;
+    heading: string;
+    index: number;
+    notes: string[];
+    startDate: string;
+    subheading: string;
+    summary: string;
+};
+
 const CardContainer = styled.div`
     color: ${colors.black};
     margin: 10px auto;
@@ -20,24 +30,16 @@ const BottomContainer = styled.div`
     padding: 10px;
 `;
 
-type CardProps = {
-    endDate: string;
-    heading: string;
-    notes: string[];
-    subheading: string;
-    startDate: string;
-    summary: string;
-};
-
 const Card = ({
     endDate,
     heading,
+    index,
     notes = [],
     startDate,
     subheading,
     summary
 }: CardProps): JSX.Element => (
-    <CardContainer>
+    <CardContainer style={{ transitionDelay: `${100 + 100 * index}ms` }}>
         <TopContainer>
             <h2>{heading}</h2>
             <h3>{subheading}</h3>

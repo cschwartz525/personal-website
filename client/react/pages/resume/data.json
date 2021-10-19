@@ -1,0 +1,117 @@
+{
+    "skills": [
+        "Javascript",
+        "C#",
+        "Java",
+        "Node.JS",
+        "REST",
+        "MVC",
+        "HTML",
+        "CSS",
+        "SASS",
+        "React",
+        "AWS",
+        "Unix",
+        "Git",
+        "SVN",
+        "SQL",
+        "Unit Testing"
+    ],
+    "jobs": [
+        {
+            "companyName": "Disney Streaming Services",
+            "jobTitle": "Lead Software Engineer",
+            "startDate": "2021",
+            "endDate": "Present",
+            "description": "Leading the Disney+ and Star+ Web front-end team.",
+            "projects": [
+                "Led the web team in building and launching Star+ in 18 countries Latin America",
+                "Partnering with product managers and TPMs to plan the web team's roadmap",
+                "Serving as an engineering manager to 7 direct reports and mentoring several others",
+                "Continuously improving upon existing Disney+ and Star+ features, specifically around content browsing, user engagement, and parental controls"
+            ]
+        },
+        {
+            "companyName": "Disney Streaming Services",
+            "jobTitle": "Senior Software Engineer",
+            "startDate": "2019",
+            "endDate": "2021",
+            "description": "Worked as the technical lead for the Disney+ Web front-end team.",
+            "projects": [
+                "Led the Disney+ Web Team. Overseeing a team of 40 engineers, and managing six direct reports",
+                "Set the technical direction for the Disney+ Web Team, working closely with product managers and TPMs to accept new requirements and refine the web team’s backlog",
+                "Partnered with other leads and senior engineers to re-architect portions of the application with the goal of improving performance, decreasing site load time, increasing scalability, and enabling experimentation",
+                "Led the team in building and launching several high-profile features, including Early Access and GroupWatch",
+                "Launched Disney+ in multiple countries across North America, Europe, and Latin America",
+                "Coordinated and led an effort to exponentially increase test coverage across the Disney+ web application"
+            ]
+        },
+        {
+            "companyName": "Bamtech Media / Disney Streaming Services",
+            "jobTitle": "Software Engineer",
+            "startDate": "2016",
+            "endDate": "2019",
+            "description": "Worked as a front-end web developer and team lead for the Accounts, Activation, and Access team.",
+            "projects": [
+                "Developing login, password reset, and account management flows for several streaming video websites",
+                "Assisting with the rollout of large-scale live streaming and VOD sports websites such as MLS Live and Eurosport",
+                "Supporting, upgrading, and refactoring several existing sites, including NHL.com, MLB.com, WWE Network, and HBO NOW",
+                "Streamlining internal cable provider / MVPD authorization flow",
+                "Managing relationships with partners, business stakeholders, and other technology teams"
+            ]
+        },
+        {
+            "companyName": "Trustpilot",
+            "jobTitle": "Software Developer",
+            "startDate": "2016",
+            "endDate": "2016",
+            "description": "Worked as a full-stack developer on the Commercial Growth team. Developed back-end functionality in Node.js, Express, and .NET. Created front-end features in React.js, Angular.js, Handlebars.js, and more.",
+            "projects": [
+                "Supported the business-facing website and created new features to help drive engagement and increase signups and conversions.",
+                "Created APIs using REST and SOAP in order to sync data between components in a microservice architecture.",
+                "Developed several Lambda functions in AWS to carry out lightweight, repeatable business functions.",
+                "Worked on the Trustpilot careers website, converting existing UI elements to reusable components in React.js.",
+                "Contributed to a fast-moving agile development team, deploying new functionality on a daily basis."
+            ]
+        },
+        {
+            "companyName": "Citigroup",
+            "jobTitle": "Assitant Vice President - Software Devleopment",
+            "startDate": "2013",
+            "endDate": "2016",
+            "description": "Worked as a full-stack developer in the Institutional Clients Group. Spent my first year with the Finance Desk Technology team and spent my second year with the Global Securitized Markets Technology team",
+            "projects": [
+                "Served as a crucial member in the build-out of MIS, a bid and order tracking module for traders. Developed both front-end and server-side functionality for this module.",
+                "Supported the .NET-based Management Reporting module, which provides critical risk and reporting data to traders daily.",
+                "Developed robust stateful response messaging for the Margin Operations team using a REST web service and Tibco EMS",
+                "Refactored internal code structure for Java modules to allow for single-click deployment. Implemented a new build procedure using Maven.",
+                "Managed the reporting and recon build-out for Volcker regulations.",
+                "Supported a user base of over 100 traders and salespeople worldwide, spanning multiple desks and asset classes."
+            ]
+        },
+        {
+            "companyName": "The Lloyd Group",
+            "jobTitle": "Operations Intern",
+            "location": "New York, NY",
+            "startDate": "2012",
+            "endDate": "2012",
+            "description": "Assisted in a wide variety of information technology operations including remote server management, scripting, SharePoint development, managed backup services, audits, and hardware builds."
+        }
+    ],
+    "education": [
+        {
+            "name": "University of Virginia",
+            "degree": "Bachelor of Science",
+            "major": "Computer Science",
+            "startDate": "2009",
+            "endDate": "2013",
+            "courses": [
+                "Data structures and algorithms",
+                "Cloud computing",
+                "Web and mobile systems",
+                "Networks",
+                "UI / UX"
+            ]
+        }
+    ]
+}
