@@ -8,8 +8,12 @@ type NavItemProps = {
     link: string;
 };
 
+const NavLink = styled(Link)`
+    text-decoration: none;
+`;
+
 const Tab = styled.div`
-    margin: 10px;
+    margin: 18px 10px;
     padding: 10px;
     vertical-align: middle;
     border: 2px;
@@ -59,11 +63,11 @@ const NavItem = ({
     const status = `/${link}` === location.pathname ? 'active' : 'inactive';
 
     return (
-        <Link to={`/${link}`}>
+        <NavLink to={`/${link}`}>
             <Tab className={`no-select ${status}`}>
                 {content}
             </Tab>
-        </Link>
+        </NavLink>
     );
 };
 
