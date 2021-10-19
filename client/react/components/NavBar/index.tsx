@@ -18,6 +18,12 @@ const Wrapper = styled.div`
     }
 `;
 
+const Icons = styled.div`
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+`;
+
 const HamburgerIcon = styled.button`
     background: transparent;
     border: none;
@@ -66,14 +72,14 @@ const NavBar = ({ setTheme, theme }: NavBarProps): JSX.Element => {
 
     return (
         <Wrapper>
-            <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0 20px' }}>
-                <Link to='/'>
+            <Icons>
+                <Link onClick={() => setShow(false)} to='/'>
                     <Logo />
                 </Link>
                 <HamburgerIcon onClick={toggleShow}>
                     <FontAwesomeIcon icon='bars' />
                 </HamburgerIcon>
-            </div>
+            </Icons>
             <NavList
                 setTheme={setTheme}
                 show={show}
