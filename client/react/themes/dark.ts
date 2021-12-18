@@ -8,5 +8,9 @@ export default {
         hoverColor: colors.darkblue,
         visitedColor: colors.orange,
     },
-    logoUrl: '/assets/images/logo_white.png'
+    logoUrl: '/assets/images/logo_white.png',
+    nav: {
+        color: colors.white,
+        hoverColor: colors.orange
+    }
 };

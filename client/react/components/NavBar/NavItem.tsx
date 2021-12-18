@@ -9,19 +9,16 @@ type NavItemProps = {
 };
 
 const NavLink = styled(Link)`
-    text-decoration: none;
-`;
-
-const Tab = styled.div`
-    margin: 18px 10px;
-    padding: 10px;
-    vertical-align: middle;
-    border: 2px;
-    border-color: ${colors.black};
-    border-style: solid;
-    border-radius: 5px;
+    background: none;
+    border-bottom: 3px solid transparent;
     cursor: pointer;
-    color: ${colors.black};
+    color: ${({ theme }) => theme.nav.color};
+    margin: 18px 20px;
+    padding: 10px 0;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
 
     @media screen and (min-width: 480px) {
         display: inline-block;
@@ -31,27 +28,26 @@ const Tab = styled.div`
         display: block;
         margin: 10px auto;
         text-align: center;
-        width: 120px;
-    }
-
-    &.inactive {
-        background: ${colors.lightgrey};
     }
 
     &.active {
-        color: ${colors.white};
-        background: ${colors.mediumblue};
+        border-bottom: 3px solid ${({ theme }) => theme.nav.color};
     }
 
-    &:hover,
-    &:hover.active,
-    &:hover.inactive {
-        color: ${colors.white};
-        background: ${colors.mediumblue}; /* Old browsers */
-        background: -moz-linear-gradient(top, ${colors.lightblue} 0%, ${colors.mediumblue} 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, ${colors.lightblue} 0%, ${colors.mediumblue} 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, ${colors.lightblue} 0%, ${colors.mediumblue} 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='${colors.lightblue}', endColorstr='${colors.mediumblue}',GradientType=0 ); /* IE6-9 */
+    &:after {
+        background: ${({ theme }) => theme.nav.hoverColor};;
+        bottom: -3px;
+        content: "";
+        height: 3px;
+        left: 0;
+        position: absolute;
+        right: 100%;
+        transition: 0.2s ease-in-out;
+    }
+
+    &:hover:after {
+        right: 0;
+        transition: 0.2s ease-in-out;
     }
 `;
 
@@ -60,13 +56,11 @@ const NavItem = ({
     link
 }: NavItemProps): JSX.Element => {
     const location = useLocation();
-    const status = `/${link}` === location.pathname ? 'active' : 'inactive';
+    const status = location.pathname.startsWith(`/${link}`) ? 'active' : 'inactive';
 
     return (
-        <NavLink to={`/${link}`}>
-            <Tab className={`no-select ${status}`}>
-                {content}
-            </Tab>
+        <NavLink className={`no-select ${status}`} to={`/${link}`}>
+            {content}
         </NavLink>
     );
 };

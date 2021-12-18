@@ -16,10 +16,10 @@ const Wrapper = styled.div<WrapperProps>`
     @media screen and (max-width: 479px) {
         background-color: ${({ theme }) => theme.backgroundColor};
         bottom: 0;
-        display: ${({ show }) => show ? 'block' : 'none'};
+        display: ${({ show }) => show ? 'flex' : 'none'};
+        flex-direction: column;
         height: ${({ show }) => show ? '100vh' : '0'};
         left: 0;
-        padding-top: 20px;
         position: relative;
         right: 0;
         top: 0;
