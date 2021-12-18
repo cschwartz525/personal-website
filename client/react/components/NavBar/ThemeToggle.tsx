@@ -7,6 +7,7 @@ import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 library.add(faMoon, faSun);
 
 const ThemeButton = styled.button`
+    align-items: center;
     background-color: ${({ theme }) => theme.backgroundColor};
     border: ${({ theme }) => `2px solid ${theme.color}`};
     border-radius: 50%;
@@ -14,16 +15,17 @@ const ThemeButton = styled.button`
     cursor: pointer;
     font-size: 20px;
     height: 40px;
+    justify-content: center;
     width: 40px;
 
     @media screen and (min-width: 480px) {
-        display: inline-block;
+        display: inline-flex;
         float: right;
         margin: 20px;
     }
 
     @media screen and (max-width: 479px) {
-        display: block;
+        display: flex;
         margin: 20px auto;
     }
 
