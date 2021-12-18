@@ -13,7 +13,7 @@ type CardProps = {
 };
 
 const CardContainer = styled.div`
-    color: ${colors.black};
+    color: ${colors.darkblue};
     margin: 10px auto;
 `;
 

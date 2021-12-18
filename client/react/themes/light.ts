@@ -2,15 +2,15 @@ import colors from '../styles/colors';
 
 export default {
     backgroundColor: colors.white,
-    color: colors.black,
+    color: colors.darkblue,
     links: {
-        color: colors.black,
+        color: colors.darkblue,
         hoverColor: colors.lightblue,
         visitedColor: colors.orange,
     },
     logoUrl: '/assets/images/logo_black.png',
     nav: {
-        color: colors.black,
+        color: colors.darkblue,
         hoverColor: colors.orange
     }
 };

@@ -1,11 +1,11 @@
 import colors from '../styles/colors';
 
 export default {
-    backgroundColor: colors.black,
+    backgroundColor: colors.darkblue,
     color: colors.white,
     links: {
         color: colors.white,
-        hoverColor: colors.darkblue,
+        hoverColor: colors.mediumblue,
         visitedColor: colors.orange,
     },
     logoUrl: '/assets/images/logo_white.png',
