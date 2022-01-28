@@ -17,9 +17,11 @@ import themes from './themes';
 const Wrapper = styled.div`
     background: ${({ theme }) => theme.backgroundColor};
     color: ${({ theme }) => theme.color};
+    display: flex;
+    flex-direction: column;
     font-family: Lato, Helvetica, Arial;
+    justify-content: space-between;
     min-height: 100vh;
-    position: relative;
 `;
 
 const Site = () => {

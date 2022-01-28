@@ -8,12 +8,8 @@ import { fab, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 library.add(fab, faGithub, faLinkedinIn, faEnvelope);
 
 const Container = styled.div`
-    bottom: 0;
     height: 80px;
-    left: 0;
     margin-top: 20px;
-    position: absolute;
-    right: 0;
 `;
 
 const SocialRow = styled.div`
