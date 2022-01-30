@@ -34,6 +34,7 @@ const Wrapper = styled.div`
 `;
 
 const Site = () => {
+    const [showNavList, setShowNavList] = useState(false);
     const [theme, setTheme] = useState('dark');
 
     return (
@@ -42,23 +43,28 @@ const Site = () => {
             <Wrapper>
                 <Router>
                     <NavBar
+                        setShow={setShowNavList}
                         setTheme={setTheme}
+                        show={showNavList}
                         theme={theme}
                     />
-                    <Switch>
-                        <Route path='/' exact>
-                            <LandingPage />
-                        </Route>
-                        <Route path='/about'>
-                            <AboutPage />
-                        </Route>
-                        <Route path='/contact'>
-                            <ContactPage />
-                        </Route>
-                        <Route path='/resume'>
-                            <ResumePage />
-                        </Route>
-                    </Switch>
+                    {
+                        !showNavList &&
+                        <Switch>
+                            <Route path='/' exact>
+                                <LandingPage />
+                            </Route>
+                            <Route path='/about'>
+                                <AboutPage />
+                            </Route>
+                            <Route path='/contact'>
+                                <ContactPage />
+                            </Route>
+                            <Route path='/resume'>
+                                <ResumePage />
+                            </Route>
+                        </Switch>
+                    }
                 </Router>
                 <Footer />
             </Wrapper>

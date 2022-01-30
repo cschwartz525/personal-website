@@ -58,13 +58,13 @@ const Logo = styled.div`
 `;
 
 type NavBarProps = {
+    setShow: (show: boolean) => void;
     setTheme: (theme: string) => void;
+    show: boolean;
     theme: string;
 };
 
-const NavBar = ({ setTheme, theme }: NavBarProps): JSX.Element => {
-    const [show, setShow] = useState(false);
-
+const NavBar = ({ setShow, setTheme, show, theme }: NavBarProps): JSX.Element => {
     const toggleShow = () => {
         setShow(!show);
     };
