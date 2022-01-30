@@ -1,7 +1,6 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
 import NavItem from './NavItem';
-import ThemeToggle from './ThemeToggle';
 
 type WrapperProps = {
     show: boolean;
@@ -27,36 +26,28 @@ const Wrapper = styled.div<WrapperProps>`
 `;
 
 type NavListProps = {
-    setTheme: (theme: string) => void;
+    onClick: () => void;
     show: boolean;
-    theme: string;
-    toggleShow: () => void;
 };
 
-const NavList = ({ setTheme, show, theme, toggleShow }: NavListProps): JSX.Element => {
-    return (
-        <Wrapper
-            onClick={toggleShow}
-            show={show}
-        >
-            <NavItem
-                content='About'
-                link='about'
-            />
-            <NavItem
-                content='Resume'
-                link='resume'
-            />
-            <NavItem
-                content='Contact'
-                link='contact'
-            />
-            <ThemeToggle
-                setTheme={setTheme}
-                theme={theme}
-            />
-        </Wrapper>
-    );
-};
+const NavList = ({ onClick, show }: NavListProps): JSX.Element => (
+    <Wrapper
+        onClick={onClick}
+        show={show}
+    >
+        <NavItem
+            content='About'
+            link='about'
+        />
+        <NavItem
+            content='Resume'
+            link='resume'
+        />
+        <NavItem
+            content='Contact'
+            link='contact'
+        />
+    </Wrapper>
+);
 
 export default memo(NavList);
