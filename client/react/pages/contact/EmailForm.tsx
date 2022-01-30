@@ -19,7 +19,7 @@ const ButtonWrapper = styled.div`
 `;
 
 const FormButton = styled.input`
-    background-color: ${({ theme }) => theme.backgroundColor};
+    background-color: transparent;
     border: ${({ theme }) => `2px solid ${theme.color}`};
     border-radius: 20px;
     color: ${({ theme }) => theme.color};

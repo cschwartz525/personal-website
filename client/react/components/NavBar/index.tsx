@@ -9,7 +9,6 @@ import NavList from './NavList';
 library.add(faBars);
 
 const Wrapper = styled.div`
-    background-color: ${({ theme }) => theme.backgroundColor};
     display: block;
     height: 80px;
 
