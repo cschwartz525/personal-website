@@ -14,10 +14,17 @@ import LandingPage from './pages/landing';
 import ResumePage from './pages/resume';
 import themes from './themes';
 
-const Wrapper = styled.div`
+const Background = styled.div`
     background: ${({ theme }) => theme.backgroundGradient};
-    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-position: center;
+    height: 100vh;
+    position: fixed;
+    width: 100vw;
+    z-index: -1;
+`;
+
+const Wrapper = styled.div`
     color: ${({ theme }) => theme.color};
     display: flex;
     flex-direction: column;
@@ -31,6 +38,7 @@ const Site = () => {
 
     return (
         <ThemeProvider theme={themes[theme]}>
+            <Background />
             <Wrapper>
                 <Router>
                     <NavBar
