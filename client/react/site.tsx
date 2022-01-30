@@ -14,10 +14,17 @@ import LandingPage from './pages/landing';
 import ResumePage from './pages/resume';
 import themes from './themes';
 
-const Wrapper = styled.div`
+const Background = styled.div`
     background: ${({ theme }) => theme.backgroundGradient};
-    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-position: center;
+    height: 100vh;
+    position: fixed;
+    width: 100vw;
+    z-index: -1;
+`;
+
+const Wrapper = styled.div`
     color: ${({ theme }) => theme.color};
     display: flex;
     flex-direction: column;
@@ -27,30 +34,37 @@ const Wrapper = styled.div`
 `;
 
 const Site = () => {
+    const [showNavList, setShowNavList] = useState(false);
     const [theme, setTheme] = useState('dark');
 
     return (
         <ThemeProvider theme={themes[theme]}>
+            <Background />
             <Wrapper>
                 <Router>
                     <NavBar
+                        setShow={setShowNavList}
                         setTheme={setTheme}
+                        show={showNavList}
                         theme={theme}
                     />
-                    <Switch>
-                        <Route path='/' exact>
-                            <LandingPage />
-                        </Route>
-                        <Route path='/about'>
-                            <AboutPage />
-                        </Route>
-                        <Route path='/contact'>
-                            <ContactPage />
-                        </Route>
-                        <Route path='/resume'>
-                            <ResumePage />
-                        </Route>
-                    </Switch>
+                    {
+                        !showNavList &&
+                        <Switch>
+                            <Route path='/' exact>
+                                <LandingPage />
+                            </Route>
+                            <Route path='/about'>
+                                <AboutPage />
+                            </Route>
+                            <Route path='/contact'>
+                                <ContactPage />
+                            </Route>
+                            <Route path='/resume'>
+                                <ResumePage />
+                            </Route>
+                        </Switch>
+                    }
                 </Router>
                 <Footer />
             </Wrapper>

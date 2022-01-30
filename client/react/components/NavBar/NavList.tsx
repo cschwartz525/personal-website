@@ -14,7 +14,6 @@ const Wrapper = styled.div<WrapperProps>`
     }
 
     @media screen and (max-width: 479px) {
-        background-color: ${({ theme }) => theme.backgroundColor};
         bottom: 0;
         display: ${({ show }) => show ? 'flex' : 'none'};
         flex-direction: column;
