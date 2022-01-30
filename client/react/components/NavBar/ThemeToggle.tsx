@@ -8,7 +8,7 @@ library.add(faMoon, faSun);
 
 const ThemeButton = styled.button`
     align-items: center;
-    background-color: ${({ theme }) => theme.backgroundColor};
+    background-color: transparent;
     border: ${({ theme }) => `2px solid ${theme.color}`};
     border-radius: 50%;
     color: ${({ theme }) => theme.color};

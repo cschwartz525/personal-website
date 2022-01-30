@@ -37,7 +37,7 @@ const LinksContainer = styled.div`
 `;
 
 const LinkButton = styled(Link)`
-    background-color: ${({ theme }) => theme.backgroundColor};
+    background-color: transparent;
     border: ${({ theme }) => `2px solid ${theme.color}`};
     border-radius: 20px;
     color: ${({ theme }) => theme.color};

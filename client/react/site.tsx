@@ -15,7 +15,9 @@ import ResumePage from './pages/resume';
 import themes from './themes';
 
 const Wrapper = styled.div`
-    background: ${({ theme }) => theme.backgroundColor};
+    background: ${({ theme }) => theme.backgroundGradient};
+    background-attachment: fixed;
+    background-position: center;
     color: ${({ theme }) => theme.color};
     display: flex;
     flex-direction: column;

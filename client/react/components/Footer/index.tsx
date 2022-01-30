@@ -19,7 +19,7 @@ const SocialRow = styled.div`
 
 const SocialButton = styled.a`
     align-items: center;
-    background-color: ${({ theme }) => theme.backgroundColor};
+    background-color: transparent;
     border: ${({ theme }) => `1px solid ${theme.color}`};
     border-radius: 50%;
     color: ${({ theme }) => theme.color};
