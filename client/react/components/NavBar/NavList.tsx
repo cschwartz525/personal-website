@@ -9,7 +9,6 @@ type WrapperProps = {
 const Wrapper = styled.div<WrapperProps>`
     @media screen and (min-width: 480px) {
         display: block;
-        width: 100%;
     }
 
     @media screen and (max-width: 479px) {

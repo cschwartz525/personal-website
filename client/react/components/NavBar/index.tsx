@@ -14,6 +14,7 @@ const Wrapper = styled.div`
 
     @media screen and (min-width: 480px) {
         display: flex;
+        justify-content: space-between;
     }
 `;
 
