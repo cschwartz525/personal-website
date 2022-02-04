@@ -7,5 +7,6 @@ export default {
     lightgrey: '#dbe4ee',
     orange: '#ffaa00',
     red: '#ff0000',
+    mediumGreen: '#22b590',
     transparent: 'rgba(0, 0, 0, 0)'
 };
