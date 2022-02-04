@@ -6,7 +6,7 @@ export default {
     color: colors.white,
     links: {
         color: colors.white,
-        hoverColor: colors.mediumblue,
+        hoverColor: colors.orange,
         visitedColor: colors.orange,
     },
     logoUrl: '/assets/images/logo_white.png',
