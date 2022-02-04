@@ -7,7 +7,7 @@ export default {
     links: {
         color: colors.darkblue,
         hoverColor: colors.lightblue,
-        visitedColor: colors.orange,
+        visitedColor: colors.lightblue,
     },
     logoUrl: '/assets/images/logo_black.png',
     nav: {

@@ -14,6 +14,7 @@ const Wrapper = styled.div`
 
     @media screen and (min-width: 480px) {
         display: flex;
+        justify-content: space-between;
     }
 `;
 
@@ -59,12 +60,10 @@ const Logo = styled.div`
 
 type NavBarProps = {
     setShow: (show: boolean) => void;
-    setTheme: (theme: string) => void;
     show: boolean;
-    theme: string;
 };
 
-const NavBar = ({ setShow, setTheme, show, theme }: NavBarProps): JSX.Element => {
+const NavBar = ({ setShow, show }: NavBarProps): JSX.Element => {
     const toggleShow = () => {
         setShow(!show);
     };
@@ -80,10 +79,8 @@ const NavBar = ({ setShow, setTheme, show, theme }: NavBarProps): JSX.Element =>
                 </HamburgerIcon>
             </Icons>
             <NavList
-                setTheme={setTheme}
+                onClick={() => setShow(false)}
                 show={show}
-                theme={theme}
-                toggleShow={toggleShow}
             />
         </Wrapper>
     );

@@ -33,20 +33,27 @@ const Wrapper = styled.div`
     min-height: 100vh;
 `;
 
+const getRandomTheme = () => {
+    const keys = Object.keys(themes);
+    const index = Math.floor(Math.random() * keys.length);
+    const theme = themes[keys[index]];
+
+    return theme;
+};
+
+const theme = getRandomTheme();
+
 const Site = () => {
     const [showNavList, setShowNavList] = useState(false);
-    const [theme, setTheme] = useState('dark');
 
     return (
-        <ThemeProvider theme={themes[theme]}>
+        <ThemeProvider theme={theme}>
             <Background />
             <Wrapper>
                 <Router>
                     <NavBar
                         setShow={setShowNavList}
-                        setTheme={setTheme}
                         show={showNavList}
-                        theme={theme}
                     />
                     {
                         !showNavList &&
