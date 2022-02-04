@@ -36,7 +36,7 @@ const Wrapper = styled.div`
 const getRandomTheme = () => {
     const keys = Object.keys(themes);
     const index = Math.floor(Math.random() * keys.length);
-    const theme = themes[keys[index]];
+    const theme = themes[keys[1]];
 
     return theme;
 };
