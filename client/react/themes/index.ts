@@ -1,5 +1,5 @@
-import dark from './dark';
-import light from './light';
+import blue from './blue';
 import red from './red';
+import white from './white';
 
-export default { dark, light, red } as Record<string, any>;
+export default { blue, red, white,  } as Record<string, any>;
