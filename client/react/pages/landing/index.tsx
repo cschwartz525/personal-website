@@ -10,17 +10,37 @@ const Wrapper = styled.div`
 
 const Heading = styled.h1`
     color: ${({ theme }) => theme.color};
-    font-size: 72px;
+    font-size: 3.25em;
     font-weight: bold;
+    letter-spacing: 7px;
     margin-bottom: 20px;
     text-align: center;
+
+    @media screen and (min-width: 412px) {
+        font-size: 56px;
+        letter-spacing: 7px;
+    }
+
+    @media screen and (max-width: 411px) {
+        font-size: 48px;
+        letter-spacing: 6px;
+    }
 `;
 
 const Subheading = styled.h2`
     color: ${({ theme }) => theme.color};
-    font-size: 19px;
+    font-size: 20px;
+    font-weight: normal;
     margin-bottom: 20px;
     text-align: center;
+
+    @media screen and (min-width: 412px) {
+        font-size: 20px;
+    }
+
+    @media screen and (max-width: 411px) {
+        font-size: 18px;
+    }
 `;
 
 const LinksContainer = styled.div`
@@ -31,7 +51,7 @@ const LinksContainer = styled.div`
 
     @media screen and (max-width: 411px) {
         display: block;
-        width: 50%;
+        width: 60%;
         margin: 0 auto;
     }
 `;
@@ -90,11 +110,11 @@ const LandingPage = () => {
                 unmountOnExit
             >
                 <div>
-                    <Heading>Craig Schwartz</Heading>
+                    <Heading>CRAIG SCHWARTZ</Heading>
                     <Subheading>Hi, I'm Craig. I build user-friendly websites and web applications.</Subheading>
                     <LinksContainer>
-                        <LinkButton to='/about'>Learn More</LinkButton>
-                        <LinkButton to='/contact'>Contact Me</LinkButton>
+                        <LinkButton to='/about'>LEARN MORE</LinkButton>
+                        <LinkButton to='/contact'>CONTACT ME</LinkButton>
                     </LinksContainer>
                 </div>
             </CSSTransition>

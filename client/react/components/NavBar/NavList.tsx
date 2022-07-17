@@ -8,7 +8,9 @@ type WrapperProps = {
 
 const Wrapper = styled.div<WrapperProps>`
     @media screen and (min-width: 480px) {
+        align-self: center;
         display: block;
+        padding: 0 20px;
     }
 
     @media screen and (max-width: 479px) {
@@ -17,6 +19,7 @@ const Wrapper = styled.div<WrapperProps>`
         flex-direction: column;
         height: ${({ show }) => show ? '100vh' : '0'};
         left: 0;
+        margin-top: 20px;
         position: relative;
         right: 0;
         top: 0;
