@@ -10,7 +10,7 @@ library.add(faBars);
 
 const Wrapper = styled.div`
     display: block;
-    height: 80px;
+    height: 96px;
 
     @media screen and (min-width: 480px) {
         display: flex;
@@ -43,7 +43,7 @@ const Logo = styled.div`
     background-image: url(${({ theme }) => theme.logoUrl});
     background-size: contain;
     background-repeat: no-repeat;
-    height: 40px;
+    height: 56px;
     vertical-align: middle;
     width: 56px;
 

@@ -13,7 +13,8 @@ const NavLink = styled(Link)`
     border-bottom: 3px solid transparent;
     cursor: pointer;
     color: ${({ theme }) => theme.nav.color};
-    margin: 18px 20px;
+    letter-spacing: 3px;
+    margin: 0 20px;
     padding: 10px 0;
     position: relative;
     text-decoration: none;

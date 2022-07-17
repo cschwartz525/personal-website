@@ -19,16 +19,27 @@
     ],
     "jobs": [
         {
+            "companyName": "LinkedIn",
+            "jobTitle": "Staff Software Engineer",
+            "startDate": "2022",
+            "endDate": "Present",
+            "description": "Working as an engineer and leader in the Product Accelerator team.",
+            "projects": [
+                "Supporting a wide range of partner teams within LinkedIn to ship high-profile product initiatives with improved speed and scale",
+                "Building impactful new features for the LinkedIn web experience in Ember"
+            ]
+        },
+        {
             "companyName": "Disney Streaming Services",
             "jobTitle": "Lead Software Engineer",
             "startDate": "2021",
-            "endDate": "Present",
-            "description": "Leading the Disney+ and Star+ Web front-end team.",
+            "endDate": "2022",
+            "description": "Led the Disney+ and Star+ Web front-end team.",
             "projects": [
                 "Led the web team in building and launching Star+ in 18 countries Latin America",
-                "Partnering with product managers and TPMs to plan the web team's roadmap",
-                "Serving as an engineering manager to 7 direct reports and mentoring several others",
-                "Continuously improving upon existing Disney+ and Star+ features, specifically around content browsing, user engagement, and parental controls"
+                "Partnered with product managers and TPMs to plan the web team's roadmap",
+                "Served as an engineering manager to 7 direct reports and mentoring several others",
+                "Continuously improved upon existing Disney+ and Star+ features, specifically around content browsing, user engagement, and parental controls"
             ]
         },
         {
