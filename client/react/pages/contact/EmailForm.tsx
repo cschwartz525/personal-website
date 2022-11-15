@@ -63,6 +63,7 @@ const InputField = styled.input`
     background: transparent;
     border: none;
     border-bottom: ${({ theme }) => `2px solid ${theme.color}`};
+    border-radius: 0;
     color: ${({ theme }) => theme.color};
     font-size: 20px;
     margin: 0 0 8px;
