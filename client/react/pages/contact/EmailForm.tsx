@@ -18,6 +18,11 @@ const ButtonWrapper = styled.div`
     }
 `;
 
+const Center = styled.div`
+    display: flex;
+    justify-content: center;
+`;
+
 const FormButton = styled.input`
     background-color: transparent;
     border: ${({ theme }) => `2px solid ${theme.color}`};
@@ -155,20 +160,22 @@ const EmailForm = (): JSX.Element => {
                 rows={20}
                 value={message}
             />
-            <ReCAPTCHA
-                ref={el => { captcha = el; }}
-                onChange={setRecaptchaValue}
-                sitekey='6Ldi4oYUAAAAALqD9pjgAFq8553Vzz3kTOJW1h0e'
-            />
+            <Center>
+                <ReCAPTCHA
+                    ref={el => { captcha = el; }}
+                    onChange={setRecaptchaValue}
+                    sitekey='6Ldi4oYUAAAAALqD9pjgAFq8553Vzz3kTOJW1h0e'
+                />
+            </Center>
             <ButtonWrapper>
                 <FormButton
                     type='submit'
-                    value='Send'
+                    value='SEND'
                 />
                 <FormButton
                     onClick={resetForm}
                     type='reset'
-                    value='Reset'
+                    value='RESET'
                 />
             </ButtonWrapper>
         </form>
