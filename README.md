@@ -2,8 +2,8 @@
 
 Personal website for Craig Schwartz
 
-Written using *NodeJS*, *Express*, *React*, *Typescript*, and *SASS*
+Written using *[NodeJS](https://nodejs.org/)*, *[Express](https://expressjs.com/)*, *[React](https://reactjs.org/)*, *[Typescript](https://www.typescriptlang.org/)*, and *[SASS](https://sass-lang.com/)*
 
-Built using *Webpack*
+Built using *[Webpack](https://webpack.js.org/)*
 
-Deployed on *Heroku*
+Deployed on *[Railway](https://railway.app/)*
