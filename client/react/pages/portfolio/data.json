@@ -1,0 +1,30 @@
+{
+    "projects": [
+        {
+            "title": "20 Questions",
+            "description": "Multiplayer guessing game using websockets",
+            "links": {
+                "github": "https://github.com/cschwartz525/20-questions",
+                "production": "https://20-questions-production.up.railway.app"
+            },
+            "tools": [
+                "React",
+                "Typescript",
+                "Socket.IO"
+            ]
+        },
+        {
+            "title": "Workout Log",
+            "description": "Next.js application to track workouts and progress",
+            "links": {
+                "github": "https://github.com/cschwartz525/workout-log",
+                "production": "https://workout-log-production.up.railway.app"
+            },
+            "tools": [
+                "Next.js",
+                "Typescript",
+                "MongoDB"
+            ]
+        }
+    ]
+}
