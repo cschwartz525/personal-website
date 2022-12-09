@@ -7,13 +7,13 @@ type WrapperProps = {
 };
 
 const Wrapper = styled.div<WrapperProps>`
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 700px) {
         align-self: center;
         display: block;
         padding: 0 20px;
     }
 
-    @media screen and (max-width: 479px) {
+    @media screen and (max-width: 699px) {
         bottom: 0;
         display: ${({ show }) => show ? 'flex' : 'none'};
         flex-direction: column;
@@ -44,6 +44,10 @@ const NavList = ({ onClick, show }: NavListProps): JSX.Element => (
         <NavItem
             content='Resume'
             link='resume'
+        />
+        <NavItem
+            content='Portfolio'
+            link='portfolio'
         />
         <NavItem
             content='Contact'

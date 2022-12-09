@@ -12,7 +12,7 @@ const Wrapper = styled.div`
     display: block;
     height: 96px;
 
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 700px) {
         display: flex;
         justify-content: space-between;
     }
@@ -34,7 +34,7 @@ const HamburgerIcon = styled.button`
     font-size: 30px;
     outline: none;
 
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 700px) {
         display: none;
     }
 `;
@@ -47,12 +47,12 @@ const Logo = styled.div`
     vertical-align: middle;
     width: 56px;
 
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 700px) {
         display: inline-block;
         margin: 20px 10px 20px 20px;
     }
 
-    @media screen and (max-width: 479px) {
+    @media screen and (max-width: 699px) {
         display: block;
         margin: 20px auto;
     }

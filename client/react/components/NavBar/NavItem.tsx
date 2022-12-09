@@ -21,11 +21,11 @@ const NavLink = styled(Link)`
     text-transform: uppercase;
     vertical-align: middle;
 
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 700px) {
         display: inline-block;
     }
 
-    @media screen and (max-width: 479px) {
+    @media screen and (max-width: 699px) {
         display: block;
         margin: 10px auto;
         text-align: center;
