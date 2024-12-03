@@ -23,10 +23,13 @@
             "jobTitle": "Staff Software Engineer",
             "startDate": "2022",
             "endDate": "Present",
-            "description": "Working as an engineer and leader in the Product Accelerator team.",
+            "description": "Working as an engineer and leader in the Feed team.",
             "projects": [
-                "Supporting a wide range of partner teams within LinkedIn to ship high-profile product initiatives with improved speed and scale",
-                "Building impactful new features for the LinkedIn web experience in Ember"
+                "Supporting a wide range of partner teams within LinkedIn to ship high-profile product initiatives with speed and scale.",
+                "Building impactful new features for the LinkedIn Feed web experience.",
+                "Serving as the primary application owner for LinkedIn's server-side rendered mobile web application, which hosts more than 10 complex web pages including the main feed.",
+                "Worked with a cross-functional council of engineers and managers to take full ownership of site reliability, audit monitoring and alerting, train engineers, and operationalize our oncalls.",
+                "Led the rollout of collaborative articles on destkop and mobile web, serving as tech lead for a team of 10 engineers."
             ]
         },
         {
@@ -36,10 +39,10 @@
             "endDate": "2022",
             "description": "Led the Disney+ and Star+ Web front-end team.",
             "projects": [
-                "Led the web team in building and launching Star+ in 18 countries Latin America",
-                "Partnered with product managers and TPMs to plan the web team's roadmap",
-                "Served as an engineering manager to 7 direct reports and mentoring several others",
-                "Continuously improved upon existing Disney+ and Star+ features, specifically around content browsing, user engagement, and parental controls"
+                "Led the web team in building and launching Star+ in 18 countries Latin America.",
+                "Partnered with product managers and TPMs to plan the web team's roadmap.",
+                "Served as an engineering manager to 7 direct reports and mentoring several others.",
+                "Continuously improved upon existing Disney+ and Star+ features, specifically around content browsing, user engagement, and parental controls."
             ]
         },
         {
@@ -49,12 +52,12 @@
             "endDate": "2021",
             "description": "Worked as the technical lead for the Disney+ Web front-end team.",
             "projects": [
-                "Led the Disney+ Web Team. Overseeing a team of 40 engineers, and managing six direct reports",
-                "Set the technical direction for the Disney+ Web Team, working closely with product managers and TPMs to accept new requirements and refine the web team’s backlog",
-                "Partnered with other leads and senior engineers to re-architect portions of the application with the goal of improving performance, decreasing site load time, increasing scalability, and enabling experimentation",
-                "Led the team in building and launching several high-profile features, including Early Access and GroupWatch",
-                "Launched Disney+ in multiple countries across North America, Europe, and Latin America",
-                "Coordinated and led an effort to exponentially increase test coverage across the Disney+ web application"
+                "Led the Disney+ Web Team. Overseeing a team of 40 engineers, and managing six direct reports.",
+                "Set the technical direction for the Disney+ Web Team, working closely with product managers and TPMs to accept new requirements and refine the web team’s backlog.",
+                "Partnered with other leads and senior engineers to re-architect portions of the application with the goal of improving performance, decreasing site load time, increasing scalability, and enabling experimentation.",
+                "Led the team in building and launching several high-profile features, including Early Access and GroupWatch.",
+                "Launched Disney+ in multiple countries across North America, Europe, and Latin America.",
+                "Coordinated and led an effort to exponentially increase test coverage across the Disney+ web application."
             ]
         },
         {
@@ -64,11 +67,11 @@
             "endDate": "2019",
             "description": "Worked as a front-end web developer and team lead for the Accounts, Activation, and Access team.",
             "projects": [
-                "Developing login, password reset, and account management flows for several streaming video websites",
-                "Assisting with the rollout of large-scale live streaming and VOD sports websites such as MLS Live and Eurosport",
-                "Supporting, upgrading, and refactoring several existing sites, including NHL.com, MLB.com, WWE Network, and HBO NOW",
-                "Streamlining internal cable provider / MVPD authorization flow",
-                "Managing relationships with partners, business stakeholders, and other technology teams"
+                "Developed login, password reset, and account management flows for several streaming video websites.",
+                "Assisted with the rollout of large-scale live streaming and VOD sports websites such as MLS Live and Eurosport.",
+                "Supported, upgraded, and refactored several existing sites, including NHL.com, MLB.com, WWE Network, and HBO NOW.",
+                "Streamlined internal cable provider / MVPD authorization flow.",
+                "Managed relationships with partners, business stakeholders, and other technology teams."
             ]
         },
         {
