@@ -1,21 +1,25 @@
 {
     "skills": [
-        "Javascript",
-        "C#",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Node.js",
+        "Ember",
         "Java",
-        "Node.JS",
+        "Kotlin",
+        "C#",
         "REST",
         "MVC",
         "HTML",
         "CSS",
         "SASS",
-        "React",
         "AWS",
         "Unix",
         "Git",
         "SVN",
         "SQL",
-        "Unit Testing"
+        "Unit Testing",
+        "Site Reliability"
     ],
     "jobs": [
         {
@@ -28,8 +32,8 @@
                 "Supporting a wide range of partner teams within LinkedIn to ship high-profile product initiatives with speed and scale.",
                 "Building impactful new features for the LinkedIn Feed web experience.",
                 "Serving as the primary application owner for LinkedIn's server-side rendered mobile web application, which hosts more than 10 complex web pages including the main feed.",
-                "Worked with a cross-functional council of engineers and managers to take full ownership of site reliability, audit monitoring and alerting, train engineers, and operationalize our oncalls.",
-                "Led the rollout of collaborative articles on destkop and mobile web, serving as tech lead for a team of 10 engineers."
+                "Worked with a cross-functional council of engineers and managers to take full ownership of site reliability, audit monitoring and alerting, train engineers, and operationalize our on-calls.",
+                "Led the rollout of collaborative articles on desktop and mobile web, serving as tech lead for a team of 10 engineers."
             ]
         },
         {
@@ -39,7 +43,7 @@
             "endDate": "2022",
             "description": "Led the Disney+ and Star+ Web front-end team.",
             "projects": [
-                "Led the web team in building and launching Star+ in 18 countries Latin America.",
+                "Led the web team in building and launching Star+ in 18 countries in Latin America.",
                 "Partnered with product managers and TPMs to plan the web team's roadmap.",
                 "Served as an engineering manager to 7 direct reports and mentoring several others.",
                 "Continuously improved upon existing Disney+ and Star+ features, specifically around content browsing, user engagement, and parental controls."
@@ -90,7 +94,7 @@
         },
         {
             "companyName": "Citigroup",
-            "jobTitle": "Assitant Vice President - Software Devleopment",
+            "jobTitle": "Assistant Vice President - Software Development",
             "startDate": "2013",
             "endDate": "2016",
             "description": "Worked as a full-stack developer in the Institutional Clients Group. Spent my first year with the Finance Desk Technology team and spent my second year with the Global Securitized Markets Technology team",
