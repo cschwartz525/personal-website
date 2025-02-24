@@ -39,7 +39,13 @@
                 "Typescript",
                 "MongoDB"
             ],
-            "images": []
+            "images": [
+                "/assets/images/portfolio/workout-log/desktop-1.png",
+                "/assets/images/portfolio/workout-log/desktop-2.png",
+                "/assets/images/portfolio/workout-log/mobile-1.png",
+                "/assets/images/portfolio/workout-log/mobile-2.png",
+                "/assets/images/portfolio/workout-log/mobile-3.png"
+            ]
         }
     ]
 }
