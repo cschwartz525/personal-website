@@ -8,5 +8,6 @@ export default {
     lightgrey: '#dbe4ee',
     orange: '#ffaa00',
     red: '#ff0000',
-    transparent: 'rgba(0, 0, 0, 0)'
+    transparent: 'rgba(0, 0, 0, 0)',
+    semiTransparentBlack: 'rgba(0, 0, 0, 0.7)',
 };

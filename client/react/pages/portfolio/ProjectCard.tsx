@@ -1,12 +1,13 @@
-import React, { memo } from 'react';
+import React, { memo, useState } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faCamera, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { fab, faGithub } from '@fortawesome/free-brands-svg-icons';
+import ScreenshotsModal from './ScreenshotsModal';
 import colors from '../../styles/colors';
 
-library.add(fab, faGithub, faGlobe);
+library.add(fab, faCamera, faGithub, faGlobe);
 
 const CardContainer = styled.div`
     color: ${colors.darkblue};
@@ -39,6 +40,19 @@ const Link = styled.a`
     }
 `;
 
+const ScreenshotsButton = styled.button`
+    background: ${colors.semiTransparentBlack};
+    border-radius: 10px;
+    color: ${colors.white};
+    cursor: pointer;
+    padding: 5px;
+    width: 100%;
+
+    &:hover {
+        background: ${colors.black};
+    }
+`;
+
 type Project = {
     title: string;
     description: string;
@@ -47,25 +61,35 @@ type Project = {
         production: string;
     };
     tools: string[];
+    images: string[];
 };
 
-const ProjectCard = ({ project }: { project: Project }): JSX.Element => (
-    <CardContainer>
-        <TopContainer>
-            <h2>{project.title}</h2>
-            <div>
-                <Link href={project.links.production} target='_blank'><FontAwesomeIcon icon='globe' /></Link>
-                <Link href={project.links.github} target='_blank'><FontAwesomeIcon icon={['fab', 'github']} /></Link>
-            </div>
-        </TopContainer>
-        <BottomContainer>
-            <p>{project.description}</p>
+const ProjectCard = ({ project }: { project: Project }): JSX.Element => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-            <ul>
-                {project.tools.map((tool, index) => <li key={tool}>{tool}</li>)}
-            </ul>
-        </BottomContainer>
-    </CardContainer>
-);
+    return (
+        <>
+            <CardContainer>
+                <TopContainer>
+                    <h2>{project.title}</h2>
+                    <div>
+                        <Link href={project.links.production} target='_blank'><FontAwesomeIcon icon='globe' /></Link>
+                        <Link href={project.links.github} target='_blank'><FontAwesomeIcon icon={['fab', 'github']} /></Link>
+                    </div>
+                </TopContainer>
+                <BottomContainer>
+                    <p>{project.description}</p>
+
+                    <ul>
+                        {project.tools.map((tool, index) => <li key={tool}>{tool}</li>)}
+                    </ul>
+
+                    <ScreenshotsButton onClick={() => setIsModalOpen(true)}>Screenshots <FontAwesomeIcon icon='camera' /></ScreenshotsButton>
+                </BottomContainer>
+            </CardContainer>
+            <ScreenshotsModal images={project.images} isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
+        </>
+    );
+};
 
 export default memo(ProjectCard);
