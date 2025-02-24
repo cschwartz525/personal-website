@@ -20,6 +20,7 @@ app.use(express.static(path.join(process.env.PWD, 'dist/client')));
 // Serve index.html on all valid routes
 app.use('/about', express.static(path.join(process.env.PWD, 'dist/client')));
 app.use('/contact', express.static(path.join(process.env.PWD, 'dist/client')));
+app.use('/portfolio', express.static(path.join(process.env.PWD, 'dist/client')));
 app.use('/resume', express.static(path.join(process.env.PWD, 'dist/client')));
 
 app.use(bodyParser.json());

@@ -1,0 +1,45 @@
+{
+    "projects": [
+        {
+            "title": "20 Questions",
+            "description": "Multiplayer guessing game using websockets",
+            "links": {
+                "github": "https://github.com/cschwartz525/20-questions",
+                "production": "https://20-questions-production.up.railway.app"
+            },
+            "tools": [
+                "React",
+                "Typescript",
+                "Socket.IO"
+            ],
+            "images": [
+                "/assets/images/portfolio/20-questions/desktop-1.png",
+                "/assets/images/portfolio/20-questions/desktop-2.png",
+                "/assets/images/portfolio/20-questions/desktop-3.png",
+                "/assets/images/portfolio/20-questions/desktop-4.png",
+                "/assets/images/portfolio/20-questions/desktop-5.png",
+                "/assets/images/portfolio/20-questions/desktop-6.png",
+                "/assets/images/portfolio/20-questions/mobile-1.png",
+                "/assets/images/portfolio/20-questions/mobile-2.png",
+                "/assets/images/portfolio/20-questions/mobile-3.png",
+                "/assets/images/portfolio/20-questions/mobile-4.png",
+                "/assets/images/portfolio/20-questions/mobile-5.png",
+                "/assets/images/portfolio/20-questions/mobile-6.png"
+            ]
+        },
+        {
+            "title": "Workout Log",
+            "description": "Next.js application to track workouts and progress",
+            "links": {
+                "github": "https://github.com/cschwartz525/workout-log",
+                "production": "https://workout-log-production.up.railway.app"
+            },
+            "tools": [
+                "Next.js",
+                "Typescript",
+                "MongoDB"
+            ],
+            "images": []
+        }
+    ]
+}
