@@ -5,6 +5,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCamera, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { fab, faGithub } from '@fortawesome/free-brands-svg-icons';
 import ScreenshotsModal from './ScreenshotsModal';
+import { buttonStyles } from '../../components/Button';
 import colors from '../../styles/colors';
 
 library.add(fab, faCamera, faGithub, faGlobe);
@@ -41,15 +42,16 @@ const Link = styled.a`
 `;
 
 const ScreenshotsButton = styled.button`
-    background: ${colors.semiTransparentBlack};
-    border-radius: 10px;
-    color: ${colors.white};
-    cursor: pointer;
-    padding: 5px;
-    width: 100%;
+    ${buttonStyles}
+
+    border-color: ${colors.black};
+    color: ${colors.black};
+    justify-self: center;
 
     &:hover {
-        background: ${colors.black};
+        background-color: ${colors.black};
+        border-color: ${colors.black};
+        color: ${colors.white};
     }
 `;
 

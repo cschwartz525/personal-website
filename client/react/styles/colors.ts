@@ -9,5 +9,5 @@ export default {
     orange: '#ffaa00',
     red: '#ff0000',
     transparent: 'rgba(0, 0, 0, 0)',
-    semiTransparentBlack: 'rgba(0, 0, 0, 0.7)',
+    semiTransparentBlack: 'rgba(0, 0, 0, 0.6)',
 };
