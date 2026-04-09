@@ -55,7 +55,7 @@
     "@types/react-transition-group": "^4.4.2",
     "@types/styled-components": "^5.1.9",
     "babel-loader": "^8.3.0",
-    "copy-webpack-plugin": "^9.1.0",
+    "copy-webpack-plugin": "^14.0.0",
     "file-loader": "^6.2.0",
     "sass": "^1.34.1",
     "sass-loader": "^12.0.0",
