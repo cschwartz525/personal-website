@@ -29,6 +29,6 @@ app.get('/api/about', about);
 app.get('/api/resume', resume);
 app.post('/api/sendEmail', sendEmail);
 
-app.listen(config.port, '0.0.0.0', function() {
+app.listen(Number(config.port), '0.0.0.0', function() {
     console.log('Server is listening on port %d', config.port);
 });
