@@ -2,6 +2,7 @@ import React, { FormEvent, memo, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import styled from 'styled-components';
 import axios from 'axios';
+import { buttonStyles } from '../../components/Button';
 
 const ButtonWrapper = styled.div`
     margin: 10px auto;
@@ -24,44 +25,7 @@ const Center = styled.div`
 `;
 
 const FormButton = styled.input`
-    background-color: transparent;
-    border: ${({ theme }) => `2px solid ${theme.color}`};
-    border-radius: 20px;
-    color: ${({ theme }) => theme.color};
-    display: block;
-    font-weight: bold;
-    letter-spacing: .5px;
-    text-align: center;
-    text-decoration: none;
-    transition: .2s;
-
-    @media screen and (min-width: 412px) {
-        margin: 0 10px;
-        padding: 10px 40px;
-    }
-
-    @media screen and (max-width: 411px) {
-        margin: 10px 0;
-        padding: 10px 20px;
-        width: 100%;
-    }
-
-    &:hover {
-        background-color: ${({ theme }) => theme.color};
-        border: ${({ theme }) => `2px solid ${theme.color}`};
-        color: ${({ theme }) => theme.backgroundColor};
-        cursor: pointer;
-        transition: .2s;
-
-        @media screen and (min-width: 412px) {
-            margin: 0;
-            padding: 10px 50px;
-        }
-
-        @media screen and (max-width: 411px) {
-            padding: 10px 30px;
-        }
-    }
+    ${buttonStyles}
 `;
 
 const InputField = styled.input`

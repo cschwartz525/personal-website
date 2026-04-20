@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import AboutPage from './pages/about';
 import ContactPage from './pages/contact';
 import LandingPage from './pages/landing';
+import PorfolioPage from './pages/portfolio';
 import ResumePage from './pages/resume';
 import themes from './themes';
 
@@ -66,6 +67,9 @@ const Site = () => {
                             </Route>
                             <Route path='/contact'>
                                 <ContactPage />
+                            </Route>
+                            <Route path='/portfolio'>
+                                <PorfolioPage />
                             </Route>
                             <Route path='/resume'>
                                 <ResumePage />
